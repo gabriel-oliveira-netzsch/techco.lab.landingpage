@@ -184,8 +184,10 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
                   <AlertCircle className="size-5 text-amber-600" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-[18px] font-semibold text-[#1a1a2e] mb-2">
-                    {locale === 'pt-BR' ? 'Vaga indisponível' : 'Position unavailable'}
+                  <h3 className="text-[18px] font-semibold text-[#4c4d58] mb-2">
+                    {locale === "pt-BR"
+                      ? "Vaga indisponível"
+                      : "Position unavailable"}
                   </h3>
                   <p className="text-[14px] text-[#6b7280] leading-relaxed">
                     {translations.notAcceptingApplications}
@@ -221,7 +223,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
             <ArrowLeft className="size-4" />
             <span>{translations.backToPositions}</span>
           </Link>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -230,7 +232,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
           >
             {job.title}
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -271,12 +273,14 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               {/* Company Description */}
               {sections?.companyDescription && (
                 <div>
-                  <h2 className="text-[22px] font-bold text-[#1a1a2e] mb-4">
+                  <h2 className="text-[22px] font-bold text-[#4c4d58] mb-4">
                     {sections.companyDescription.title}
                   </h2>
                   <div
                     className="prose prose-gray max-w-none text-[15px] leading-[1.8] text-[#4a4a4a]"
-                    dangerouslySetInnerHTML={{ __html: sections.companyDescription.text }}
+                    dangerouslySetInnerHTML={{
+                      __html: sections.companyDescription.text,
+                    }}
                   />
                 </div>
               )}
@@ -284,12 +288,14 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               {/* Job Description */}
               {sections?.jobDescription && (
                 <div>
-                  <h2 className="text-[22px] font-bold text-[#1a1a2e] mb-4">
+                  <h2 className="text-[22px] font-bold text-[#4c4d58] mb-4">
                     {sections.jobDescription.title}
                   </h2>
                   <div
                     className="prose prose-gray max-w-none text-[15px] leading-[1.8] text-[#4a4a4a] [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
-                    dangerouslySetInnerHTML={{ __html: sections.jobDescription.text }}
+                    dangerouslySetInnerHTML={{
+                      __html: sections.jobDescription.text,
+                    }}
                   />
                 </div>
               )}
@@ -297,12 +303,14 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               {/* Qualifications */}
               {sections?.qualifications && (
                 <div>
-                  <h2 className="text-[22px] font-bold text-[#1a1a2e] mb-4">
+                  <h2 className="text-[22px] font-bold text-[#4c4d58] mb-4">
                     {sections.qualifications.title}
                   </h2>
                   <div
                     className="prose prose-gray max-w-none text-[15px] leading-[1.8] text-[#4a4a4a] [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
-                    dangerouslySetInnerHTML={{ __html: sections.qualifications.text }}
+                    dangerouslySetInnerHTML={{
+                      __html: sections.qualifications.text,
+                    }}
                   />
                 </div>
               )}
@@ -310,12 +318,14 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               {/* Additional Information */}
               {sections?.additionalInformation && (
                 <div>
-                  <h2 className="text-[22px] font-bold text-[#1a1a2e] mb-4">
+                  <h2 className="text-[22px] font-bold text-[#4c4d58] mb-4">
                     {sections.additionalInformation.title}
                   </h2>
                   <div
                     className="prose prose-gray max-w-none text-[15px] leading-[1.8] text-[#4a4a4a] [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
-                    dangerouslySetInnerHTML={{ __html: sections.additionalInformation.text }}
+                    dangerouslySetInnerHTML={{
+                      __html: sections.additionalInformation.text,
+                    }}
                   />
                 </div>
               )}
@@ -329,7 +339,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               className="lg:col-span-1"
             >
               <div className="bg-[#f9fafb] rounded-[16px] p-6 sticky top-8">
-                <h3 className="text-[18px] font-bold text-[#1a1a2e] mb-3">
+                <h3 className="text-[18px] font-bold text-[#4c4d58] mb-3">
                   {translations.interested}
                 </h3>
                 <p className="text-[14px] text-[#6b7280] mb-6 leading-relaxed">

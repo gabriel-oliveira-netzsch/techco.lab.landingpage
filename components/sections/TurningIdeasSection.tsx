@@ -16,7 +16,7 @@ export function TurningIdeasSection() {
   return (
     <section
       data-section="turning-ideas-rebuilt"
-      className="bg-[#1a1a2e] relative w-full py-[64px] md:py-[80px] lg:py-[100px]"
+      className="bg-[#4c4d58] relative w-full py-[64px] md:py-[80px] lg:py-[100px]"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         <div className="flex flex-col lg:flex-row gap-[48px] lg:gap-[64px] items-center">
@@ -29,11 +29,11 @@ export function TurningIdeasSection() {
               transition={{ duration: 0.5 }}
               className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2]"
             >
-              <span className="text-white">{t('title')}</span>
+              <span className="text-white">{t("title")}</span>
               <br />
-              <span className="text-[#00B894]">{t('titleHighlight')}</span>
+              <span className="text-[#00B894]">{t("titleHighlight")}</span>
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export function TurningIdeasSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-[15px] md:text-[16px] leading-[1.7] text-white/70 max-w-[500px]"
             >
-              {t('description')}
+              {t("description")}
             </motion.p>
 
             {/* Buttons */}
@@ -54,25 +54,25 @@ export function TurningIdeasSection() {
             >
               <Link href={`${prefix}/our-culture`}>
                 <motion.div
-                  whileHover={{ backgroundColor: '#009874' }}
+                  whileHover={{ backgroundColor: "#009874" }}
                   transition={{ duration: 0.2 }}
                   className="bg-[#00B894] inline-flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[8px] cursor-pointer"
                 >
                   <span className="font-semibold text-[14px] md:text-[15px] text-white">
-                    {t('cta')}
+                    {t("cta")}
                   </span>
                   <ArrowRightIcon />
                 </motion.div>
               </Link>
-              
+
               <Link href={`${prefix}/open-positions`}>
                 <motion.div
-                  whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                   transition={{ duration: 0.2 }}
                   className="border border-white/50 inline-flex gap-[8px] items-center justify-center px-[20px] py-[12px] rounded-[8px] cursor-pointer"
                 >
                   <span className="font-semibold text-[14px] md:text-[15px] text-white">
-                    {t('cta2')}
+                    {t("cta2")}
                   </span>
                   <ArrowRightIcon />
                 </motion.div>

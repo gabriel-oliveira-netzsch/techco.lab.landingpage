@@ -76,11 +76,12 @@ export function LocationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#1a1a2e] mb-4"
+            className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#4c4d58] mb-4"
           >
-            {t('title')} <span className="text-[#00B894]">{t('titleHighlight')}</span>
+            {t("title")}{" "}
+            <span className="text-[#00B894]">{t("titleHighlight")}</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +89,7 @@ export function LocationsSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-[15px] md:text-[16px] leading-[1.6] text-[#6b7280]"
           >
-            {t('subtitle')}
+            {t("subtitle")}
           </motion.p>
         </div>
 
@@ -96,19 +97,19 @@ export function LocationsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <LocationCard
             image={images.frame107}
-            city={t('curitiba.city')}
-            title={t('curitiba.title')}
-            description={t('curitiba.description')}
-            linkText={t('linkCuritiba')}
+            city={t("curitiba.city")}
+            title={t("curitiba.title")}
+            description={t("curitiba.description")}
+            linkText={t("linkCuritiba")}
             linkUrl="https://maps.google.com/?q=Nex+Coworking+Curitiba"
             delay={0}
           />
           <LocationCard
             image={images.frame108}
-            city={t('pomerode.city')}
-            title={t('pomerode.title')}
-            description={t('pomerode.description')}
-            linkText={t('linkPomerode')}
+            city={t("pomerode.city")}
+            title={t("pomerode.title")}
+            description={t("pomerode.description")}
+            linkText={t("linkPomerode")}
             linkUrl="https://maps.google.com/?q=NETZSCH+Pomerode"
             delay={0.1}
           />

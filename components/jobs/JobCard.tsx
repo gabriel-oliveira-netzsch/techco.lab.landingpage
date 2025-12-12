@@ -39,13 +39,11 @@ export function JobCard({
         {/* Work Type Badge */}
         <div className="flex items-center gap-2">
           <div className="w-1 h-6 bg-[#00B894] rounded-full" />
-          <span className="text-[13px] text-[#6b7280]">
-            {workType}
-          </span>
+          <span className="text-[13px] text-[#6b7280]">{workType}</span>
         </div>
 
         {/* Title */}
-        <h3 className="text-[18px] md:text-[20px] font-semibold text-[#1a1a2e] leading-tight">
+        <h3 className="text-[18px] md:text-[20px] font-semibold text-[#4c4d58] leading-tight">
           {title}
         </h3>
 
@@ -62,7 +60,10 @@ export function JobCard({
           className="inline-flex items-center gap-2 text-[#00B894] font-medium text-[14px] hover:underline transition-all group mt-1"
         >
           {applyText}
-          <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" stroke="#00B894" />
+          <ArrowRightIcon
+            className="size-4 group-hover:translate-x-1 transition-transform"
+            stroke="#00B894"
+          />
         </Link>
       </div>
     </motion.article>

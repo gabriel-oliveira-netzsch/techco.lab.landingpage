@@ -41,9 +41,10 @@ export function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-[28px] md:text-[42px] lg:text-[52px] font-bold leading-[1.2] text-[#1a1a2e]"
+            className="text-[28px] md:text-[42px] lg:text-[52px] font-bold leading-[1.2] text-[#4c4d58]"
           >
-            {t('title')} <span className="text-[#00B894]">{t('titleHighlight')}</span>
+            {t("title")}{" "}
+            <span className="text-[#00B894]">{t("titleHighlight")}</span>
           </motion.h2>
         </div>
 
@@ -64,7 +65,6 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex flex-col items-center gap-4">
-                
                 <div>
                   <p className="text-gray-600 font-semibold text-[16px]">
                     {currentTestimonial.author}
@@ -113,7 +113,9 @@ export function TestimonialsSection() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`size-2 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-[#00B894] w-6' : 'bg-[#00B894]/30'
+                  index === currentIndex
+                    ? "bg-[#00B894] w-6"
+                    : "bg-[#00B894]/30"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

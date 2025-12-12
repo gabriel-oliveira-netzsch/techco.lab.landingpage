@@ -144,12 +144,228 @@
     }
   },
   "WhatWeDo": {
-    "title": "O que fazemos",
-    "subtitle": "Transformando a indústria através da inovação digital"
+    "title": "O que fazemos de",
+    "titleHighlight": "melhor",
+    "subtitle": "Focamos em iniciativas estratégicas e técnicas que moldam a espinha dorsal digital da NETZSCH e desbloqueiam novas oportunidades para equipes ao redor do mundo.",
+    "categories": {
+      "strategy": {
+        "title": "Estratégia Digital & Consultoria",
+        "description": "Descoberta, mapeamento de valor, roadmaps e planejamento de entregas."
+      },
+      "development": {
+        "title": "Desenvolvimento de Software",
+        "description": "Aplicações cloud-ready, microsserviços, fluxos de dados seguros e APIs."
+      },
+      "data": {
+        "title": "Soluções de Dados & IA",
+        "description": "Análises, casos de uso de ML, automação e resultados mensuráveis."
+      },
+      "design": {
+        "title": "Experiência & Design",
+        "description": "Pesquisa, UI/UX, design systems, adoção e usabilidade."
+      }
+    },
+    "projects": {
+      "title": "Últimos",
+      "titleHighlight": "projetos",
+      "subtitle": "Ambientes que promovem inovação contínua e networking.",
+      "items": [
+        {
+          "tags": ["UX", "Design System", "Mapeam & Diagramas"],
+          "title": "IRIS BeadMills",
+          "description": "Projetado para modernizar operações industriais, o IRIS une tecnologia e design em uma plataforma SaaS de nova geração que reimagina interfaces Homem-Máquina desde o início.",
+          "results": [
+            "30% mais rápido na conclusão de tarefas",
+            "45% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Análise & Testes"],
+          "title": "Estratégia Orientada por Dados",
+          "description": "Na A&T, o desafio era libertar a equipe de Estratégia de Negócios do trabalho manual demorado na coleta e processamento de dados. A equipe da Techco.lab mapeou processos, conectou múltiplas fontes de dados e construiu um novo data warehouse do zero. O resultado: uma operação mais rápida e inteligente com análises automatizadas que transformaram esforço manual em tempo de pensamento estratégico e abriram novas oportunidades para insights de negócios.",
+          "results": [
+            "20% mais rápido na consolidação de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Moagem & Dispersão"],
+          "title": "Inteligência Comercial para Crescimento Sustentável",
+          "description": "Em P&S, o objetivo era apoiar o negócio de Peças de Reposição na identificação de segmentação de clientes, momento ideal de compra e potencial de upselling. A Techco.lab desenvolveu uma solução de BI que entrega insights acionáveis em tempo real, permitindo que a equipe de vendas atue com precisão e personalização. O impacto é claro: aumento de receita da reativação de clientes, redução de churn e uma abordagem de gestão mais proativa e orientada por dados.",
+          "results": [
+            "30% mais rápido na conclusão de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Moagem & Dispersão"],
+          "title": "Controle e Previsibilidade em Escala Global",
+          "description": "Em Moagem & Dispersão, a Techco.lab liderou uma iniciativa robusta de BI para a equipe de Controladoria, integrando dados de Vendas, Faturamento e Previsão de Receita de múltiplos sistemas e moedas. Superando desafios técnicos complexos, a equipe entregou dashboards dinâmicos que reduziram o tempo de análise de meia hora para apenas segundos. Hoje, a unidade se beneficia de uma visão global confiável do desempenho comercial, capacitando tomadas de decisão rápidas, confiantes e estratégicas.",
+          "results": [
+            "50% mais rápido na conclusão de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Salesforce", "E-commerce", "Moagem & Dispersão"],
+          "title": "Portal do Cliente — Experiência Digital para Excelência em Pós-Vendas",
+          "description": "O Portal do Cliente simplifica a jornada completa do cliente ao unificar identificação de peças de reposição, pedidos, informações de equipamentos e recursos de conhecimento em uma plataforma. Integrado com SAP e Salesforce, aumenta a eficiência, reduz necessidades de suporte e capacita decisões mais inteligentes para clientes e equipes de serviço.",
+          "results": [
+            "Maior autonomia do cliente através de autoatendimento intuitivo",
+            "Maior precisão na seleção e pedido de peças de reposição",
+            "Experiência digital consistente em todas as regiões e equipes"
+          ]
+        },
+        {
+          "tags": ["ServiceNow", "Azure", "SAP HCM", "Moagem & Dispersão"],
+          "title": "ServiceNow",
+          "description": "A plataforma é usada como pilar estratégico para digitalizar processos que antes eram manuais e descentralizados. Com ela, reduzimos etapas repetitivas, eliminamos retrabalho, criamos fluxos de trabalho digitais e conectados entre departamentos e sistemas dentro da empresa, sempre apoiando nossas áreas de negócio com soluções escaláveis e sustentáveis adaptadas às necessidades da empresa e seus colaboradores.",
+          "results": [
+            "Uma média de 2.750+ solicitações mensais de TI (IT365)",
+            "Uma média de 1.000+ solicitações mensais de RH (HRSD)",
+            "Uma média de 350+ solicitações mensais de gestão de demandas e projetos (SPM)",
+            "Tomada de decisão mais rápida e segura",
+            "Menos retrabalho e maior visibilidade em cada etapa dos processos"
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "O que nossa equipe diz",
+      "items": [
+        {
+          "quote": "Como fundador da Techco.lab, fico impressionado com a mentalidade prática e a flexibilidade dos profissionais de tecnologia brasileiros. Suas qualificações e dedicação à qualidade atingem – e muitas vezes superam – padrões globais. É isso que torna a Techco.lab uma parceira excepcional: uma equipe com expertise e atitude proativa para entregar resultados reais.",
+          "author": "Stefan Lautenschlager",
+          "role": "Head de Data & Analytics do Grupo NETZSCH",
+          "image": "/testimonials/stefan.jpg"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "O futuro da inovação digital começa aqui —",
+      "titleHighlight": "com você.",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Ver vagas abertas"
+    }
   },
   "OurCulture": {
-    "title": "Nossa Cultura",
-    "subtitle": "Um lugar onde inovação encontra colaboração"
+    "hero": {
+      "title": "Em que",
+      "titleHighlight": "acreditamos",
+      "subtitle": "Focamos em iniciativas estratégicas e técnicas que constroem a base digital da NETZSCH e liberam novas oportunidades para times no mundo todo.",
+      "values": [
+        {
+          "title": "Protagonismo",
+          "description": "Assumimos responsabilidade pelos resultados e elevamos o padrão."
+        },
+        {
+          "title": "Colaboração",
+          "description": "Debatemos com intensidade, decidimos rápido e entregamos juntos."
+        },
+        {
+          "title": "Aprendizado",
+          "description": "Experimentamos, refletimos e iteramos."
+        },
+        {
+          "title": "Integridade",
+          "description": "Comunicação clara, transparência e responsabilidade."
+        },
+        {
+          "title": "Reconhecimento",
+          "description": "Paramos para reconhecer conquistas — de grandes lançamentos a correções complexas."
+        }
+      ]
+    },
+    "gptw": {
+      "title": "Somos um",
+      "titleHighlight": "Great Place to Work®",
+      "description": "Na NETZSCH, construir tecnologia de alto impacto começa com construir um ambiente onde as pessoas prosperam. Nossa certificação GPTW reflete exatamente isso: o reconhecimento de quem vive o dia a dia aqui — nossos colaboradores. É a confirmação de que cultivamos um espaço que valoriza bem-estar, aprendizado contínuo, respeito e excelência, criando as condições ideais para times fortes, inovadores e preparados para o futuro."
+    },
+    "milestones": {
+      "title": "Marcos",
+      "titleHighlight": "importam.",
+      "subtitle": "Celebramos o progresso — não apenas os resultados finais.",
+      "items": [
+        {
+          "title": "Lançamentos e entregas",
+          "description": "Entregamos métricas relevantes para os clientes."
+        },
+        {
+          "title": "Vitórias de processo",
+          "description": "Quando os fluxos internos ficam mais fluidos, todo mundo ganha."
+        },
+        {
+          "title": "Crescimento pessoal",
+          "description": "Reconhecemos pessoas que evoluem — em habilidades, confiança e protagonismo."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Por que trabalhar no",
+      "titleHighlight": "Techco.lab",
+      "subtitle": "Aqui no Techco.lab, valorizamos as pessoas tanto quanto a inovação — oferecendo projetos desafiadores, crescimento profissional e um pacote completo de benefícios para o seu bem-estar.",
+      "discoverTitle": "Descubra os benefícios que você encontrará ao fazer parte do time.",
+      "items": [
+        { "title": "Contrato CLT", "icon": "file-text" },
+        { "title": "PPL", "icon": "coins" },
+        { "title": "Reconhecimento", "icon": "award" },
+        { "title": "Programa de Ideias", "icon": "lightbulb" },
+        { "title": "Saúde e odontológico", "icon": "heart" },
+        { "title": "Bem-estar", "icon": "activity" },
+        { "title": "Descontos em farmácias", "icon": "pill" },
+        { "title": "Descontos em combustível", "icon": "fuel" },
+        { "title": "Subsídio educação", "icon": "graduation-cap" },
+        { "title": "OpenEnglish", "icon": "languages" },
+        { "title": "NOA & Alura", "icon": "monitor" },
+        { "title": "Trabalho híbrido", "icon": "home" },
+        { "title": "Indicação", "icon": "users" },
+        { "title": "Vale alimentação", "icon": "utensils" },
+        { "title": "Equidade salarial", "icon": "scale" },
+        { "title": "Equipamentos", "icon": "laptop" }
+      ]
+    },
+    "realDeal": {
+      "title": "O que realmente",
+      "titleHighlight": "importa",
+      "description": "A gente não promete mesa de pingue-pongue ou \"férias ilimitadas\". O que prometemos são benefícios reais, espaço para crescer, flexibilidade quando você precisar e um ambiente onde você não odeia as segundas-feiras.",
+      "highlight": "Investimos em pessoas porque boas pessoas são difíceis de encontrar.",
+      "highlight2": "E ainda mais difíceis de substituir."
+    },
+    "testimonials": {
+      "title": "Nas palavras do",
+      "titleHighlight": "time",
+      "subtitle": "Algumas palavras das pessoas que fazem este lugar ser o que é.",
+      "items": [
+        {
+          "quote": "Ingressar no Techco.lab em 2023 foi um ponto de virada na minha carreira. A cultura, os valores compartilhados e a oportunidade de trabalhar com pessoas tão talentosas e criativas me impulsionam a crescer todos os dias. Nossa equipe encontra o equilíbrio certo entre foco e diversão: rimos muito, colaboramos profundamente e, quando é hora de entregar, todos dão o seu melhor. Fazer parte deste ambiente e contribuir com soluções significativas para nossos clientes internos tem sido genuinamente gratificante.",
+          "author": "Kevin Okuda",
+          "role": "Team Lead - Business Intelligence & Analytics",
+          "image": "/testimonials/kevin.jpg"
+        },
+        {
+          "quote": "Trabalhar no Techco.lab mudou a forma como cresço e aprendo. Vindo de uma vida caótica de agência, encontrei uma cultura honesta, colaborativa e nunca julgadora. As pessoas te ensinam o que você não sabe, e mergulhar nos softwares e nos equipamentos me fez ir muito mais longe do que eu imaginaria. Estou explorando temas de engenharia que nunca imaginei explorar. O que torna o Techco.lab especial é a sensação de construir algo maior juntos: as ideias são ouvidas, o time é aberto e o impacto é real.",
+          "author": "Gabriel Oliveira",
+          "role": "UX/UI Designer",
+          "image": "/testimonials/gabriel.jpg"
+        },
+        {
+          "quote": "Poder conectar pessoas com o desejo de trabalhar em uma boa empresa de tecnologia é uma conquista que o Techco.lab me permitiu alcançar. Quando há foco em pessoas, cultura e futuro — é aí que tudo começa. A busca constante por talentos e criadores de cultura é um crescimento que posso testemunhar em cada profissional e em mim mesma ao longo do caminho.",
+          "author": "Júlia Fritzke",
+          "role": "Recruiting Analyst - Human Resources",
+          "image": "/testimonials/julia.jpg"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "O futuro da inovação digital começa aqui —",
+      "titleHighlight": "com você.",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Ver vagas abertas"
+    }
   },
   "OpenPositions": {
     "title": "Por que trabalhar no",

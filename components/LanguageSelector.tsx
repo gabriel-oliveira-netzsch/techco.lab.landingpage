@@ -63,42 +63,66 @@ export function LanguageSelector() {
             <USFlagIcon className="w-4 h-3" />
           )}
           <span className="font-medium leading-[20px] relative shrink-0 text-[14px] text-center text-nowrap text-white whitespace-pre">
-            {isPTBR ? 'PT-BR' : 'EN'}
+            {isPTBR ? "PT-BR" : "EN"}
           </span>
         </div>
-        <ChevronDownIcon className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDownIcon
+          className={`transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
       </button>
 
       {isOpen && (
-        <nav 
+        <nav
           className="absolute right-0 top-full mt-2 bg-white rounded-[8px] shadow-lg overflow-hidden z-50 min-w-[140px] border border-gray-100"
           aria-label="Language selection"
         >
           <Link
             href={localePaths.en}
-            className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${currentLocale === 'en' ? 'bg-gray-50' : ''}`}
+            className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${
+              currentLocale === "en" ? "bg-gray-50" : ""
+            }`}
           >
             <USFlagIcon className="w-5 h-4 flex-shrink-0" />
-            <span className="font-medium text-[14px] text-[#1a1a2e] whitespace-nowrap">
+            <span className="font-medium text-[14px] text-[#4c4d58] whitespace-nowrap">
               English
             </span>
-            {currentLocale === 'en' && (
-              <svg className="w-4 h-4 text-[#00B894] ml-auto flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            {currentLocale === "en" && (
+              <svg
+                className="w-4 h-4 text-[#00B894] ml-auto flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
               </svg>
             )}
           </Link>
           <Link
-            href={localePaths['pt-BR']}
-            className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${currentLocale === 'pt-BR' ? 'bg-gray-50' : ''}`}
+            href={localePaths["pt-BR"]}
+            className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${
+              currentLocale === "pt-BR" ? "bg-gray-50" : ""
+            }`}
           >
             <BRFlagIcon className="w-5 h-4 flex-shrink-0" />
-            <span className="font-medium text-[14px] text-[#1a1a2e] whitespace-nowrap">
+            <span className="font-medium text-[14px] text-[#4c4d58] whitespace-nowrap">
               Português
             </span>
-            {currentLocale === 'pt-BR' && (
-              <svg className="w-4 h-4 text-[#00B894] ml-auto flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            {currentLocale === "pt-BR" && (
+              <svg
+                className="w-4 h-4 text-[#00B894] ml-auto flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
               </svg>
             )}
           </Link>

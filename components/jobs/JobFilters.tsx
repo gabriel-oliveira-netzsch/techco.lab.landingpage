@@ -40,7 +40,7 @@ export function JobFilters({
             value={searchValue}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder={placeholders.search}
-            className="w-full h-[44px] pl-4 pr-10 border border-gray-300 rounded-[6px] text-[14px] text-[#1a1a2e] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00B894] focus:border-transparent transition-all"
+            className="w-full h-[44px] pl-4 pr-10 border border-gray-300 rounded-[6px] text-[14px] text-[#4c4d58] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00B894] focus:border-transparent transition-all"
           />
           <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-5 text-gray-400" />
         </div>
@@ -55,7 +55,7 @@ export function JobFilters({
           <select
             value={locationValue}
             onChange={(e) => onLocationChange(e.target.value)}
-            className="w-full h-[44px] pl-4 pr-10 border border-gray-300 rounded-[6px] text-[14px] text-[#1a1a2e] bg-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00B894] focus:border-transparent transition-all"
+            className="w-full h-[44px] pl-4 pr-10 border border-gray-300 rounded-[6px] text-[14px] text-[#4c4d58] bg-white appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00B894] focus:border-transparent transition-all"
           >
             <option value="all">{placeholders.location}</option>
             {locations.map((location) => (

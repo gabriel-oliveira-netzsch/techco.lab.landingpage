@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section
       data-name="Hero 1"
-      className="bg-[#1a1a2e] relative w-full overflow-hidden"
+      className="bg-[#4c4d58] relative w-full overflow-hidden"
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-[64px] py-[64px] md:py-[100px] lg:py-[120px]">
         <div className="flex flex-col gap-[24px] max-w-[850px]">
@@ -33,7 +33,7 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="text-[36px] md:text-[48px] lg:text-[56px] font-bold leading-[1.15] min-h-[2.4em]"
           >
-            <span className="text-white">{t('titleLine1')}</span>
+            <span className="text-white">{t("titleLine1")}</span>
             <br />
             <TypewriterEffect
               words={typingWords}
@@ -43,7 +43,7 @@ export function HeroSection() {
               className="text-[#00B894]"
             />
           </motion.h1>
-          
+
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-[18px] md:text-[20px] leading-[1.6] text-white max-w-[600px] border-l-4 border-[#00B894] pl-4"
           >
-            {t('subtitle')}
+            {t("subtitle")}
           </motion.p>
 
           {/* Buttons */}
@@ -63,25 +63,25 @@ export function HeroSection() {
           >
             <Link href={`${prefix}/open-positions`}>
               <motion.div
-                whileHover={{ backgroundColor: '#009874' }}
+                whileHover={{ backgroundColor: "#009874" }}
                 transition={{ duration: 0.2 }}
                 className="bg-[#00B894] inline-flex gap-[8px] items-center justify-center px-[24px] py-[14px] rounded-[8px] cursor-pointer"
               >
                 <span className="font-semibold text-[16px] text-white">
-                  {t('cta')}
+                  {t("cta")}
                 </span>
                 <ArrowRightIcon />
               </motion.div>
             </Link>
-            
+
             <Link href={`${prefix}/what-we-do`}>
               <motion.div
-                whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+                whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                 transition={{ duration: 0.2 }}
                 className="border border-white/50 inline-flex gap-[8px] items-center justify-center px-[24px] py-[14px] rounded-[8px] cursor-pointer"
               >
                 <span className="font-semibold text-[16px] text-white">
-                  {t('cta2')}
+                  {t("cta2")}
                 </span>
                 <ArrowRightIcon />
               </motion.div>

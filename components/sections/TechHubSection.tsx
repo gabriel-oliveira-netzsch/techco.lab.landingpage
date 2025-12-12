@@ -26,21 +26,22 @@ export function TechHubSection() {
               transition={{ duration: 0.5 }}
               className="text-[#00B894] text-[12px] md:text-[14px] font-semibold tracking-[0.1em] uppercase"
             >
-              {t('badge')}
+              {t("badge")}
             </motion.span>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#1a1a2e]"
+              className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#4c4d58]"
             >
-              {t('titleLine1')}
+              {t("titleLine1")}
               <br />
-              {t('titleLine2')} <span className="text-[#00B894]">{t('titleHighlight')}</span>
+              {t("titleLine2")}{" "}
+              <span className="text-[#00B894]">{t("titleHighlight")}</span>
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +49,7 @@ export function TechHubSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-[15px] md:text-[16px] leading-[1.7] text-[#6b7280] max-w-[480px]"
             >
-              {t('description')}
+              {t("description")}
             </motion.p>
 
             {/* Links */}
@@ -59,19 +60,19 @@ export function TechHubSection() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-wrap gap-[24px] mt-2"
             >
-              <Link 
+              <Link
                 href={`${prefix}/what-we-do`}
                 className="inline-flex items-center gap-[8px] text-[#00B894] font-medium hover:underline transition-all"
               >
-                {t('linkProjects')}
+                {t("linkProjects")}
                 <ArrowRightIcon className="size-4" stroke="#00B894" />
               </Link>
-              
-              <Link 
+
+              <Link
                 href={`${prefix}/open-positions`}
                 className="inline-flex items-center gap-[8px] text-[#00B894] font-medium hover:underline transition-all"
               >
-                {t('linkCareers')}
+                {t("linkCareers")}
                 <ArrowRightIcon className="size-4" stroke="#00B894" />
               </Link>
             </motion.div>

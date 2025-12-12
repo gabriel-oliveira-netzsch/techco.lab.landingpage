@@ -145,11 +145,233 @@
   },
   "WhatWeDo": {
     "title": "What we do",
-    "subtitle": "Transforming industry through digital innovation"
+    "titleHighlight": "best",
+    "subtitle": "We focus on strategic and technical initiatives that shape the digital backbone of NETZSCH and unlock new opportunities for teams around the world.",
+    "categories": {
+      "strategy": {
+        "title": "Digital Strategy & Consulting",
+        "description": "Discovery, value mapping, roadmaps, and delivery planning."
+      },
+      "development": {
+        "title": "Software Development",
+        "description": "Cloud-ready apps, microservices, secure data flows, and APIs."
+      },
+      "data": {
+        "title": "Data & AI Solutions",
+        "description": "Analytics, ML use-cases, automation, measurable outcomes."
+      },
+      "design": {
+        "title": "Experience & Design",
+        "description": "Research, UX/UI, design systems, adoption and usability."
+      }
+    },
+    "projects": {
+      "title": "Latest",
+      "titleHighlight": "projects",
+      "subtitle": "Environments that foster continuous innovation and networking.",
+      "items": [
+        {
+          "tags": ["UX", "Design System", "Grinding & Dispersing"],
+          "title": "IRIS BeadMills",
+          "description": "Designed to modernize industrial operations, IRIS unites technology and design in a next-generation SaaS platform that reimagines Human-Machine Interfaces from the ground up.",
+          "results": [
+            "35% faster task completion time",
+            "40% drop in onboarding time",
+            "Global rollout across 5 production sites"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Analyzing & Testing"],
+          "title": "Data-Driven Strategy",
+          "description": "At A&T, the challenge was to free the Business Strategy team from time-consuming manual work in data collection and processing. The Techco.lab team mapped processes, connected multiple data sources, and built a new data warehouse from the ground up. The result: a faster, smarter operation with automated analytics that transformed manual effort into strategic thinking time and opened new opportunities for business insights.",
+          "results": [
+            "20% faster data consolidation",
+            "40% drop in onboarding time",
+            "Global rollout across 5 production sites"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Analyzing & Testing"],
+          "title": "Commercial Intelligence for Sustainable Growth",
+          "description": "In PBS, the goal was to support the Spare Parts business in identifying customer segmentation, ideal purchase timing, and upselling potential. Techco.lab developed a BI solution that delivers real-time, actionable insights, enabling the sales team to act with precision and personalization. The impact is clear: increased revenue from customer reactivation, reduced churn, and a more proactive, data-driven management approach.",
+          "results": [
+            "30% faster task completion time",
+            "40% drop in onboarding time",
+            "Global rollout across 5 production sites"
+          ]
+        },
+        {
+          "tags": [
+            "SAP",
+            "Azure",
+            "Power BI",
+            "SAP BW",
+            "Grinding & Dispersing"
+          ],
+          "title": "Control and Predictability on a Global Scale",
+          "description": "In Grinding & Dispersing, Techco.lab led a robust BI initiative for the Controlling team, integrating Sales, Billing, and Revenue Forecast data from multiple systems and currencies. Overcoming complex technical challenges, the team delivered dynamic dashboards that cut analysis time from half an hour to just seconds. Today, the unit benefits from a reliable, global view of commercial performance, empowering fast, confident, and strategic decision-making.",
+          "results": [
+            "50% faster task completion time",
+            "40% drop in onboarding time",
+            "Global rollout across 5 production sites"
+          ]
+        },
+        {
+          "tags": ["SAP", "Salesforce", "E-commerce", "Grinding & Dispersing"],
+          "title": "Customer Portal — Digital Experience for After-Sales Excellence",
+          "description": "The Customer Portal simplifies the end-to-end customer journey by unifying spare-parts identification, ordering, equipment information, and knowledge resources in one platform. Integrated with SAP and Salesforce, it increases efficiency, reduces support needs, and empowers smarter decisions for customers and service teams.",
+          "results": [
+            "Improved customer autonomy through intuitive self-service",
+            "Greater accuracy in spare parts selection and ordering",
+            "Consistent digital experience across regions and teams"
+          ]
+        },
+        {
+          "tags": ["ServiceNow", "Azure", "SAP HCM", "Grinding & Dispersing"],
+          "title": "ServiceNow",
+          "description": "The platform is used as a strategic pillar to digitize processes that were previously manual and decentralized. With it, we reduce repetitive steps, eliminate rework, create digital and connected workflows between departments and systems within the company, always supporting our business areas with scalable, sustainable solutions tailored to the needs of the company and its employees.",
+          "results": [
+            "An average of 2,750+ monthly IT requests (IT365)",
+            "An average of 1,000+ monthly HR requests (HRSD)",
+            "An average of 350+ monthly requests for demand and project management (SPM)",
+            "Faster and more secure decision-making",
+            "Less rework and greater visibility at each stage of the processes"
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What our team says",
+      "items": [
+        {
+          "quote": "As the founder of Techco.lab, I'm impressed by the practical mindset and flexibility of Brazilian tech professionals. Their strong qualifications and commitment to quality meet – and often exceed – global standards. This is what makes Techco.lab an exceptional partner: a team combining expertise with a can-do attitude to deliver real results.",
+          "author": "Stefan Lautenschlager",
+          "role": "Head of Data & Analytics NETZSCH Group*",
+          "image": "/testimonials/stefan.jpg"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "The future of digital innovation starts here —",
+      "titleHighlight": "with you.",
+      "subtitle": "Ready to be part of this transformation?",
+      "cta": "Browse open positions"
+    }
   },
   "OurCulture": {
-    "title": "Our Culture",
-    "subtitle": "A place where innovation meets collaboration"
+    "hero": {
+      "title": "What we",
+      "titleHighlight": "stand for",
+      "subtitle": "We focus on strategic and technical initiatives that shape the digital backbone of NETZSCH and unlock new opportunities for teams around the world.",
+      "values": [
+        {
+          "title": "Ownership",
+          "description": "We own the outcome and value the bat."
+        },
+        {
+          "title": "Collaboration",
+          "description": "We debate hard, decide fast, deliver together."
+        },
+        {
+          "title": "Upskilling",
+          "description": "We experiment, reflect, and iterate."
+        },
+        {
+          "title": "Integrity",
+          "description": "Clear communication, transparency, accountability."
+        },
+        {
+          "title": "Achieve",
+          "description": "We pause to recognize wins — from launches to tough fixes."
+        }
+      ]
+    },
+    "gptw": {
+      "title": "We're a",
+      "titleHighlight": "Great Place to Work®",
+      "description": "At NETZSCH, building high-impact technology starts with building an environment where people can thrive. Our GPTW certification reflects exactly that: recognition from those who live our culture every day — our employees. It confirms that we foster wellbeing, continuous learning, respect, and excellence, creating the ideal foundation for strong, innovative teams ready for the future."
+    },
+    "milestones": {
+      "title": "Milestones",
+      "titleHighlight": "matter.",
+      "subtitle": "We don't just ship and move on. We take time to recognize the effort and celebrate together.",
+      "items": [
+        {
+          "title": "Launch days & retros",
+          "description": "Every product launch is followed by a team retrospective to celebrate wins and learn from challenges."
+        },
+        {
+          "title": "Off-sites & team awards",
+          "description": "Annual team off-sites and quarterly awards recognize outstanding contributions and foster team bonding."
+        },
+        {
+          "title": "Friday wins",
+          "description": "End each week by sharing wins, big or small. It's our ritual to acknowledge progress and momentum."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Why work at",
+      "titleHighlight": "Techco.lab",
+      "subtitle": "Here at Techco.lab, we value people as much as innovation — offering challenging projects, professional growth, and a complete package of benefits for your well-being.",
+      "discoverTitle": "Discover the benefits you will receive by joining us.",
+      "items": [
+        { "title": "CLT Contract", "icon": "file-text" },
+        { "title": "Profit Sharing (PPL)", "icon": "coins" },
+        { "title": "Service Award", "icon": "award" },
+        { "title": "Program of ideas reward", "icon": "lightbulb" },
+        { "title": "Health & Dental Insurance", "icon": "heart" },
+        { "title": "Wellness Platform", "icon": "activity" },
+        { "title": "Pharmacy Discounts", "icon": "pill" },
+        { "title": "Fuel Discounts", "icon": "fuel" },
+        { "title": "Education Subsidy", "icon": "graduation-cap" },
+        { "title": "OpenEnglish Access", "icon": "languages" },
+        { "title": "NDA & Alura", "icon": "monitor" },
+        { "title": "Hybrid Work", "icon": "home" },
+        { "title": "Referral Bonus", "icon": "users" },
+        { "title": "Food Voucher", "icon": "utensils" },
+        { "title": "Salary Equity", "icon": "scale" },
+        { "title": "Equipment", "icon": "laptop" }
+      ]
+    },
+    "realDeal": {
+      "title": "The",
+      "titleHighlight": "real-deal",
+      "description": "We're not promising ping-pong tables or fake \"unlimited vacation.\" What we promise is straightforward benefits, room to grow, flexibility when you need it, and a workplace where you don't dread Mondays.",
+      "highlight": "We invest in people because good people are hard to find.",
+      "highlight2": "And even harder to replace."
+    },
+    "testimonials": {
+      "title": "In their own",
+      "titleHighlight": "words",
+      "subtitle": "We foster collaboration and creativity across two key locations in Brazil.",
+      "items": [
+        {
+          "quote": "Joining Techco.lab in 2023 was a turning point in my career. The culture, shared values, and the opportunity to work with such talented and creative people push me to grow every day. Our team strikes the right balance between focus and fun: we laugh a lot, we collaborate deeply, and when it's time to deliver, everyone shows up with their best. Being part of this environment and contributing to meaningful solutions for our internal customers has been genuinely fulfilling.",
+          "author": "Kevin Okuda",
+          "role": "Team Lead - Business Intelligence & Analytics",
+          "image": "/testimonials/kevin.jpg"
+        },
+        {
+          "quote": "Working at Techco.lab changed the way I grew and learn. Coming from chaotic agency life, I found a culture that is honest, collaborative, and never judgmental. People teach you what you don't know, and diving into the software and equipment pushed me far. I'm engineering topics I never imagined exploring. What makes Techco.lab special is the feeling of building something bigger together: ideas are heard, the team is open, and the impact is real.",
+          "author": "Gabriel Oliveira",
+          "role": "UX/UI Designer",
+          "image": "/testimonials/gabriel.jpg"
+        },
+        {
+          "quote": "Being able to connect people with their desire to work at a good technology company is an achievement that Techco.lab has allowed me to accomplish. When there is a focus on people, culture, and the future – that's where it all begins. The constant hunt for talented and culture creators is growth that I can witness on every professional and myself along the way.",
+          "author": "Júlia Fritzke",
+          "role": "Recruiting Analyst - Human Resources",
+          "image": "/testimonials/julia.jpg"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "The future of digital innovation starts here —",
+      "titleHighlight": "with you.",
+      "subtitle": "Ready to be part of this transformation?",
+      "cta": "Browse open positions"
+    }
   },
   "OpenPositions": {
     "title": "Why work at",
