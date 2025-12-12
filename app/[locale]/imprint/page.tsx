@@ -39,40 +39,40 @@ export default async function ImprintPage({ params }: Props) {
       <main className="flex-1">
         {/* Content */}
         <section className="bg-white py-[48px] md:py-[64px]">
-          <div className="max-w-[900px] mx-auto px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-8">
             {/* Title */}
             <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#4c4d58] mb-8">
-              {t('title')}
+              {t("title")}
             </h1>
 
             {/* Company Info */}
             <div className="mb-8 text-[15px] text-[#4c4d58] leading-[1.8]">
-              <p>{t('company.name')}</p>
-              <p>{t('company.street')}</p>
-              <p>{t('company.city')}</p>
-              <p>{t('company.phone')}</p>
-              <p>{t('company.fax')}</p>
-              <p>{t('company.email')}</p>
-              <p>{t('company.website')}</p>
+              <p>{t("company.name")}</p>
+              <p>{t("company.street")}</p>
+              <p>{t("company.city")}</p>
+              <p>{t("company.phone")}</p>
+              <p>{t("company.fax")}</p>
+              <p>{t("company.email")}</p>
+              <p>{t("company.website")}</p>
             </div>
 
             {/* Directors */}
             <div className="mb-8 text-[15px] text-[#4c4d58] leading-[1.8]">
-              <p className="font-bold">{t('directors.title')}</p>
-              <p>{t('directors.names')}</p>
-              <p>{t('directors.court')}</p>
-              <p>{t('directors.registerNumber')}</p>
-              <p>{t('directors.taxNumber')}</p>
+              <p className="font-bold">{t("directors.title")}</p>
+              <p>{t("directors.names")}</p>
+              <p>{t("directors.court")}</p>
+              <p>{t("directors.registerNumber")}</p>
+              <p>{t("directors.taxNumber")}</p>
             </div>
 
             {/* Responsible */}
             <div className="mb-8 text-[15px] text-[#4c4d58] leading-[1.8]">
-              <p className="font-bold">{t('responsible.title')}</p>
-              <p className="font-bold">{t('responsible.subtitle')}</p>
-              <p>{t('responsible.name')}</p>
-              <p>{t('responsible.company')}</p>
-              <p>{t('responsible.street')}</p>
-              <p>{t('responsible.city')}</p>
+              <p className="font-bold">{t("responsible.title")}</p>
+              <p className="font-bold">{t("responsible.subtitle")}</p>
+              <p>{t("responsible.name")}</p>
+              <p>{t("responsible.company")}</p>
+              <p>{t("responsible.street")}</p>
+              <p>{t("responsible.city")}</p>
             </div>
 
             <hr className="border-gray-200 my-8" />
@@ -80,13 +80,13 @@ export default async function ImprintPage({ params }: Props) {
             {/* Liability */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[22px] font-bold text-[#4c4d58] mb-4">
-                {t('liability.title')}
+                {t("liability.title")}
               </h2>
               <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
-                {t('liability.content1')}
+                {t("liability.content1")}
               </p>
               <p className="text-[15px] text-[#4c4d58] leading-[1.8]">
-                {t('liability.content2')}
+                {t("liability.content2")}
               </p>
             </div>
 
@@ -95,13 +95,13 @@ export default async function ImprintPage({ params }: Props) {
             {/* Copyright */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[22px] font-bold text-[#4c4d58] mb-4">
-                {t('copyright.title')}
+                {t("copyright.title")}
               </h2>
               <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
-                {t('copyright.content1')}
+                {t("copyright.content1")}
               </p>
               <p className="text-[15px] text-[#4c4d58] leading-[1.8]">
-                {t('copyright.content2')}
+                {t("copyright.content2")}
               </p>
             </div>
 
@@ -110,10 +110,10 @@ export default async function ImprintPage({ params }: Props) {
             {/* Advertising */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[22px] font-bold text-[#4c4d58] mb-4">
-                {t('advertising.title')}
+                {t("advertising.title")}
               </h2>
               <p className="text-[15px] text-[#4c4d58] leading-[1.8]">
-                {t('advertising.content')}
+                {t("advertising.content")}
               </p>
             </div>
           </div>
