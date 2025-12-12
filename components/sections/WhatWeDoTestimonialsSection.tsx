@@ -64,10 +64,11 @@ export function WhatWeDoTestimonialsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-[16px] p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center"
+              className="bg-white rounded-[16px] flex flex-col md:flex-row overflow-hidden"
+              style={{ minHeight: 300 }}
             >
               {/* Quote */}
-              <div className="flex-1">
+              <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
                 <blockquote className="text-[15px] md:text-[16px] leading-[1.8] text-[#4c4d58] mb-6 italic">
                   &ldquo;{currentTestimonial.quote}&rdquo;
                 </blockquote>
@@ -82,21 +83,13 @@ export function WhatWeDoTestimonialsSection() {
               </div>
 
               {/* Image */}
-              <div className="flex-shrink-0">
-                <div className="size-[120px] md:size-[150px] rounded-full bg-gray-200 overflow-hidden relative">
-                  {currentTestimonial.image ? (
-                    <Image
-                      src={currentTestimonial.image}
-                      alt={currentTestimonial.author}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="size-full bg-gradient-to-br from-[#00B894] to-[#4c4d58] flex items-center justify-center text-white text-[40px] font-bold">
-                      {currentTestimonial.author.charAt(0)}
-                    </div>
-                  )}
-                </div>
+              <div className="w-full md:w-[250px] h-[300px] md:h-auto relative shrink-0">
+                <Image
+                  src={currentTestimonial.image}
+                  alt={currentTestimonial.author}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </motion.div>
           </AnimatePresence>
@@ -110,8 +103,8 @@ export function WhatWeDoTestimonialsSection() {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentIndex
-                      ? 'bg-[#00B894] w-6'
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      ? "bg-[#00B894] w-6"
+                      : "bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

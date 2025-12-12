@@ -111,9 +111,20 @@
     "testimonials": {
       "title": "Collaborating for a",
       "titleHighlight": "smarter future",
-      "quote": "Techco.lab is where global industry meets bold digital talents. From Brazil to Germany and to the world, we build platforms and digital solutions that optimize the digital processes of the entire group. Here, your ideas don't stay local — they gain worldwide scale. Join a multicultural team that learns fast, grows fast, and supports our three Business Units. If you want your work to have global impact, Techco.lab is your place.",
-      "author": "Paul Netzsch",
-      "role": "Member of the Corporate Executive at NETZSCH Group"
+      "items": [
+        {
+          "quote": "Working closely with Techco.lab has shown how much value a highly skilled digital team can bring to a global organization like NETZSCH. Their mindset of experimentation, ownership, and continuous improvement accelerates how we innovate and deliver solutions around the world. I'm proud of how this team is shaping the future of our digital products.",
+          "author": "Jens Niesner",
+          "role": "CFO and Member of Executive Board of NETZSCH Group",
+          "image": "/images/491cbd1a-599b-4e23-82aa-ad5eef0bc5ee.png"
+        },
+        {
+          "quote": "Techco.lab is where global industry meets bold digital talent. From Brazil to Germany and to the world, we are building platforms and digital solutions that streamline the entire group's digital processes. Here, your ideas don't stay local—they scale worldwide. Join a multicultural team that learns fast, grows fast, and supports our three Business Units. If you want your work to matter globally, Techco.lab is your place.",
+          "author": "Paul Netzsch",
+          "role": "Member of Executive Board of NETZSCH Group",
+          "image": "/images/9db26785-eace-438e-a4f6-954e4200bc1b.png"
+        }
+      ]
     },
     "preFooter": {
       "title": "A place where you can make a difference",
@@ -244,10 +255,16 @@
       "title": "What our team says",
       "items": [
         {
+          "quote": "Techco.lab is a place that breathes technology, where curiosity drives innovation and every challenge fuels professional growth on a global stage. It's a collaborative environment that pushes us to think boldly and build solutions with real global impact.",
+          "author": "Alberto Reuters",
+          "role": "Techco.lab Manager",
+          "image": "/images/056ebec4-48f0-4120-85c0-de572c487a5e.png"
+        },
+        {
           "quote": "As the founder of Techco.lab, I'm impressed by the practical mindset and flexibility of Brazilian tech professionals. Their strong qualifications and commitment to quality meet – and often exceed – global standards. This is what makes Techco.lab an exceptional partner: a team combining expertise with a can-do attitude to deliver real results.",
           "author": "Stefan Lautenschlager",
-          "role": "Head of Data & Analytics NETZSCH Group*",
-          "image": "/testimonials/stefan.jpg"
+          "role": "Head of Data & Analytics NETZSCH Group",
+          "image": "/images/b0f7b7e5-ffc6-400f-9328-d48afe194e74.png"
         }
       ]
     },
@@ -316,22 +333,86 @@
       "subtitle": "Here at Techco.lab, we value people as much as innovation — offering challenging projects, professional growth, and a complete package of benefits for your well-being.",
       "discoverTitle": "Discover the benefits you will receive by joining us.",
       "items": [
-        { "title": "CLT Contract", "icon": "file-text" },
-        { "title": "Profit Sharing (PPL)", "icon": "coins" },
-        { "title": "Service Award", "icon": "award" },
-        { "title": "Program of ideas reward", "icon": "lightbulb" },
-        { "title": "Health & Dental Insurance", "icon": "heart" },
-        { "title": "Wellness Platform", "icon": "activity" },
-        { "title": "Pharmacy Discounts", "icon": "pill" },
-        { "title": "Fuel Discounts", "icon": "fuel" },
-        { "title": "Education Subsidy", "icon": "graduation-cap" },
-        { "title": "OpenEnglish Access", "icon": "languages" },
-        { "title": "NDA & Alura", "icon": "monitor" },
-        { "title": "Hybrid Work", "icon": "home" },
-        { "title": "Referral Bonus", "icon": "users" },
-        { "title": "Food Voucher", "icon": "utensils" },
-        { "title": "Salary Equity", "icon": "scale" },
-        { "title": "Equipment", "icon": "laptop" }
+        {
+          "title": "CLT Contract",
+          "icon": "file-text",
+          "description": "Full employment benefits and stability under Brazil's official labor law framework."
+        },
+        {
+          "title": "Profit Sharing (PPL)",
+          "icon": "coins",
+          "description": "Receive a share of the company's annual profits as part of our collective success."
+        },
+        {
+          "title": "Service Award",
+          "icon": "award",
+          "description": "Celebrate your milestones with special recognition for years of contribution."
+        },
+        {
+          "title": "Program of ideas reward",
+          "icon": "lightbulb",
+          "description": "An internal program that celebrates innovation — win prizes for your best ideas."
+        },
+        {
+          "title": "Health & Dental Insurance",
+          "icon": "heart",
+          "description": "Comprehensive medical and dental coverage for your peace of mind."
+        },
+        {
+          "title": "Wellness Platform",
+          "icon": "activity",
+          "description": "Take care of your body and mind with GoGood's health and wellness resources."
+        },
+        {
+          "title": "Pharmacy Discounts",
+          "icon": "pill",
+          "description": "Get special discounts at partnered pharmacies for your everyday health and wellness needs."
+        },
+        {
+          "title": "Fuel Discounts",
+          "icon": "fuel",
+          "description": "Enjoy reduced prices when filling up at selected partner gas stations across the network."
+        },
+        {
+          "title": "Education Subsidy",
+          "icon": "graduation-cap",
+          "description": "We invest in your growth with partial funding for continued learning."
+        },
+        {
+          "title": "OpenEnglish Access",
+          "icon": "languages",
+          "description": "Free full access to the OpenEnglish platform to boost your language skills."
+        },
+        {
+          "title": "NOA & Alura",
+          "icon": "monitor",
+          "description": "Your unified hub for quick, practical skill growth — anytime, anywhere."
+        },
+        {
+          "title": "Hybrid Work",
+          "icon": "home",
+          "description": "Flexible schedule with no mandatory office days — balance life your way."
+        },
+        {
+          "title": "Referral Bonus",
+          "icon": "users",
+          "description": "Earn rewards for helping us find great new teammates."
+        },
+        {
+          "title": "Food Voucher",
+          "icon": "utensils",
+          "description": "Prepaid credit card to be used in supermarkets or restaurants."
+        },
+        {
+          "title": "Salary Equity",
+          "icon": "scale",
+          "description": "Transparent, fair, and competitive pay based on role and performance."
+        },
+        {
+          "title": "Equipment",
+          "icon": "laptop",
+          "description": "Work comfortably with provided laptops and essential peripherals."
+        }
       ]
     },
     "realDeal": {

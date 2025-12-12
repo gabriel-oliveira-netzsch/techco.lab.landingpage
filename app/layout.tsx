@@ -116,6 +116,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} ${poppins.variable} antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>

@@ -111,9 +111,20 @@
     "testimonials": {
       "title": "Colaborando para um",
       "titleHighlight": "futuro mais inteligente",
-      "quote": "A Techco.lab é onde a indústria global encontra talentos digitais ousados. Do Brasil para a Alemanha e para o mundo, construímos plataformas e soluções digitais que otimizam os processos digitais de todo o grupo. Aqui, suas ideias não ficam locais — elas ganham escala mundial. Junte-se a um time multicultural que aprende rápido, cresce rápido e apoia nossas três Unidades de Negócio. Se você quer que seu trabalho tenha impacto global, a Techco.lab é o seu lugar.",
-      "author": "Paul Netzsch",
-      "role": "Member of the Corporate Executive at NETZSCH Group"
+      "items": [
+        {
+          "quote": "Trabalhar em estreita colaboração com a Techco.lab mostrou o quanto uma equipe digital altamente qualificada pode agregar valor a uma organização global como a NETZSCH. Sua mentalidade de experimentação, propriedade e melhoria contínua acelera a forma como inovamos e entregamos soluções ao redor do mundo. Tenho orgulho de como essa equipe está moldando o futuro de nossos produtos digitais.",
+          "author": "Jens Niesner",
+          "role": "CFO e Membro do Conselho Executivo do NETZSCH Group",
+          "image": "/images/491cbd1a-599b-4e23-82aa-ad5eef0bc5ee.png"
+        },
+        {
+          "quote": "A Techco.lab é onde a indústria global encontra talentos digitais ousados. Do Brasil para a Alemanha e para o mundo, construímos plataformas e soluções digitais que otimizam os processos digitais de todo o grupo. Aqui, suas ideias não ficam locais — elas ganham escala mundial. Junte-se a um time multicultural que aprende rápido, cresce rápido e apoia nossas três Unidades de Negócio. Se você quer que seu trabalho tenha impacto global, a Techco.lab é o seu lugar.",
+          "author": "Paul Netzsch",
+          "role": "Membro do Conselho Executivo do NETZSCH Group",
+          "image": "/images/9db26785-eace-438e-a4f6-954e4200bc1b.png"
+        }
+      ]
     },
     "preFooter": {
       "title": "Um lugar onde você pode fazer a diferença",
@@ -238,10 +249,16 @@
       "title": "O que nossa equipe diz",
       "items": [
         {
+          "quote": "A Techco.lab é um lugar que respira tecnologia, onde a curiosidade impulsiona a inovação e cada desafio estimula o crescimento profissional em escala global. É um ambiente colaborativo que nos incentiva a pensar grande e criar soluções com impacto real.",
+          "author": "Alberto Reuters",
+          "role": "Gerente da Techco.lab",
+          "image": "/images/056ebec4-48f0-4120-85c0-de572c487a5e.png"
+        },
+        {
           "quote": "Como fundador da Techco.lab, fico impressionado com a mentalidade prática e a flexibilidade dos profissionais de tecnologia brasileiros. Suas qualificações e dedicação à qualidade atingem – e muitas vezes superam – padrões globais. É isso que torna a Techco.lab uma parceira excepcional: uma equipe com expertise e atitude proativa para entregar resultados reais.",
           "author": "Stefan Lautenschlager",
           "role": "Head de Data & Analytics do Grupo NETZSCH",
-          "image": "/testimonials/stefan.jpg"
+          "image": "/images/b0f7b7e5-ffc6-400f-9328-d48afe194e74.png"
         }
       ]
     },
@@ -310,22 +327,86 @@
       "subtitle": "Aqui no Techco.lab, valorizamos as pessoas tanto quanto a inovação — oferecendo projetos desafiadores, crescimento profissional e um pacote completo de benefícios para o seu bem-estar.",
       "discoverTitle": "Descubra os benefícios que você encontrará ao fazer parte do time.",
       "items": [
-        { "title": "Contrato CLT", "icon": "file-text" },
-        { "title": "PPL", "icon": "coins" },
-        { "title": "Reconhecimento", "icon": "award" },
-        { "title": "Programa de Ideias", "icon": "lightbulb" },
-        { "title": "Saúde e odontológico", "icon": "heart" },
-        { "title": "Bem-estar", "icon": "activity" },
-        { "title": "Descontos em farmácias", "icon": "pill" },
-        { "title": "Descontos em combustível", "icon": "fuel" },
-        { "title": "Subsídio educação", "icon": "graduation-cap" },
-        { "title": "OpenEnglish", "icon": "languages" },
-        { "title": "NOA & Alura", "icon": "monitor" },
-        { "title": "Trabalho híbrido", "icon": "home" },
-        { "title": "Indicação", "icon": "users" },
-        { "title": "Vale alimentação", "icon": "utensils" },
-        { "title": "Equidade salarial", "icon": "scale" },
-        { "title": "Equipamentos", "icon": "laptop" }
+        {
+          "title": "Contrato CLT",
+          "icon": "file-text",
+          "description": "Benefícios completos de emprego e estabilidade conforme a legislação trabalhista brasileira (CLT)."
+        },
+        {
+          "title": "PPL",
+          "icon": "coins",
+          "description": "Receba uma parte dos lucros anuais da empresa como parte do nosso sucesso coletivo."
+        },
+        {
+          "title": "Reconhecimento",
+          "icon": "award",
+          "description": "Celebre seus marcos com reconhecimentos especiais pelos anos de contribuição."
+        },
+        {
+          "title": "Programa de Ideias",
+          "icon": "lightbulb",
+          "description": "Um programa interno que celebra inovação — ganhe prêmios pelas suas melhores ideias."
+        },
+        {
+          "title": "Saúde e odontológico",
+          "icon": "heart",
+          "description": "Plano de saúde e odontológico completo para sua tranquilidade."
+        },
+        {
+          "title": "Bem-estar",
+          "icon": "activity",
+          "description": "Cuide do corpo e da mente com os recursos de saúde e bem-estar da GoGood."
+        },
+        {
+          "title": "Descontos em farmácias",
+          "icon": "pill",
+          "description": "Obtenha descontos especiais em farmácias parceiras para suas necessidades de saúde e bem-estar."
+        },
+        {
+          "title": "Descontos em combustível",
+          "icon": "fuel",
+          "description": "Aproveite preços reduzidos ao abastecer em postos parceiros selecionados da rede."
+        },
+        {
+          "title": "Subsídio educação",
+          "icon": "graduation-cap",
+          "description": "Investimos no seu crescimento com apoio financeiro parcial para educação contínua."
+        },
+        {
+          "title": "OpenEnglish",
+          "icon": "languages",
+          "description": "Acesso completo à plataforma OpenEnglish para impulsionar suas habilidades em idiomas."
+        },
+        {
+          "title": "NOA & Alura",
+          "icon": "monitor",
+          "description": "Seu hub unificado para desenvolvimento rápido e prático de habilidades — a qualquer hora, em qualquer lugar."
+        },
+        {
+          "title": "Trabalho híbrido",
+          "icon": "home",
+          "description": "Horário flexível sem dias obrigatórios no escritório — equilibre sua vida do seu jeito."
+        },
+        {
+          "title": "Indicação",
+          "icon": "users",
+          "description": "Ganhe recompensas ao nos ajudar a encontrar novos talentos para o time."
+        },
+        {
+          "title": "Vale alimentação",
+          "icon": "utensils",
+          "description": "Cartão pré-pago para usar em supermercados ou restaurantes."
+        },
+        {
+          "title": "Equidade salarial",
+          "icon": "scale",
+          "description": "Salário transparente, justo e competitivo de acordo com o cargo e desempenho."
+        },
+        {
+          "title": "Equipamentos",
+          "icon": "laptop",
+          "description": "Trabalhe com conforto usando os equipamentos e periféricos fornecidos pela empresa."
+        }
       ]
     },
     "realDeal": {
