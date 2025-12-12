@@ -66,7 +66,7 @@ export function Header({ currentPage }: HeaderProps) {
   const isPTBR = locale === 'pt-BR';
 
   return (
-    <header className="bg-[#4c4d58] box-border content-stretch flex items-center justify-between px-4 md:px-8 lg:px-[32px] py-[16px] relative shrink-0 w-full">
+    <header className="bg-[#4c4d58] box-border content-stretch flex items-center justify-between px-4 md:px-8 lg:px-[32px] py-[16px] relative shrink-0 w-full sticky top-0 z-50">
       <div
         aria-hidden="true"
         className="absolute border-[#d9d9d9] border-[0px_0px_1px] border-solid inset-0 pointer-events-none"

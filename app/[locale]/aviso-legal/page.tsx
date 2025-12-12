@@ -27,19 +27,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ImprintPage({ params }: Props) {
+export default async function AvisoLegalPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: 'Imprint' });
 
   return (
-    <div data-name="Imprint" className="flex flex-col min-h-screen bg-white">
+    <div data-name="AvisoLegal" className="flex flex-col min-h-screen bg-white">
       <Header currentPage="imprint" />
       <main className="flex-1">
         {/* Content */}
         <section className="bg-white py-[48px] md:py-[64px]">
-          <div className="max-w-[900px] mx-auto px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-8">
             {/* Title */}
             <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#4c4d58] mb-8">
               {t('title')}
@@ -123,3 +123,4 @@ export default async function ImprintPage({ params }: Props) {
     </div>
   );
 }
+

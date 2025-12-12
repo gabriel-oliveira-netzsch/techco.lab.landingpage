@@ -394,7 +394,45 @@
   },
   "Imprint": {
     "title": "Aviso Legal",
-    "subtitle": "Informações legais"
+    "subtitle": "Informações legais",
+    "company": {
+      "name": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany",
+      "phone": "Telefone: +49 9287 75-0",
+      "fax": "Fax: +49 9287 75208",
+      "email": "E-mail: info@netzsch.com",
+      "website": "www: https://www.netzsch.com"
+    },
+    "directors": {
+      "title": "Diretor-Geral:",
+      "names": "Moritz Netzsch, Paul Netzsch, Jens Niessner",
+      "court": "Tribunal de registro: Local court Hof",
+      "registerNumber": "Número de registro: HRA 404",
+      "taxNumber": "Número de identificação fiscal de acordo com §27a da lei tributária: DE 133914533"
+    },
+    "responsible": {
+      "title": "Responsável pelo conteúdo de acordo com § 55 Abs.",
+      "subtitle": "2 RStV:",
+      "name": "Yann Jeschke",
+      "company": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany"
+    },
+    "liability": {
+      "title": "Responsabilidade",
+      "content1": "Como provedor de serviços, somos responsáveis pelo conteúdo destes sites de acordo com as disposições gerais (cf. § 7 parágrafo 1 DDG). Não somos obrigados a monitorar conteúdo de terceiros transmitido ou armazenado (cf. §§ 8-10 DDG). Isso não afeta as obrigações de remover ou bloquear o uso de informações de acordo com as leis gerais. No entanto, tal responsabilidade só é possível a partir do momento do conhecimento de uma infração específica. Se tomarmos conhecimento de quaisquer infrações legais, o conteúdo correspondente será removido imediatamente.",
+      "content2": "As páginas deste site contêm links para sites de terceiros externos. Não temos influência sobre o conteúdo desses sites e, por essa razão, não podemos aceitar qualquer responsabilidade por eles; nem adotamos tal conteúdo como nosso. O respectivo provedor ou operador dos sites é responsável pelo conteúdo dos sites vinculados. Verificamos os sites vinculados no momento da vinculação e não identificamos nenhum conteúdo ilegal. Não podemos razoavelmente ser obrigados a monitorar permanentemente o conteúdo das páginas vinculadas sem qualquer motivo específico para fazê-lo. No entanto, se tomarmos conhecimento de quaisquer infrações legais, os links correspondentes serão removidos imediatamente."
+    },
+    "copyright": {
+      "title": "Direitos Autorais",
+      "content1": "O conteúdo e as obras nestas páginas estão sujeitos à lei alemã de direitos autorais. Gostaríamos de salientar que qualquer reprodução/cópia, edição, distribuição e qualquer tipo de uso fora dos limites da lei de direitos autorais requer o consentimento por escrito do respectivo detentor dos direitos autorais.",
+      "content2": "Os direitos autorais de terceiros são respeitados nestas páginas. No entanto, caso ocorra qualquer violação de direitos autorais, por favor nos informe. Assim que as infrações se tornarem conhecidas, todo o conteúdo em questão será excluído imediatamente."
+    },
+    "advertising": {
+      "title": "Oposição à Publicidade",
+      "content": "Finalmente, por meio deste, nos opomos ao uso dos dados de contato publicados aqui no aviso legal para o envio de publicidade não solicitada."
+    }
   },
   "Common": {
     "learnMore": "Saiba mais",

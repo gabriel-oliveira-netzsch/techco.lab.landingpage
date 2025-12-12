@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export function GPTWSection() {
   const t = useTranslations('OurCulture.gptw');
@@ -27,33 +28,15 @@ export function GPTWSection() {
             </p>
           </div>
 
-          {/* GPTW Badge Placeholder */}
+          {/* GPTW Badge */}
           <div className="flex-shrink-0">
-            <div className="w-[140px] h-[180px] md:w-[160px] md:h-[200px] bg-white rounded-[12px] shadow-lg flex items-center justify-center p-4">
-              <div className="text-center">
-                <div className="text-[#8B2332] font-bold text-[18px] leading-tight mb-1">
-                  Great
-                </div>
-                <div className="text-[#8B2332] font-bold text-[18px] leading-tight mb-1">
-                  Place
-                </div>
-                <div className="text-[#8B2332] font-bold text-[18px] leading-tight mb-1">
-                  To
-                </div>
-                <div className="text-[#8B2332] font-bold text-[18px] leading-tight mb-2">
-                  Work.
-                </div>
-                <div className="text-[10px] text-[#8B2332] font-semibold bg-[#8B2332]/10 px-2 py-1 rounded">
-                  Certificada
-                </div>
-                <div className="text-[9px] text-gray-500 mt-1">
-                  JAN 2025 - JAN 2026
-                </div>
-                <div className="text-[9px] text-gray-500">
-                  BRASIL
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/images/1a891033b140f013daed427c3793e9af5c926d73.png"
+              alt="Great Place to Work Certified - Jan 2025 - Jan 2026 - Brasil"
+              width={160}
+              height={200}
+              className="w-[120px] md:w-[140px] lg:w-[160px] h-auto"
+            />
           </div>
         </motion.div>
       </div>

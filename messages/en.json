@@ -400,7 +400,45 @@
   },
   "Imprint": {
     "title": "Legal Notice",
-    "subtitle": "Legal information"
+    "subtitle": "Legal information",
+    "company": {
+      "name": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany",
+      "phone": "Phone: +49 9287 75-0",
+      "fax": "Fax: +49 9287 75208",
+      "email": "E-mail: info@netzsch.com",
+      "website": "www: https://www.netzsch.com"
+    },
+    "directors": {
+      "title": "Managing Directors:",
+      "names": "Moritz Netzsch, Paul Netzsch, Jens Niessner",
+      "court": "Register court: Local court Hof",
+      "registerNumber": "Register number: HRA 404",
+      "taxNumber": "Tax identification number according to §27a of the tax law: DE 133914533"
+    },
+    "responsible": {
+      "title": "Responsible for content according to § 55 Abs.",
+      "subtitle": "2 RStV:",
+      "name": "Yann Jeschke",
+      "company": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany"
+    },
+    "liability": {
+      "title": "Liability",
+      "content1": "As a service provider, we are responsible for the content of these sites in accordance with general provisions (cf. § 7 paragraph 1 DDG). We are not obligated to monitor third-party content that is transmitted or stored (cf. §§ 8-10 DDG). This does not affect the obligations to remove or block the use of information in accordance with general laws. However, such liability is only possible from the time of knowledge of a specific infringement. If we become aware of any legal violations, the corresponding content will be removed immediately.",
+      "content2": "The pages of this site contain links to external third-party websites. We have no influence over the content of these sites and, for this reason, cannot accept any responsibility for them; nor do we adopt such content as our own. The respective provider or operator of the sites is responsible for the content of the linked sites. We checked the linked sites at the time of linking and did not identify any illegal content. We cannot reasonably be required to permanently monitor the content of linked pages without any specific reason to do so. However, if we become aware of any legal violations, the corresponding links will be removed immediately."
+    },
+    "copyright": {
+      "title": "Copyright",
+      "content1": "The content and works on these pages are subject to German copyright law. We would like to point out that any reproduction/copying, editing, distribution and any type of use outside the limits of copyright law requires the written consent of the respective copyright holder.",
+      "content2": "Third-party copyrights are respected on these pages. However, should any copyright infringement occur, please inform us. As soon as infringements become known, all content in question will be deleted immediately."
+    },
+    "advertising": {
+      "title": "Opposition to Advertising",
+      "content": "Finally, we hereby object to the use of the contact data published here in the legal notice for sending unsolicited advertising."
+    }
   },
   "Common": {
     "learnMore": "Learn more",
