@@ -1,0 +1,175 @@
+{
+  "SEO": {
+    "home": {
+      "title": "Techco.lab | Hub Digital de Inovação da NETZSCH",
+      "description": "A Techco.lab desenvolve soluções de IA industrial para a NETZSCH – plataformas conectadas, analytics preditivo e experiências digitais que transformam operações de manufatura em mais de 50 países.",
+      "keywords": "Techco.lab, NETZSCH, inovação digital, carreiras tecnologia Brasil, trabalho híbrido, vagas tech Sul Brasil, vagas Curitiba, vagas Pomerode, contrato CLT, participação lucros, plataforma bem-estar, plano saúde, subsídio educacional, openenglish, NOA, Alura, vale alimentação, trabalho híbrido, equidade salarial, recrutador tech, UI UX designer, engenheiro dados, desenvolvedor software, transformação digital, crescimento carreira, Grupo NETZSCH"
+    },
+    "careers": {
+      "title": "Techco.lab | Carreiras em Inovação Digital na NETZSCH",
+      "description": "Junte-se ao Techco.lab — o hub de inovação digital da NETZSCH. Estamos contratando profissionais de tecnologia em regime híbrido no Sul do Brasil. Aproveite contrato CLT, plano de saúde e odontológico, participação nos lucros, programas de bem-estar, trabalho híbrido, subsídio educacional, vale-alimentação e muito mais."
+    },
+    "openGraph": {
+      "title": "Techco.lab | Carreiras em Inovação Digital na NETZSCH",
+      "description": "O Techco.lab conecta inovação e tecnologia na NETZSCH. Oferecemos trabalho híbrido, participação nos lucros, apoio educacional e programas de bem-estar em uma cultura colaborativa.",
+      "url": "https://ntechcolab.com/pt-BR"
+    },
+    "twitter": {
+      "title": "Techco.lab | Carreiras na NETZSCH",
+      "description": "Junte-se à equipe Techco.lab — carreiras em inovação digital híbrida no Sul do Brasil com a NETZSCH."
+    },
+    "aiSummary": "A Techco.lab desenvolve soluções de IA industrial para a NETZSCH, incluindo plataformas conectadas, manutenção preditiva, interfaces inteligentes e análises em tempo real que reduzem tempo de inatividade, otimizam produção e aceleram a transformação digital para fabricantes industriais em mais de 50 países."
+  },
+  "Navigation": {
+    "home": "Início",
+    "whatWeDo": "O que fazemos",
+    "ourCulture": "Cultura",
+    "openPositions": "Vagas abertas",
+    "browsePositions": "Ver vagas abertas"
+  },
+  "Footer": {
+    "tagline": "Conectando talentos e inovação para acelerar a transformação digital global da NETZSCH",
+    "copyright": "© 2025 Techco.lab. Todos os direitos reservados.",
+    "imprint": "Aviso Legal",
+    "cookieManagement": "Gerenciar Cookies",
+    "privacyPolicy": "Política de Privacidade"
+  },
+  "Home": {
+    "hero": {
+      "titleLine1": "Nós construímos",
+      "typingWords": [
+        "produtos digitais.",
+        "tecnologias inteligentes.",
+        "o futuro digital da NETZSCH."
+      ],
+      "subtitle": "O motor de inovação da NETZSCH construindo plataformas conectadas, análises de IA e experiências digitais para indústrias globais.",
+      "cta": "Junte-se à equipe",
+      "cta2": "Veja o que construímos"
+    },
+    "techHub": {
+      "badge": "UM CATALISADOR PARA TRANSFORMAÇÃO",
+      "titleLine1": "Hub de desenvolvimento",
+      "titleLine2": "de tecnologia da",
+      "titleHighlight": "NETZSCH",
+      "description": "A Techco.lab é o motor de inovação por trás da evolução digital da NETZSCH. Atuando como um hub tecnológico global, aceleramos mudanças, criamos soluções escaláveis e conectamos tecnologia ao impacto real.",
+      "linkProjects": "Veja nossos projetos",
+      "linkCareers": "Ver vagas abertas"
+    },
+    "capabilities": {
+      "badge": "NOSSAS CAPACIDADES",
+      "subtitle": "Explore como nossas capacidades digitais transformam visão em impacto industrial escalável.",
+      "titleLine1": "Onde a inovação encontra a",
+      "titleHighlight": "realidade",
+      "featuredText": "Moldamos a espinha dorsal digital da NETZSCH através de projetos que desbloqueiam novas possibilidades para pessoas, processos e desempenho.",
+      "items": {
+        "ai": {
+          "title": "IA Industrial",
+          "description": "Construímos sistemas de IA que ajudam fábricas e operações a prever problemas, otimizar processos e reduzir tempos de inatividade."
+        },
+        "platforms": {
+          "title": "Plataformas Conectadas",
+          "description": "Desenvolvemos plataformas que conectam equipamentos, dados e equipes para visibilidade em tempo real e controle operacional."
+        },
+        "interfaces": {
+          "title": "Interfaces Digitais",
+          "description": "Criamos interfaces intuitivas que colocam insights acionáveis nas mãos de gerentes, técnicos e operadores."
+        }
+      }
+    },
+    "turningIdeas": {
+      "title": "Transformando ideias em",
+      "titleHighlight": "impacto real.",
+      "description": "Na Techco.Lab, a inovação começa com as pessoas. Nossa cultura é construída sobre curiosidade, colaboração e aprendizado contínuo — onde cada ideia pode criar mudanças tangíveis. Reunimos equipes multifuncionais que unem engenharia, design e expertise em dados para desenvolver soluções significativas para a indústria, sustentabilidade e sociedade.",
+      "cta": "Explore nossa cultura",
+      "cta2": "Ver vagas abertas"
+    },
+    "locations": {
+      "title": "Espaços que inspiram",
+      "titleHighlight": "inovação",
+      "subtitle": "Promovemos colaboração e criatividade em duas localizações principais no Brasil.",
+      "curitiba": {
+        "city": "CURITIBA",
+        "title": "Nex Coworking",
+        "description": "Um ambiente colaborativo onde profissionais moldam o futuro da tecnologia."
+      },
+      "pomerode": {
+        "city": "POMERODE",
+        "title": "NEM Headquarters",
+        "description": "Onde a excelência em engenharia encontra a transformação digital."
+      },
+      "linkCuritiba": "Ver localização",
+      "linkPomerode": "Ver localização"
+    },
+    "stats": {
+      "users": "500+",
+      "usersLabel": "usuários ativos",
+      "countries": "35+",
+      "countriesLabel": "países impactados",
+      "projects": "80+",
+      "projectsLabel": "projetos entregues"
+    },
+    "testimonials": {
+      "title": "Colaborando para um",
+      "titleHighlight": "futuro mais inteligente",
+      "quote": "A Techco.lab é onde a indústria global encontra talentos digitais ousados. Do Brasil para a Alemanha e para o mundo, construímos plataformas e soluções digitais que otimizam os processos digitais de todo o grupo. Aqui, suas ideias não ficam locais — elas ganham escala mundial. Junte-se a um time multicultural que aprende rápido, cresce rápido e apoia nossas três Unidades de Negócio. Se você quer que seu trabalho tenha impacto global, a Techco.lab é o seu lugar.",
+      "author": "Paul Netzsch",
+      "role": "Member of the Corporate Executive at NETZSCH Group"
+    },
+    "preFooter": {
+      "title": "Um lugar onde você pode fazer a diferença",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Candidate-se às vagas"
+    },
+    "whatWeDeliver": {
+      "title": "O que entregamos",
+      "subtitle": "Nossas soluções impulsionam a próxima geração de operações industriais",
+      "items": {
+        "platforms": {
+          "title": "Plataformas Conectadas",
+          "description": "Sistemas unificados que conectam máquinas, dados e pessoas em operações globais."
+        },
+        "analytics": {
+          "title": "Analytics Preditivo",
+          "description": "Insights com IA que preveem necessidades de manutenção e otimizam a produção."
+        },
+        "interfaces": {
+          "title": "Interfaces Inteligentes",
+          "description": "Experiências digitais intuitivas que simplificam operações complexas."
+        },
+        "realtime": {
+          "title": "Inteligência em Tempo Real",
+          "description": "Dashboards e alertas ao vivo que mantêm as operações no pico de eficiência."
+        }
+      }
+    }
+  },
+  "WhatWeDo": {
+    "title": "O que fazemos",
+    "subtitle": "Transformando a indústria através da inovação digital"
+  },
+  "OurCulture": {
+    "title": "Nossa Cultura",
+    "subtitle": "Um lugar onde inovação encontra colaboração"
+  },
+  "OpenPositions": {
+    "title": "Vagas Abertas",
+    "subtitle": "Encontre sua próxima oportunidade na Techco.lab",
+    "searchPlaceholder": "Digite cargo ou palavra-chave",
+    "locationPlaceholder": "Selecione a localização",
+    "clearFilters": "Limpar filtros",
+    "noPositions": "Nenhuma vaga aberta no momento",
+    "applyNow": "Apply →",
+    "viewDetails": "Ver detalhes",
+    "hybrid": "Híbrido"
+  },
+  "Imprint": {
+    "title": "Aviso Legal",
+    "subtitle": "Informações legais"
+  },
+  "Common": {
+    "learnMore": "Saiba mais",
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "backToHome": "Voltar ao início"
+  }
+}
