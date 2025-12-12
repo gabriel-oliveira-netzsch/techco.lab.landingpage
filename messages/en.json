@@ -39,10 +39,10 @@
       "titleLine1": "We build",
       "typingWords": [
         "digital products.",
-        "smart technologies.",
-        "the digital future of NETZSCH."
+        "intelligent technologies.",
+        "NETZSCH's digital future."
       ],
-      "subtitle": "The innovation engine of NETZSCH building connected platforms, AI analytics, and digital experiences for global industries.",
+      "subtitle": "NETZSCH's innovation engine building connected platforms, AI analytics, and digital experiences for global industries.",
       "cta": "Join the team",
       "cta2": "See what we build"
     },
@@ -152,15 +152,29 @@
     "subtitle": "A place where innovation meets collaboration"
   },
   "OpenPositions": {
-    "title": "Open Positions",
-    "subtitle": "Find your next opportunity at Techco.lab",
+    "title": "Why work at",
+    "titleHighlight": "Techco.Lab",
+    "subtitle": "We create technology that connects industries and cultures. By joining our team, you will contribute to global innovation projects, collaborate with teams around the world, and develop your expertise through real impact — not just theory.",
+    "cultureQuestion": "Want to know more about our benefits, culture, and how we work?",
+    "cultureLink": "Discover Our Culture",
     "searchPlaceholder": "Enter job title or keyword",
     "locationPlaceholder": "Select location",
     "clearFilters": "Clear filters",
-    "noPositions": "No open positions at the moment",
+    "noPositions": "No positions available at the moment — but great talent never goes unnoticed. Send us your profile anyway!",
     "applyNow": "Apply →",
     "viewDetails": "View details",
     "hybrid": "Hybrid"
+  },
+  "PositionDetails": {
+    "pageTitle": "Position Details | Techco.lab",
+    "pageDescription": "Check out the details of this opportunity at Techco.lab",
+    "backToPositions": "Back to positions",
+    "notFound": "Position not found",
+    "viewAllPositions": "View all positions",
+    "applyNow": "Apply Now",
+    "interested": "Interested?",
+    "interestedDescription": "Apply now and join our digital innovation team.",
+    "notAcceptingApplications": "This position is not accepting applications at the moment. Please check back later or explore other opportunities."
   },
   "Imprint": {
     "title": "Legal Notice",

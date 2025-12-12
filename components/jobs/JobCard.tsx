@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowRightIcon } from '@/components/icons';
 
@@ -10,6 +11,7 @@ interface JobCardProps {
   workType: string;
   description?: string;
   applyText: string;
+  locale: string;
   index?: number;
 }
 
@@ -20,9 +22,11 @@ export function JobCard({
   workType,
   description,
   applyText,
+  locale,
   index = 0,
 }: JobCardProps) {
-  const applyUrl = `https://jobs.smartrecruiters.com/NETZSCH/${id}`;
+  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const detailsUrl = `${prefix}/positions/${id}`;
 
   return (
     <motion.article
@@ -53,17 +57,14 @@ export function JobCard({
         )}
 
         {/* Apply Link */}
-        <a
-          href={applyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={detailsUrl}
           className="inline-flex items-center gap-2 text-[#00B894] font-medium text-[14px] hover:underline transition-all group mt-1"
         >
           {applyText}
           <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" stroke="#00B894" />
-        </a>
+        </Link>
       </div>
     </motion.article>
   );
 }
-

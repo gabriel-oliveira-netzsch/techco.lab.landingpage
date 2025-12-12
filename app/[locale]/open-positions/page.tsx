@@ -1,8 +1,10 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { Header } from '@/components/Header';
-import { GlobalFooter } from '@/components/GlobalFooter';
-import { JobsList } from '@/components/jobs';
+import Link from "next/link";
+import { Header } from "@/components/Header";
+import { GlobalFooter } from "@/components/GlobalFooter";
+import { JobsList } from "@/components/jobs";
+import { ArrowRightIcon } from "@/components/icons";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,19 +12,19 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'OpenPositions' });
+  const t = await getTranslations({ locale, namespace: "OpenPositions" });
 
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: `${t("title")} ${t("titleHighlight")} | Techco.lab`,
+    description: t("subtitle"),
     alternates: {
       canonical:
-        locale === 'en'
-          ? 'https://ntechcolab.com/open-positions'
+        locale === "en"
+          ? "https://ntechcolab.com/open-positions"
           : `https://ntechcolab.com/${locale}/open-positions`,
       languages: {
-        en: 'https://ntechcolab.com/open-positions',
-        'pt-BR': 'https://ntechcolab.com/pt-BR/open-positions',
+        en: "https://ntechcolab.com/open-positions",
+        "pt-BR": "https://ntechcolab.com/pt-BR/open-positions",
       },
     },
   };
@@ -32,39 +34,57 @@ export default async function OpenPositionsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: 'OpenPositions' });
-  const tCommon = await getTranslations({ locale, namespace: 'Common' });
+  const t = await getTranslations({ locale, namespace: "OpenPositions" });
+  const tCommon = await getTranslations({ locale, namespace: "Common" });
 
   const translations = {
-    searchPlaceholder: t('searchPlaceholder'),
-    locationPlaceholder: t('locationPlaceholder'),
-    clearFilters: t('clearFilters'),
-    noPositions: t('noPositions'),
-    applyNow: t('applyNow'),
-    loading: tCommon('loading'),
-    error: tCommon('error'),
-    hybrid: t('hybrid'),
+    searchPlaceholder: t("searchPlaceholder"),
+    locationPlaceholder: t("locationPlaceholder"),
+    clearFilters: t("clearFilters"),
+    noPositions: t("noPositions"),
+    applyNow: t("applyNow"),
+    loading: tCommon("loading"),
+    error: tCommon("error"),
+    hybrid: t("hybrid"),
   };
 
   return (
-    <div data-name="OpenPositions" className="flex flex-col min-h-screen bg-white">
+    <div
+      data-name="OpenPositions"
+      className="flex flex-col min-h-screen bg-white"
+    >
       <Header currentPage="open-positions" />
       <main className="flex-1">
         {/* Page Hero */}
         <section className="bg-[#4c4d58] relative w-full py-[48px] md:py-[64px] lg:py-[80px]">
-          <div className="max-w-[1200px] mx-auto px-6 md:px-8 text-center">
-            <h1 className="text-[32px] md:text-[42px] lg:text-[48px] font-bold leading-[1.2] text-white mb-3">
-              {t('title')}
+          <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+            <h1 className="text-[32px] md:text-[42px] lg:text-[48px] font-bold leading-[1.2] text-white mb-4">
+              {t("title")}{" "}
+              <span className="text-[#00B894]">{t("titleHighlight")}</span>
             </h1>
-            <p className="text-[15px] md:text-[17px] leading-[1.6] text-white/80 max-w-[550px] mx-auto">
-              {t('subtitle')}
+            <p className="text-[15px] md:text-[17px] leading-[1.7] text-white/80">
+              {t("subtitle")}
             </p>
+          </div>
+          <div className="max-w-[1200px] mx-auto mt-10 px-6 md:px-8">
+            <div className="bg-white rounded-[8px] py-8 px-6 md:px-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-[15px] md:text-[16px] text-[#4c4d58] text-center md:text-left">
+                {t("cultureQuestion")}
+              </p>
+              <Link
+                href={`/${locale === "en" ? "en" : locale}/our-culture`}
+                className="flex items-center gap-2 text-[#00B894] font-semibold text-[15px] hover:gap-3 transition-all whitespace-nowrap group"
+              >
+                {t("cultureLink")}
+                <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Jobs List Section */}
         <section className="bg-[#fafafa] py-[48px] md:py-[64px]">
-          <div className="max-w-[900px] mx-auto px-6 md:px-8">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-8">
             <JobsList translations={translations} locale={locale} />
           </div>
         </section>

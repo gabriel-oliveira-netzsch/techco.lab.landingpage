@@ -100,24 +100,24 @@ async function fetchJobs(
 ): Promise<JobsResponse> {
   const params = new URLSearchParams({
     limit: limit.toString(),
-    sort: 'created',
+    sort: "job_id",
   });
 
-  if (city && city !== 'all') {
-    params.append('city', city);
+  if (city && city !== "all") {
+    params.append("city", city);
   }
 
   if (pageId) {
-    params.append('pageId', pageId);
+    params.append("pageId", pageId);
   }
 
   const response = await fetch(
     `https://api.smartrecruiters.com/jobs?${params.toString()}`,
     {
-      method: 'GET',
+      method: "GET",
       headers: {
-        Accept: 'application/json',
-        'Accept-Language': 'en',
+        Accept: "application/json",
+        "Accept-Language": "en",
         Authorization: `Bearer ${accessToken}`,
       },
       next: { revalidate: 300 }, // Cache for 5 minutes
@@ -134,17 +134,20 @@ async function fetchJobs(
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const city = searchParams.get('city') || undefined;
-    const search = searchParams.get('search') || '';
-    const limit = parseInt(searchParams.get('limit') || '100', 10);
-    const pageId = searchParams.get('pageId') || undefined;
+    const city = searchParams.get("city") || undefined;
+    const search = searchParams.get("search") || "";
+    const limit = parseInt(searchParams.get("limit") || "100", 10);
+    const pageId = searchParams.get("pageId") || undefined;
 
     const accessToken = await getAccessToken();
     const jobsData = await fetchJobs(accessToken, city, limit, pageId);
 
     // Filter only PUBLIC jobs and apply search filter
     let filteredJobs = jobsData.content.filter(
-      (job) => job.postingStatus === 'PUBLIC' && job.status === 'SOURCING'
+      (job) =>
+        job.postingStatus === "PUBLIC" &&
+        ["sourcing", "interview", "offer"].includes(job.status.toLowerCase()) &&
+        job.department?.label === "techco.lab"
     );
 
     // Apply search filter if provided
@@ -159,7 +162,9 @@ export async function GET(request: NextRequest) {
     }
 
     // Get unique cities for filter options
-    const cities = [...new Set(jobsData.content.map((job) => job.location.city))].sort();
+    const cities = [
+      ...new Set(filteredJobs.map((job) => job.location.city)),
+    ].sort();
 
     return NextResponse.json({
       totalFound: filteredJobs.length,
@@ -168,9 +173,9 @@ export async function GET(request: NextRequest) {
       nextPageId: jobsData.nextPageId,
     });
   } catch (error) {
-    console.error('Error fetching jobs:', error);
+    console.error("Error fetching jobs:", error);
     return NextResponse.json(
-      { error: 'Failed to fetch jobs', jobs: [], cities: [] },
+      { error: "Failed to fetch jobs", jobs: [], cities: [] },
       { status: 500 }
     );
   }

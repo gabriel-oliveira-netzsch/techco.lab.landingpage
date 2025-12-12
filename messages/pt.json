@@ -152,15 +152,29 @@
     "subtitle": "Um lugar onde inovação encontra colaboração"
   },
   "OpenPositions": {
-    "title": "Vagas Abertas",
-    "subtitle": "Encontre sua próxima oportunidade na Techco.lab",
+    "title": "Por que trabalhar no",
+    "titleHighlight": "Techco.Lab",
+    "subtitle": "Criamos tecnologia que conecta indústrias e culturas. Ao se juntar ao nosso time, você contribuirá para projetos globais de inovação, colaborará com equipes ao redor do mundo e desenvolverá sua expertise através de impacto real — não apenas teoria.",
+    "cultureQuestion": "Quer saber mais sobre nossos benefícios, cultura e como trabalhamos?",
+    "cultureLink": "Conheça Nossa Cultura",
     "searchPlaceholder": "Digite cargo ou palavra-chave",
     "locationPlaceholder": "Selecione a localização",
     "clearFilters": "Limpar filtros",
-    "noPositions": "Nenhuma vaga aberta no momento",
+    "noPositions": "Nenhuma vaga disponível no momento — mas grandes talentos nunca passam despercebidos. Envie seu perfil mesmo assim!",
     "applyNow": "Apply →",
     "viewDetails": "Ver detalhes",
     "hybrid": "Híbrido"
+  },
+  "PositionDetails": {
+    "pageTitle": "Detalhes da Vaga | Techco.lab",
+    "pageDescription": "Confira os detalhes desta oportunidade na Techco.lab",
+    "backToPositions": "Voltar para vagas",
+    "notFound": "Vaga não encontrada",
+    "viewAllPositions": "Ver todas as vagas",
+    "applyNow": "Candidatar-se",
+    "interested": "Interessado?",
+    "interestedDescription": "Candidate-se agora e faça parte da nossa equipe de inovação digital.",
+    "notAcceptingApplications": "Esta vaga não está recebendo candidaturas no momento. Por favor, volte mais tarde ou confira outras oportunidades."
   },
   "Imprint": {
     "title": "Aviso Legal",

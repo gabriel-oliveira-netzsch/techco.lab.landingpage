@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Loader2 } from 'lucide-react';
 import { JobCard } from './JobCard';
 import { JobFilters } from './JobFilters';
+import Image from "next/image";
 
 interface Job {
   id: string;
@@ -56,8 +57,8 @@ export function JobsList({ translations, locale }: JobsListProps) {
   const [cities, setCities] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [searchValue, setSearchValue] = useState('');
-  const [locationValue, setLocationValue] = useState('all');
+  const [searchValue, setSearchValue] = useState("");
+  const [locationValue, setLocationValue] = useState("all");
 
   // Fetch jobs from API
   const fetchJobs = useCallback(async () => {
@@ -65,7 +66,7 @@ export function JobsList({ translations, locale }: JobsListProps) {
     setError(null);
 
     try {
-      const response = await fetch('/api/jobs');
+      const response = await fetch("/api/jobs");
       const data: JobsApiResponse = await response.json();
 
       if (data.error) {
@@ -98,23 +99,23 @@ export function JobsList({ translations, locale }: JobsListProps) {
 
       // Location filter
       const matchesLocation =
-        locationValue === 'all' || job.location.city === locationValue;
+        locationValue === "all" || job.location.city === locationValue;
 
       return matchesSearch && matchesLocation;
     });
   }, [jobs, searchValue, locationValue]);
 
   const handleClearFilters = () => {
-    setSearchValue('');
-    setLocationValue('all');
+    setSearchValue("");
+    setLocationValue("all");
   };
 
   // Generate work type text
   const getWorkType = (job: Job): string => {
     const city = job.location.city;
     const regionCode = job.location.regionCode;
-    const cityDisplay = `${city}${regionCode ? `, ${regionCode}` : ''}`;
-    
+    const cityDisplay = `${city}${regionCode ? `, ${regionCode}` : ""}`;
+
     if (job.location.remote) {
       return `Remote - ${cityDisplay}`;
     }
@@ -123,11 +124,17 @@ export function JobsList({ translations, locale }: JobsListProps) {
 
   // Generate description from job
   const getDescription = (job: Job): string => {
-    const isPT = locale === 'pt-BR';
-    const lookingFor = isPT ? 'Procuramos por uma pessoa que gostaria de atuar como' : 'We are looking for someone who would like to work as';
-    const team = isPT ? 'junto ao nosso time internacional' : 'in our international team';
-    const englishRequired = isPT ? 'portanto o inglês é essencial' : 'therefore English is essential';
-    
+    const isPT = locale === "pt-BR";
+    const lookingFor = isPT
+      ? "Procuramos por uma pessoa que gostaria de atuar como"
+      : "We are looking for someone who would like to work as";
+    const team = isPT
+      ? "junto ao nosso time internacional"
+      : "in our international team";
+    const englishRequired = isPT
+      ? "portanto o inglês é essencial"
+      : "therefore English is essential";
+
     return `${lookingFor} ${job.title} ${team}, ${englishRequired}.`;
   };
 
@@ -175,7 +182,16 @@ export function JobsList({ translations, locale }: JobsListProps) {
             exit={{ opacity: 0 }}
             className="text-center py-12"
           >
-            <p className="text-[#6b7280] text-[16px]">{translations.noPositions}</p>
+            <Image
+              src="/images/ce222126-01f3-4fda-92a5-75a21b46d342.png"
+              alt="No positions"
+              height={100}
+              width={400}
+              className="object-contain mx-auto"
+            />
+            <p className="text-[#6b7280] text-[18px] max-w-[600px] mx-auto">
+              {translations.noPositions}
+            </p>
           </motion.div>
         ) : (
           <motion.div
@@ -194,6 +210,7 @@ export function JobsList({ translations, locale }: JobsListProps) {
                 workType={getWorkType(job)}
                 description={getDescription(job)}
                 applyText={translations.applyNow}
+                locale={locale}
                 index={index}
               />
             ))}
