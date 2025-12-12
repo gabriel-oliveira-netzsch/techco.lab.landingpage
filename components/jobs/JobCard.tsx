@@ -1,0 +1,69 @@
+'use client';
+
+import { motion } from 'motion/react';
+import { ArrowRightIcon } from '@/components/icons';
+
+interface JobCardProps {
+  id: string;
+  title: string;
+  location: string;
+  workType: string;
+  description?: string;
+  applyText: string;
+  index?: number;
+}
+
+export function JobCard({
+  id,
+  title,
+  location,
+  workType,
+  description,
+  applyText,
+  index = 0,
+}: JobCardProps) {
+  const applyUrl = `https://jobs.smartrecruiters.com/NETZSCH/${id}`;
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
+      className="bg-white border-b border-gray-200 py-6 first:pt-0"
+    >
+      <div className="flex flex-col gap-3">
+        {/* Work Type Badge */}
+        <div className="flex items-center gap-2">
+          <div className="w-1 h-6 bg-[#00B894] rounded-full" />
+          <span className="text-[13px] text-[#6b7280]">
+            {workType}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h3 className="text-[18px] md:text-[20px] font-semibold text-[#1a1a2e] leading-tight">
+          {title}
+        </h3>
+
+        {/* Description */}
+        {description && (
+          <p className="text-[14px] text-[#6b7280] leading-relaxed line-clamp-2">
+            {description}
+          </p>
+        )}
+
+        {/* Apply Link */}
+        <a
+          href={applyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-[#00B894] font-medium text-[14px] hover:underline transition-all group mt-1"
+        >
+          {applyText}
+          <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" stroke="#00B894" />
+        </a>
+      </div>
+    </motion.article>
+  );
+}
+

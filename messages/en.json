@@ -1,0 +1,175 @@
+{
+  "SEO": {
+    "home": {
+      "title": "Techco.lab | NETZSCH Digital Innovation Hub",
+      "description": "Techco.lab builds industrial AI solutions for NETZSCH – connected platforms, predictive analytics, and digital experiences that transform manufacturing operations across 50+ countries.",
+      "keywords": "Techco.lab, NETZSCH, digital innovation, technology careers Brazil, hybrid work, South Brazil tech jobs, Curitiba jobs, Pomerode jobs, CLT contract, profit sharing, wellness platform, health insurance, education subsidy, openenglish, NOA, Alura, food voucher, hybrid workplace, salary equity, tech recruiter, UI UX designer, data engineer, software developer, digital transformation, career growth, NETZSCH Group"
+    },
+    "careers": {
+      "title": "Techco.lab | Digital Innovation Careers at NETZSCH",
+      "description": "Join Techco.lab — NETZSCH's digital innovation hub. We are hiring technology professionals in a hybrid model in Southern Brazil. Enjoy CLT contract, health and dental insurance, profit sharing, wellness programs, hybrid work, education subsidy, meal vouchers and much more."
+    },
+    "openGraph": {
+      "title": "Techco.lab | Digital Innovation Careers at NETZSCH",
+      "description": "Techco.lab connects innovation and technology at NETZSCH. We offer hybrid work, profit sharing, education support, and wellness programs in a collaborative culture.",
+      "url": "https://ntechcolab.com"
+    },
+    "twitter": {
+      "title": "Techco.lab | Careers at NETZSCH",
+      "description": "Join the Techco.lab team — hybrid digital innovation careers in Southern Brazil with NETZSCH."
+    },
+    "aiSummary": "Techco.lab builds industrial AI solutions for NETZSCH, including connected platforms, predictive maintenance, smart interfaces, and real-time analytics that reduce downtime, optimize production, and accelerate digital transformation for industrial manufacturers across 50+ countries."
+  },
+  "Navigation": {
+    "home": "Home",
+    "whatWeDo": "What we do",
+    "ourCulture": "Culture",
+    "openPositions": "Open positions",
+    "browsePositions": "View open positions"
+  },
+  "Footer": {
+    "tagline": "Connecting talent and innovation to accelerate NETZSCH's global digital transformation",
+    "copyright": "© 2025 Techco.lab. All rights reserved.",
+    "imprint": "Legal Notice",
+    "cookieManagement": "Manage Cookies",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "Home": {
+    "hero": {
+      "titleLine1": "We build",
+      "typingWords": [
+        "digital products.",
+        "smart technologies.",
+        "the digital future of NETZSCH."
+      ],
+      "subtitle": "The innovation engine of NETZSCH building connected platforms, AI analytics, and digital experiences for global industries.",
+      "cta": "Join the team",
+      "cta2": "See what we build"
+    },
+    "techHub": {
+      "badge": "A CATALYST FOR TRANSFORMATION",
+      "titleLine1": "Technology development",
+      "titleLine2": "hub of",
+      "titleHighlight": "NETZSCH",
+      "description": "Techco.lab is the innovation engine behind NETZSCH's digital evolution. Acting as a global technology hub, we accelerate change, create scalable solutions, and connect technology to real impact.",
+      "linkProjects": "See our projects",
+      "linkCareers": "View open positions"
+    },
+    "capabilities": {
+      "badge": "OUR CAPABILITIES",
+      "subtitle": "Explore how our digital capabilities transform vision into scalable industrial impact.",
+      "titleLine1": "Where innovation meets",
+      "titleHighlight": "reality",
+      "featuredText": "We shape NETZSCH's digital backbone through projects that unlock new possibilities for people, processes, and performance.",
+      "items": {
+        "ai": {
+          "title": "Industrial AI",
+          "description": "We build AI systems that help factories and operations predict problems, optimize processes, and reduce downtime."
+        },
+        "platforms": {
+          "title": "Connected Platforms",
+          "description": "We develop platforms that connect equipment, data, and teams for real-time visibility and operational control."
+        },
+        "interfaces": {
+          "title": "Digital Interfaces",
+          "description": "We create intuitive interfaces that put actionable insights in the hands of managers, technicians, and operators."
+        }
+      }
+    },
+    "turningIdeas": {
+      "title": "Turning ideas into",
+      "titleHighlight": "real impact.",
+      "description": "At Techco.Lab, innovation starts with people. Our culture is built on curiosity, collaboration, and continuous learning — where every idea can create tangible change. We bring together cross-functional teams that combine engineering, design, and data expertise to develop meaningful solutions for industry, sustainability, and society.",
+      "cta": "Explore our culture",
+      "cta2": "View open positions"
+    },
+    "locations": {
+      "title": "Spaces that inspire",
+      "titleHighlight": "innovation",
+      "subtitle": "We foster collaboration and creativity in two main locations in Brazil.",
+      "curitiba": {
+        "city": "CURITIBA",
+        "title": "Nex Coworking",
+        "description": "A collaborative environment where professionals shape the future of technology."
+      },
+      "pomerode": {
+        "city": "POMERODE",
+        "title": "NEM Headquarters",
+        "description": "Where engineering excellence meets digital transformation."
+      },
+      "linkCuritiba": "View location",
+      "linkPomerode": "View location"
+    },
+    "stats": {
+      "users": "500+",
+      "usersLabel": "active users",
+      "countries": "35+",
+      "countriesLabel": "countries impacted",
+      "projects": "80+",
+      "projectsLabel": "projects delivered"
+    },
+    "testimonials": {
+      "title": "Collaborating for a",
+      "titleHighlight": "smarter future",
+      "quote": "Techco.lab is where global industry meets bold digital talents. From Brazil to Germany and to the world, we build platforms and digital solutions that optimize the digital processes of the entire group. Here, your ideas don't stay local — they gain worldwide scale. Join a multicultural team that learns fast, grows fast, and supports our three Business Units. If you want your work to have global impact, Techco.lab is your place.",
+      "author": "Paul Netzsch",
+      "role": "Member of the Corporate Executive at NETZSCH Group"
+    },
+    "preFooter": {
+      "title": "A place where you can make a difference",
+      "subtitle": "Ready to be part of this transformation?",
+      "cta": "Apply for positions"
+    },
+    "whatWeDeliver": {
+      "title": "What we deliver",
+      "subtitle": "Our solutions power the next generation of industrial operations",
+      "items": {
+        "platforms": {
+          "title": "Connected Platforms",
+          "description": "Unified systems that connect machines, data, and people across global operations."
+        },
+        "analytics": {
+          "title": "Predictive Analytics",
+          "description": "AI-powered insights that predict maintenance needs and optimize production."
+        },
+        "interfaces": {
+          "title": "Smart Interfaces",
+          "description": "Intuitive digital experiences that make complex operations simple."
+        },
+        "realtime": {
+          "title": "Real-time Intelligence",
+          "description": "Live dashboards and alerts that keep operations running at peak efficiency."
+        }
+      }
+    }
+  },
+  "WhatWeDo": {
+    "title": "What we do",
+    "subtitle": "Transforming industry through digital innovation"
+  },
+  "OurCulture": {
+    "title": "Our Culture",
+    "subtitle": "A place where innovation meets collaboration"
+  },
+  "OpenPositions": {
+    "title": "Open Positions",
+    "subtitle": "Find your next opportunity at Techco.lab",
+    "searchPlaceholder": "Enter job title or keyword",
+    "locationPlaceholder": "Select location",
+    "clearFilters": "Clear filters",
+    "noPositions": "No open positions at the moment",
+    "applyNow": "Apply →",
+    "viewDetails": "View details",
+    "hybrid": "Hybrid"
+  },
+  "Imprint": {
+    "title": "Legal Notice",
+    "subtitle": "Legal information"
+  },
+  "Common": {
+    "learnMore": "Learn more",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "backToHome": "Back to home"
+  }
+}

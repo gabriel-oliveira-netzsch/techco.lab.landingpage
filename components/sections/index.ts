@@ -1,0 +1,9 @@
+export { HeroSection } from './HeroSection';
+export { TechHubSection } from './TechHubSection';
+export { CapabilitiesSection } from './CapabilitiesSection';
+export { TurningIdeasSection } from './TurningIdeasSection';
+export { LocationsSection } from './LocationsSection';
+export { StatsSection } from './StatsSection';
+export { TestimonialsSection } from './TestimonialsSection';
+export { PreFooterSection } from './PreFooterSection';
+export { WhatWeDeliverSection } from './WhatWeDeliverSection';
