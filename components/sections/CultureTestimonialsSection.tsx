@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useTranslations } from 'next-intl';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import Image from 'next/image';
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { useTranslations } from "next-intl";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import Image from "next/image";
 
 interface TestimonialItem {
   quote: string;
@@ -13,25 +13,63 @@ interface TestimonialItem {
   image: string;
 }
 
+// Variantes de animação para o slide de 1 card (33.3% do container)
+// Usando translateZ(0) para manter GPU e evitar jitter no final
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? "35%" : "-35%",
+    zIndex: 0,
+  }),
+  center: {
+    x: 0,
+    zIndex: 1,
+  },
+  exit: (direction: number) => ({
+    x: direction > 0 ? "-35%" : "35%",
+    zIndex: 0,
+  }),
+};
+
 export function CultureTestimonialsSection() {
-  const t = useTranslations('OurCulture.testimonials');
-  const testimonials = t.raw('items') as TestimonialItem[];
+  const t = useTranslations("OurCulture.testimonials");
+  const testimonials = t.raw("items") as TestimonialItem[];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  const [[page, direction], setPage] = useState([0, 0]);
+  const itemsVisible = 3;
+  const totalItems = testimonials.length;
 
-  const goToPrevious = useCallback(() => {
-    setCurrentIndex((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
-  }, [totalPages]);
+  // Navegação circular: avança 1 item por vez
+  const goToPrevious = () => {
+    const newIndex = currentIndex === 0 ? totalItems - 1 : currentIndex - 1;
+    setPage([page - 1, -1]);
+    setCurrentIndex(newIndex);
+  };
 
-  const goToNext = useCallback(() => {
-    setCurrentIndex((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
-  }, [totalPages]);
+  const goToNext = () => {
+    const newIndex = currentIndex === totalItems - 1 ? 0 : currentIndex + 1;
+    setPage([page + 1, 1]);
+    setCurrentIndex(newIndex);
+  };
 
-  const visibleTestimonials = testimonials.slice(
-    currentIndex * itemsPerPage,
-    (currentIndex + 1) * itemsPerPage
-  );
+  const goToIndex = (index: number) => {
+    const dir = index > currentIndex ? 1 : -1;
+    setPage([index, dir]);
+    setCurrentIndex(index);
+  };
+
+  // Retornar sempre 3 itens consecutivos de forma circular
+  const visibleTestimonials = useMemo(() => {
+    if (totalItems === 0) return [];
+
+    const items: { testimonial: TestimonialItem; originalIndex: number }[] = [];
+    for (let i = 0; i < itemsVisible; i++) {
+      const index = (currentIndex + i) % totalItems;
+      items.push({ testimonial: testimonials[index], originalIndex: index });
+    }
+    return items;
+  }, [testimonials, currentIndex, totalItems]);
+
+  const showNavigation = totalItems > itemsVisible;
 
   return (
     <section className="bg-[#f5f5f5] py-[64px] md:py-[80px]">
@@ -45,101 +83,122 @@ export function CultureTestimonialsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#4c4d58] mb-3">
-            {t('title')}{' '}
-            <span className="text-[#00B894]">{t('titleHighlight')}</span>
+            {t("title")}{" "}
+            <span className="text-[#00B894]">{t("titleHighlight")}</span>
           </h2>
           <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#6b7280]">
-            {t('subtitle')}
+            {t("subtitle")}
           </p>
         </motion.div>
 
-        {/* Testimonials Cards */}
+        {/* Carousel Container - posição relativa para os botões */}
         <div className="relative">
-          {/* Navigation */}
-          {totalPages > 1 && (
+          {/* Navigation Buttons - FORA do overflow */}
+          {showNavigation && (
             <>
               <button
                 onClick={goToPrevious}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 z-10 size-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#4c4d58] hover:text-[#00B894] transition-colors"
+                className="absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-20 size-10 md:size-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#4c4d58] hover:text-[#00B894] hover:shadow-xl transition-all"
                 aria-label="Previous"
               >
-                <ChevronLeft className="size-5" />
+                <ChevronLeft className="size-5 md:size-6" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 z-10 size-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#4c4d58] hover:text-[#00B894] transition-colors"
+                className="absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 z-20 size-10 md:size-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#4c4d58] hover:text-[#00B894] hover:shadow-xl transition-all"
                 aria-label="Next"
               >
-                <ChevronRight className="size-5" />
+                <ChevronRight className="size-5 md:size-6" />
               </button>
             </>
           )}
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          {/* Cards Container - com overflow hidden para clip do slide */}
+          <div className="overflow-hidden relative">
+            <AnimatePresence
+              initial={false}
+              custom={direction}
+              mode="popLayout"
             >
-              {visibleTestimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-[16px] p-6 flex flex-col"
-                >
-                  {/* Quote Icon */}
-                  <Quote className="size-8 text-[#00B894] mb-4" />
+              <motion.div
+                key={page}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: {
+                    type: "tween",
+                    duration: 0.4,
+                    ease: [0.25, 0.1, 0.25, 1], // cubic-bezier suave
+                  },
+                }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
+                style={{
+                  willChange: "transform",
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                  transform: "translateZ(0)", // força GPU layer
+                }}
+              >
+                {visibleTestimonials.map(({ testimonial, originalIndex }) => (
+                  <div
+                    key={originalIndex}
+                    className="bg-white rounded-[16px] p-6 flex flex-col min-h-[400px]"
+                  >
+                    {/* Quote Icon */}
+                    <Quote className="size-8 text-[#00B894] mb-4 flex-shrink-0" />
 
-                  {/* Quote Text */}
-                  <p className="text-[13px] md:text-[14px] text-[#4c4d58] leading-[1.7] mb-6 flex-1">
-                    {testimonial.quote}
-                  </p>
+                    {/* Quote Text */}
+                    <p className="text-[10px] min-h-[300px] md:text-[12px] text-[#4c4d58] leading-[1.8] mb-6 flex-1">
+                      {testimonial.quote}
+                    </p>
 
-                  {/* Author */}
-                  <div className="flex items-center gap-3 mt-auto">
-                    <div className="size-12 rounded-full bg-gray-200 overflow-hidden relative flex-shrink-0">
-                      {testimonial.image ? (
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.author}
-                          fill
-                          className="object-cover"
-                        />
-                      ) : (
-                        <div className="size-full bg-gradient-to-br from-[#00B894] to-[#4c4d58] flex items-center justify-center text-white text-[16px] font-bold">
-                          {testimonial.author.charAt(0)}
-                        </div>
-                      )}
-                    </div>
-                    <div>
-                      <p className="text-[14px] font-semibold text-[#00B894]">
-                        {testimonial.author}
-                      </p>
-                      <p className="text-[12px] text-[#6b7280]">
-                        {testimonial.role}
-                      </p>
+                    {/* Author */}
+                    <div className="flex items-center gap-3 mt-auto flex-shrink-0">
+                      <div className="size-12 rounded-full bg-gray-200 overflow-hidden relative flex-shrink-0">
+                        {testimonial.image ? (
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.author}
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="size-full bg-gradient-to-br from-[#00B894] to-[#4c4d58] flex items-center justify-center text-white text-[16px] font-bold">
+                            {testimonial.author.charAt(0)}
+                          </div>
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-[14px] font-semibold text-[#00B894]">
+                          {testimonial.author}
+                        </p>
+                        <p className="text-[12px] text-[#6b7280]">
+                          {testimonial.role}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-          {/* Dots */}
-          {totalPages > 1 && (
+          {/* Dots - abaixo do carousel */}
+          {showNavigation && (
             <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: totalPages }).map((_, index) => (
+              {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  onClick={() => goToIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-[#00B894] w-6'
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      ? "bg-[#00B894] w-6"
+                      : "bg-gray-300 hover:bg-gray-400 w-2"
                   }`}
-                  aria-label={`Go to page ${index + 1}`}
+                  aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
@@ -149,4 +208,3 @@ export function CultureTestimonialsSection() {
     </section>
   );
 }
-
