@@ -73,7 +73,7 @@ export function CultureTestimonialsSection() {
 
   return (
     <section className="bg-[#f5f5f5] py-[64px] md:py-[80px]">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-8">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ export function CultureTestimonialsSection() {
                     <Quote className="size-8 text-[#00B894] mb-4 flex-shrink-0" />
 
                     {/* Quote Text */}
-                    <p className="text-[10px] min-h-[300px] md:text-[12px] text-[#4c4d58] leading-[1.8] mb-6 flex-1">
+                    <p className="text-[14px] min-h-[320px] md:text-[14px] text-[#4c4d58] leading-[1.8] mb-6 flex-1">
                       {testimonial.quote}
                     </p>
 
