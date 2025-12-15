@@ -83,7 +83,7 @@ export function GoogleAnalytics() {
   const isDev = process.env.NODE_ENV === 'development';
   
   // Verificar se o ID está configurado
-  if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+  if (!GA_MEASUREMENT_ID) {
     if (isDev) {
       console.warn('[GA4] Measurement ID não configurado. Defina NEXT_PUBLIC_GA_MEASUREMENT_ID no .env');
     }

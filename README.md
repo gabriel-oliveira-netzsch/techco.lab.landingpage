@@ -1,5 +1,19 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Variáveis de Ambiente
+
+Configure as seguintes variáveis em um arquivo `.env.local`:
+
+```bash
+# Cookiebot - Gerenciamento de Consentimento de Cookies
+# Obtenha o CBID em: https://manage.cookiebot.com
+NEXT_PUBLIC_COOKIEBOT_CBID=seu-cbid-aqui
+
+# Google Analytics 4 (GA4)
+# Formato: G-XXXXXXXXXX
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
 ## Getting Started
 
 First, run the development server:

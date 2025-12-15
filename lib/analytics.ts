@@ -12,8 +12,8 @@
  * - Dados demográficos (configurar no GA4 console)
  */
 
-// ID de medição do GA4 - substituir pelo ID real
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+// ID de medição do GA4 - configurar via NEXT_PUBLIC_GA_MEASUREMENT_ID no .env
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 
 // Tipos para eventos do GA4
 type GTagEvent = {
