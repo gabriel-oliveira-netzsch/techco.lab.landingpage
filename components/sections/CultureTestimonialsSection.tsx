@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
@@ -13,21 +13,25 @@ interface TestimonialItem {
   image: string;
 }
 
-// Variantes de animação para o slide de 1 card (33.3% do container)
-// Usando translateZ(0) para manter GPU e evitar jitter no final
-const slideVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? "35%" : "-35%",
-    zIndex: 0,
-  }),
-  center: {
-    x: 0,
-    zIndex: 1,
-  },
-  exit: (direction: number) => ({
-    x: direction > 0 ? "-35%" : "35%",
-    zIndex: 0,
-  }),
+// Variantes de animação - offset muda conforme quantidade de itens visíveis
+const createSlideVariants = (itemsVisible: number) => {
+  // Mobile: 1 item = 100%, Desktop: 3 itens = 35%
+  const offset = itemsVisible === 1 ? "100%" : "35%";
+
+  return {
+    enter: (direction: number) => ({
+      x: direction > 0 ? offset : `-${offset.replace("%", "")}%`,
+      zIndex: 0,
+    }),
+    center: {
+      x: 0,
+      zIndex: 1,
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? `-${offset.replace("%", "")}%` : offset,
+      zIndex: 0,
+    }),
+  };
 };
 
 export function CultureTestimonialsSection() {
@@ -35,8 +39,26 @@ export function CultureTestimonialsSection() {
   const testimonials = t.raw("items") as TestimonialItem[];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [[page, direction], setPage] = useState([0, 0]);
-  const itemsVisible = 3;
+  const [isMobile, setIsMobile] = useState(false);
   const totalItems = testimonials.length;
+
+  // Detectar breakpoint mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // 1 item no mobile, 3 no desktop
+  const itemsVisible = isMobile ? 1 : 3;
+  const slideVariants = useMemo(
+    () => createSlideVariants(itemsVisible),
+    [itemsVisible]
+  );
 
   // Navegação circular: avança 1 item por vez
   const goToPrevious = () => {
@@ -57,7 +79,7 @@ export function CultureTestimonialsSection() {
     setCurrentIndex(index);
   };
 
-  // Retornar sempre 3 itens consecutivos de forma circular
+  // Retornar itens consecutivos de forma circular (1 no mobile, 3 no desktop)
   const visibleTestimonials = useMemo(() => {
     if (totalItems === 0) return [];
 
@@ -67,7 +89,7 @@ export function CultureTestimonialsSection() {
       items.push({ testimonial: testimonials[index], originalIndex: index });
     }
     return items;
-  }, [testimonials, currentIndex, totalItems]);
+  }, [testimonials, currentIndex, totalItems, itemsVisible]);
 
   const showNavigation = totalItems > itemsVisible;
 

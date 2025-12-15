@@ -88,7 +88,7 @@ export function WhatWeDoTestimonialsSection() {
                   src={currentTestimonial.image}
                   alt={currentTestimonial.author}
                   fill
-                  className="object-cover"
+                  className="object-contain w-full h-full md:object-cover"
                 />
               </div>
             </motion.div>
