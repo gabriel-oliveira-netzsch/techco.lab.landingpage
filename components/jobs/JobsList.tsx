@@ -199,7 +199,7 @@ export function JobsList({ translations, locale }: JobsListProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="divide-y divide-gray-200"
+            className="divide-y divide-gray-200 bg-white p-4 rounded-lg shadow-md border border-gray-200"
           >
             {filteredJobs.map((job, index) => (
               <JobCard

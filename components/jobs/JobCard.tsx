@@ -33,7 +33,7 @@ export function JobCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
-      className="bg-white border-b border-gray-200 py-6 first:pt-0"
+      className="bg-transparent border-b border-gray-100 py-4 first:pt-0"
     >
       <div className="flex flex-col gap-3">
         {/* Work Type Badge */}

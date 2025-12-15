@@ -108,7 +108,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
     // If we already have publication data, redirect immediately
     if (publication) {
       const applyUrl = `https://jobs.smartrecruiters.com/oneclick-ui/company/NETZSCHGroup/publication/${publication.postingId}?dcr_ci=NETZSCHGroup`;
-      window.open(applyUrl, '_blank', 'noopener,noreferrer');
+      window.open(applyUrl, "_blank", "noopener,noreferrer");
       return;
     }
 
@@ -120,8 +120,8 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
 
       if (data.publication) {
         setPublication(data.publication);
-        const applyUrl = `https://jobs.smartrecruiters.com/NETZSCH/${data.publication.postingId}`;
-        window.open(applyUrl, '_blank', 'noopener,noreferrer');
+        const applyUrl = `https://jobs.smartrecruiters.com/oneclick-ui/company/NETZSCHGroup/publication/${data.publication.postingId}?dcr_ci=NETZSCHGroup`;
+        window.open(applyUrl, "_blank", "noopener,noreferrer");
       } else {
         // No publication found - show alert
         setShowAlert(true);
@@ -215,7 +215,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
 
       {/* Page Hero */}
       <section className="bg-[#4c4d58] relative w-full py-[48px] md:py-[64px]">
-        <div className="max-w-[1000px] mx-auto px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <Link
             href={`${prefix}/open-positions`}
             className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
@@ -261,7 +261,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
 
       {/* Position Content */}
       <section className="bg-white py-[48px] md:py-[64px]">
-        <div className="max-w-[1000px] mx-auto px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <motion.div
