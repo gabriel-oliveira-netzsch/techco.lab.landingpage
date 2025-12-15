@@ -34,6 +34,17 @@
     "cookieManagement": "Gerenciar Cookies",
     "privacyPolicy": "Política de Privacidade"
   },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você está procurando não existe ou foi movida. Vamos te colocar de volta no caminho certo.",
+    "backHome": "Voltar ao Início",
+    "viewPositions": "Ver Vagas Abertas",
+    "links": {
+      "whatWeDo": "O que fazemos",
+      "ourCulture": "Nossa Cultura",
+      "openPositions": "Vagas Abertas"
+    }
+  },
   "Home": {
     "hero": {
       "titleLine1": "Nós construímos",
