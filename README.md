@@ -116,12 +116,45 @@ As traduções ficam em `messages/en.json` e `messages/pt.json`.
 
 ## 🐳 Docker
 
-```bash
-# Build da imagem
-docker build -t techcolab-landing .
+> ⚠️ **Importante:** As variáveis `NEXT_PUBLIC_*` são embutidas no código durante o build.
+> Você **deve** passá-las como `--build-arg` para que funcionem corretamente.
 
-# Executar container
+### Build da Imagem
+
+```bash
+docker build \
+  --build-arg NEXT_PUBLIC_COOKIEBOT_CBID=seu-cbid-aqui \
+  --build-arg NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX \
+  -t techcolab-landing .
+```
+
+### Executar Container
+
+```bash
 docker run -p 3000:3000 techcolab-landing
+```
+
+### Build com Docker Compose (recomendado)
+
+Crie um arquivo `docker-compose.yml`:
+
+```yaml
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_COOKIEBOT_CBID: ${NEXT_PUBLIC_COOKIEBOT_CBID}
+        NEXT_PUBLIC_GA_MEASUREMENT_ID: ${NEXT_PUBLIC_GA_MEASUREMENT_ID}
+    ports:
+      - "3000:3000"
+```
+
+Execute com:
+
+```bash
+# Com .env na raiz
+docker compose up --build
 ```
 
 ## 📄 Licença

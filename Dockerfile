@@ -49,6 +49,17 @@ COPY . .
 # Desabilitar telemetria do Next.js durante build
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# =============================================
+# Variáveis de ambiente públicas (NEXT_PUBLIC_*)
+# Estas variáveis são "inlined" durante o build
+# e devem ser passadas como --build-arg
+# =============================================
+ARG NEXT_PUBLIC_COOKIEBOT_CBID
+ARG NEXT_PUBLIC_GA_MEASUREMENT_ID
+
+ENV NEXT_PUBLIC_COOKIEBOT_CBID=$NEXT_PUBLIC_COOKIEBOT_CBID
+ENV NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID
+
 # Build da aplicação
 RUN pnpm build
 
