@@ -1,50 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Techco.lab Landing Page
 
-## Variáveis de Ambiente
+Landing page institucional do **Techco.lab**, o hub de inovação digital do grupo NETZSCH. O site apresenta a cultura, projetos, vagas abertas e informações sobre a equipe.
 
-Configure as seguintes variáveis em um arquivo `.env.local`:
+🌐 **Produção:** [https://ntechcolab.com](https://ntechcolab.com)
+
+## 🚀 Stack Tecnológica
+
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| [Next.js](https://nextjs.org) | 16 | Framework React com App Router |
+| [React](https://react.dev) | 19 | Biblioteca de UI |
+| [TypeScript](https://www.typescriptlang.org) | 5 | Tipagem estática |
+| [Tailwind CSS](https://tailwindcss.com) | 4 | Framework CSS utility-first |
+| [Radix UI](https://www.radix-ui.com) | - | Componentes acessíveis e headless |
+| [next-intl](https://next-intl.dev) | 4 | Internacionalização (i18n) |
+| [Motion](https://motion.dev) | 12 | Animações |
+
+## 📁 Estrutura do Projeto
+
+```
+├── app/
+│   ├── [locale]/           # Rotas internacionalizadas (en, pt)
+│   │   ├── open-positions/ # Página de vagas
+│   │   ├── our-culture/    # Página de cultura
+│   │   ├── what-we-do/     # Página de projetos
+│   │   └── positions/[id]/ # Detalhes de vaga
+│   ├── api/                # API Routes
+│   │   └── jobs/           # Endpoints de vagas
+│   ├── layout.tsx          # Layout raiz
+│   ├── robots.ts           # Configuração robots.txt
+│   └── sitemap.ts          # Sitemap dinâmico
+├── components/
+│   ├── sections/           # Seções das páginas
+│   ├── jobs/               # Componentes de vagas
+│   ├── ui/                 # Componentes UI base (shadcn)
+│   ├── icons/              # Ícones SVG
+│   ├── Cookiebot.tsx       # Gerenciamento de cookies
+│   └── GoogleAnalytics.tsx # Analytics
+├── lib/
+│   ├── analytics.ts        # Utilitários GA4
+│   └── utils.ts            # Funções auxiliares
+├── messages/
+│   ├── en.json             # Traduções inglês
+│   └── pt.json             # Traduções português
+└── i18n/                   # Configuração i18n
+```
+
+## ⚙️ Variáveis de Ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto:
 
 ```bash
-# Cookiebot - Gerenciamento de Consentimento de Cookies
+# ========================================
+# Cookiebot - Gerenciamento de Consentimento
+# ========================================
 # Obtenha o CBID em: https://manage.cookiebot.com
-NEXT_PUBLIC_COOKIEBOT_CBID=seu-cbid-aqui
+NEXT_PUBLIC_COOKIEBOT_CBID=
 
+# ========================================
 # Google Analytics 4 (GA4)
+# ========================================
 # Formato: G-XXXXXXXXXX
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
 ```
 
-## Getting Started
+## 🛠️ Desenvolvimento
 
-First, run the development server:
+### Pré-requisitos
+
+- Node.js 20+
+- pnpm 9+
+
+### Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Instalar dependências
+pnpm install
+
+# Executar em desenvolvimento
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts Disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descrição |
+|---------|-----------|
+| `pnpm dev` | Inicia servidor de desenvolvimento |
+| `pnpm build` | Gera build de produção |
+| `pnpm start` | Inicia servidor de produção |
+| `pnpm lint` | Executa ESLint |
 
-## Learn More
+## 🌍 Internacionalização
 
-To learn more about Next.js, take a look at the following resources:
+O site suporta dois idiomas:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🇺🇸 **Inglês** (`/en`) - padrão
+- 🇧🇷 **Português** (`/pt-br`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+As traduções ficam em `messages/en.json` e `messages/pt.json`.
 
-## Deploy on Vercel
+## 🍪 Privacidade e Analytics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cookiebot
+- Gerenciamento de consentimento GDPR/LGPD
+- Bloqueio automático de cookies até consentimento
+- Banner multilíngue
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Google Analytics 4
+- Consent Mode v2 integrado
+- Tracking condicional baseado em consentimento
+- Eventos personalizados para recrutamento
+- Suporte a UTM parameters
+
+## 🐳 Docker
+
+```bash
+# Build da imagem
+docker build -t techcolab-landing .
+
+# Executar container
+docker run -p 3000:3000 techcolab-landing
+```
+
+## 📄 Licença
+
+Projeto proprietário - NETZSCH Group © 2025
