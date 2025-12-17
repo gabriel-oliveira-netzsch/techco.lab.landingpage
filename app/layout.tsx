@@ -122,7 +122,7 @@ export default function RootLayout({
       >
         {/* Cookiebot - deve vir primeiro para bloquear scripts */}
         <Cookiebot />
-        {/* GA4 - bloqueado pelo Cookiebot até consentimento */}
+        {/* GA4 */}
         <GoogleAnalytics />
         {children}
       </body>
