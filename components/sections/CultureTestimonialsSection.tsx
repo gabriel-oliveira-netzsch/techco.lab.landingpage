@@ -184,6 +184,7 @@ export function CultureTestimonialsSection() {
                           <Image
                             src={testimonial.image}
                             alt={testimonial.author}
+                            title={`${testimonial.author} - ${testimonial.role}`}
                             fill
                             className="object-cover"
                           />

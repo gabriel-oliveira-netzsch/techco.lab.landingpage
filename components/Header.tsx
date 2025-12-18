@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { TechcoLabLogo, ArrowRightIcon } from '@/components/icons';
 import { MobileMenu } from '@/components/MobileMenu';
 import { LanguageSelector } from '@/components/LanguageSelector';
+import { trackCTAClick, hasStatisticsConsent } from "@/lib/analytics";
 
 interface HeaderProps {
   currentPage: string;
@@ -26,14 +27,10 @@ function NavLink({ href, isActive, children }: NavLinkProps) {
       <span
         className={`font-medium leading-normal relative shrink-0 text-[16px] text-nowrap whitespace-pre ${
           isActive
-            ? 'font-bold bg-clip-text bg-gradient-to-r from-[#00B894] to-[#00A07D]'
-            : 'font-normal text-white'
+            ? "font-bold bg-clip-text bg-gradient-to-r from-[#00B894] to-[#00A07D]"
+            : "font-normal text-white"
         }`}
-        style={
-          isActive
-            ? { WebkitTextFillColor: 'transparent' }
-            : undefined
-        }
+        style={isActive ? { WebkitTextFillColor: "transparent" } : undefined}
       >
         {children}
       </span>
@@ -41,11 +38,24 @@ function NavLink({ href, isActive, children }: NavLinkProps) {
   );
 }
 
-function BrowsePositionsButton({ href, label }: { href: string; label: string }) {
+function BrowsePositionsButton({
+  href,
+  label,
+}: {
+  href: string;
+  label: string;
+}) {
   return (
-    <Link href={href}>
+    <Link
+      href={href}
+      onClick={() => {
+        if (hasStatisticsConsent()) {
+          trackCTAClick(label, "header");
+        }
+      }}
+    >
       <motion.div
-        whileHover={{ backgroundColor: '#009874' }}
+        whileHover={{ backgroundColor: "#009874" }}
         transition={{ duration: 0.2 }}
         className="bg-[#00b894] box-border content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[8px] relative rounded-[8px] shrink-0 cursor-pointer"
       >

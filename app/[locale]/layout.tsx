@@ -26,10 +26,21 @@ export default async function LocaleLayout({ children, params }: Props) {
   // Get messages for the current locale
   const messages = await getMessages();
 
+  // Map locale to HTML lang attribute
+  const htmlLang = locale === "pt-BR" ? "pt-BR" : "en";
+
   return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <>
+      {/* Update HTML lang attribute for the current locale */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = "${htmlLang}";`,
+        }}
+      />
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </>
   );
 }
 

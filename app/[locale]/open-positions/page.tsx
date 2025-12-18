@@ -3,8 +3,10 @@ import type { Metadata } from 'next';
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { GlobalFooter } from "@/components/GlobalFooter";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { JobsList } from "@/components/jobs";
 import { ArrowRightIcon } from "@/components/icons";
+import { JobsPageTracker } from "@/components/analytics/JobsPageTracker";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -46,6 +48,11 @@ export default async function OpenPositionsPage({ params }: Props) {
     loading: tCommon("loading"),
     error: tCommon("error"),
     hybrid: t("hybrid"),
+    remote: t("remote"),
+    onsite: t("onsite"),
+    workTypeHybrid: t("workTypeHybrid"),
+    workTypeRemote: t("workTypeRemote"),
+    workTypeOnsite: t("workTypeOnsite"),
   };
 
   return (
@@ -53,6 +60,7 @@ export default async function OpenPositionsPage({ params }: Props) {
       data-name="OpenPositions"
       className="flex flex-col min-h-screen bg-white"
     >
+      <BreadcrumbSchema />
       <Header currentPage="open-positions" />
       <main className="flex-1">
         {/* Page Hero */}
@@ -85,6 +93,7 @@ export default async function OpenPositionsPage({ params }: Props) {
         {/* Jobs List Section */}
         <section className="bg-[#fafafa] py-[48px] md:py-[64px]">
           <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+            <JobsPageTracker />
             <JobsList translations={translations} locale={locale} />
           </div>
         </section>

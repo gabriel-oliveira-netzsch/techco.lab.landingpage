@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { ChevronDownIcon, USFlagIcon, BRFlagIcon } from '@/components/icons';
 import { locales, type Locale } from '@/i18n/config';
+import { trackLanguageChange, hasStatisticsConsent } from "@/lib/analytics";
 
 export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,26 +24,26 @@ export function LanguageSelector() {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isPTBR = currentLocale === 'pt-BR';
+  const isPTBR = currentLocale === "pt-BR";
 
   // Calculate paths for each locale
   const localePaths = useMemo(() => {
     // Build regex pattern from all locales (escape special characters)
-    const escapedLocales = locales.map(l => l.replace(/-/g, '\\-'));
-    const localePattern = escapedLocales.join('|');
+    const escapedLocales = locales.map((l) => l.replace(/-/g, "\\-"));
+    const localePattern = escapedLocales.join("|");
     const localeRegex = new RegExp(`^/(${localePattern})`);
-    
+
     // Remove the current locale prefix
-    const pathWithoutLocale = pathname.replace(localeRegex, '') || '/';
-    
+    const pathWithoutLocale = pathname.replace(localeRegex, "") || "/";
+
     // With localePrefix: 'always', all paths need the locale prefix
     return {
-      en: `/en${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`,
-      'pt-BR': `/pt-BR${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`,
+      en: `/en${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
+      "pt-BR": `/pt-BR${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
     };
   }, [pathname]);
 
@@ -80,6 +81,11 @@ export function LanguageSelector() {
         >
           <Link
             href={localePaths.en}
+            onClick={() => {
+              if (hasStatisticsConsent() && currentLocale !== "en") {
+                trackLanguageChange(currentLocale, "en");
+              }
+            }}
             className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${
               currentLocale === "en" ? "bg-gray-50" : ""
             }`}
@@ -104,6 +110,11 @@ export function LanguageSelector() {
           </Link>
           <Link
             href={localePaths["pt-BR"]}
+            onClick={() => {
+              if (hasStatisticsConsent() && currentLocale !== "pt-BR") {
+                trackLanguageChange(currentLocale, "pt-BR");
+              }
+            }}
             className={`flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 ${
               currentLocale === "pt-BR" ? "bg-gray-50" : ""
             }`}

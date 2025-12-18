@@ -2,18 +2,21 @@ import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans, Poppins } from 'next/font/google';
 import { Cookiebot } from "@/components/Cookiebot";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { PageTracking } from "@/components/analytics/PageTracking";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 const poppins = Poppins({
@@ -21,6 +24,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -30,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Techco.lab",
   },
   description:
-    "Techco.lab builds industrial AI solutions for NETZSCH – connected platforms, predictive analytics, and digital experiences that transform manufacturing operations across 50+ countries.",
+    "Techco.lab builds industrial AI solutions for NETZSCH – connected platforms, predictive analytics, and digital experiences for global industries.",
   keywords: [
     "Techco.lab",
     "NETZSCH",
@@ -53,9 +57,18 @@ export const metadata: Metadata = {
     siteName: "Techco.lab",
     locale: "en_US",
     alternateLocale: "pt_BR",
+    images: [
+      {
+        url: "https://ntechcolab.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Techco.lab - NETZSCH Digital Innovation Hub",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["https://ntechcolab.com/images/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -81,8 +94,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to optimize font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -100,6 +120,28 @@ export default function RootLayout({
               ],
               description:
                 "Techco.lab is the digital innovation hub of NETZSCH, hiring professionals in Data, Cloud, Software, UX and Product for hybrid roles in Brazil.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "careers",
+                email: "info@netzsch.com",
+                url: "https://ntechcolab.com/open-positions",
+              },
+              address: [
+                {
+                  "@type": "PostalAddress",
+                  addressLocality: "Curitiba",
+                  addressRegion: "PR",
+                  addressCountry: "BR",
+                  name: "Nex Coworking",
+                },
+                {
+                  "@type": "PostalAddress",
+                  addressLocality: "Pomerode",
+                  addressRegion: "SC",
+                  addressCountry: "BR",
+                  name: "NEM Headquarters",
+                },
+              ],
             }),
           }}
         />
@@ -124,6 +166,8 @@ export default function RootLayout({
         <Cookiebot />
         {/* GA4 */}
         <GoogleAnalytics />
+        {/* Page Tracking */}
+        <PageTracking />
         {children}
       </body>
     </html>

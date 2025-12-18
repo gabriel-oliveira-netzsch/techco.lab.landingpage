@@ -6,12 +6,17 @@ import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRightIcon } from '@/components/icons';
 import { images } from '@/lib/images';
+import {
+  trackCTAClick,
+  trackExploreWork,
+  hasStatisticsConsent,
+} from "@/lib/analytics";
 
 export function TurningIdeasSection() {
   const locale = useLocale();
-  const t = useTranslations('Home.turningIdeas');
-  
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const t = useTranslations("Home.turningIdeas");
+
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
     <section
@@ -52,7 +57,14 @@ export function TurningIdeasSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-wrap gap-[16px] mt-2"
             >
-              <Link href={`${prefix}/our-culture`}>
+              <Link
+                href={`${prefix}/our-culture`}
+                onClick={() => {
+                  if (hasStatisticsConsent()) {
+                    trackExploreWork("turning-ideas-section");
+                  }
+                }}
+              >
                 <motion.div
                   whileHover={{ backgroundColor: "#009874" }}
                   transition={{ duration: 0.2 }}
@@ -65,7 +77,14 @@ export function TurningIdeasSection() {
                 </motion.div>
               </Link>
 
-              <Link href={`${prefix}/open-positions`}>
+              <Link
+                href={`${prefix}/open-positions`}
+                onClick={() => {
+                  if (hasStatisticsConsent()) {
+                    trackCTAClick(t("cta2"), "turning-ideas-section");
+                  }
+                }}
+              >
                 <motion.div
                   whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                   transition={{ duration: 0.2 }}

@@ -11,7 +11,8 @@ interface JobCardProps {
   workType: string;
   description?: string;
   applyText: string;
-  locale: string;
+  locale?: string;
+  department?: string;
   index?: number;
 }
 
@@ -23,9 +24,10 @@ export function JobCard({
   description,
   applyText,
   locale,
+  department,
   index = 0,
 }: JobCardProps) {
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const detailsUrl = `${prefix}/positions/${id}`;
 
   return (
@@ -33,13 +35,16 @@ export function JobCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
-      className="bg-transparent border-b border-gray-100 py-4 first:pt-0"
+      className="bg-white p-4 rounded-lg shadow-md py-4 mb-4"
     >
       <div className="flex flex-col gap-3">
         {/* Work Type Badge */}
         <div className="flex items-center gap-2">
           <div className="w-1 h-6 bg-[#00B894] rounded-full" />
           <span className="text-[13px] text-[#6b7280]">{workType}</span>
+          <span className="text-[13px] px-2 bg-[#00B894] rounded-full text-[#ffffff]">
+            {department}
+          </span>
         </div>
 
         {/* Title */}

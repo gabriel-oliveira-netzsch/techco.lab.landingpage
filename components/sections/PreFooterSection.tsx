@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRightIcon } from '@/components/icons';
+import { trackCTAClick, hasStatisticsConsent } from "@/lib/analytics";
 
 export function PreFooterSection() {
   const locale = useLocale();
-  const t = useTranslations('Home.preFooter');
-  
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const t = useTranslations("Home.preFooter");
+
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
     <section className="bg-[#4c4d58] relative w-full py-[64px] md:py-[80px] lg:py-[100px]">
@@ -22,7 +23,7 @@ export function PreFooterSection() {
             transition={{ duration: 0.5 }}
             className="text-[28px] md:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-white"
           >
-            {t('title')}
+            {t("title")}
           </motion.h2>
 
           <motion.p
@@ -32,7 +33,7 @@ export function PreFooterSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-[15px] md:text-[16px] leading-[1.6] text-white"
           >
-            {t('subtitle')}
+            {t("subtitle")}
           </motion.p>
 
           <motion.div
@@ -42,14 +43,21 @@ export function PreFooterSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4"
           >
-            <Link href={`${prefix}/open-positions`}>
+            <Link
+              href={`${prefix}/open-positions`}
+              onClick={() => {
+                if (hasStatisticsConsent()) {
+                  trackCTAClick(t("cta"), "pre-footer");
+                }
+              }}
+            >
               <motion.div
-                whileHover={{ backgroundColor: '#009874' }}
+                whileHover={{ backgroundColor: "#009874" }}
                 transition={{ duration: 0.2 }}
                 className="bg-[#00B894] inline-flex gap-[8px] items-center justify-center px-[28px] py-[14px] rounded-[8px] cursor-pointer"
               >
                 <span className="font-semibold text-[16px] text-white">
-                  {t('cta')}
+                  {t("cta")}
                 </span>
                 <ArrowRightIcon />
               </motion.div>

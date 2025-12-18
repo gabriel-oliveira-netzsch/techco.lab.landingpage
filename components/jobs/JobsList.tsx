@@ -21,6 +21,7 @@ interface Job {
     country: string;
     city: string;
     remote: boolean;
+    hybrid: boolean;
     regionCode: string;
   };
   customField?: Array<{
@@ -48,6 +49,11 @@ interface JobsListProps {
     loading: string;
     error: string;
     hybrid: string;
+    remote: string;
+    onsite: string;
+    workTypeHybrid: string;
+    workTypeRemote: string;
+    workTypeOnsite: string;
   };
   locale: string;
 }
@@ -110,16 +116,20 @@ export function JobsList({ translations, locale }: JobsListProps) {
     setLocationValue("all");
   };
 
-  // Generate work type text
+  // Generate work type text based on location flags
   const getWorkType = (job: Job): string => {
     const city = job.location.city;
     const regionCode = job.location.regionCode;
     const cityDisplay = `${city}${regionCode ? `, ${regionCode}` : ""}`;
 
     if (job.location.remote) {
-      return `Remote - ${cityDisplay}`;
+      return `${translations.workTypeRemote} ${cityDisplay}`;
     }
-    return `${translations.hybrid} - Hybrid work in ${cityDisplay}.`;
+    if (job.location.hybrid) {
+      return `${translations.workTypeHybrid} ${cityDisplay}`;
+    }
+    // Default to on-site if neither remote nor hybrid
+    return `${translations.workTypeOnsite} ${cityDisplay}`;
   };
 
   // Generate description from job
@@ -199,7 +209,6 @@ export function JobsList({ translations, locale }: JobsListProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="divide-y divide-gray-200 bg-white p-4 rounded-lg shadow-md border border-gray-200"
           >
             {filteredJobs.map((job, index) => (
               <JobCard
@@ -211,6 +220,7 @@ export function JobsList({ translations, locale }: JobsListProps) {
                 description={getDescription(job)}
                 applyText={translations.applyNow}
                 locale={locale}
+                department={job.department?.label}
                 index={index}
               />
             ))}

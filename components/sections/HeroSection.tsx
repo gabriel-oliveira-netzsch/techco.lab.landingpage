@@ -5,18 +5,19 @@ import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowRightIcon } from '@/components/icons';
 import { TypewriterEffect } from '@/components/ui/TypewriterEffect';
+import { trackCTAClick, hasStatisticsConsent } from "@/lib/analytics";
 
 export function HeroSection() {
   const locale = useLocale();
-  const t = useTranslations('Home.hero');
-  
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const t = useTranslations("Home.hero");
+
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   // Get typing words from translations
   const typingWords = [
-    t('typingWords.0'),
-    t('typingWords.1'),
-    t('typingWords.2'),
+    t("typingWords.0"),
+    t("typingWords.1"),
+    t("typingWords.2"),
   ];
 
   return (
@@ -61,7 +62,14 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap gap-[16px] mt-2"
           >
-            <Link href={`${prefix}/open-positions`}>
+            <Link
+              href={`${prefix}/open-positions`}
+              onClick={() => {
+                if (hasStatisticsConsent()) {
+                  trackCTAClick(t("cta"), "hero");
+                }
+              }}
+            >
               <motion.div
                 whileHover={{ backgroundColor: "#009874" }}
                 transition={{ duration: 0.2 }}
@@ -74,7 +82,14 @@ export function HeroSection() {
               </motion.div>
             </Link>
 
-            <Link href={`${prefix}/what-we-do`}>
+            <Link
+              href={`${prefix}/what-we-do`}
+              onClick={() => {
+                if (hasStatisticsConsent()) {
+                  trackCTAClick(t("cta2"), "hero");
+                }
+              }}
+            >
               <motion.div
                 whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                 transition={{ duration: 0.2 }}

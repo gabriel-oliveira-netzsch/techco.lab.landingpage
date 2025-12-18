@@ -30,6 +30,7 @@ function LocationCard({ image, city, title, description, linkText, linkUrl, dela
         <Image
           src={image}
           alt={title}
+          title={`${city} - ${title}`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -49,7 +50,7 @@ function LocationCard({ image, city, title, description, linkText, linkUrl, dela
         <p className="text-white/80 text-[14px] md:text-[15px] leading-[1.6] mb-4 max-w-[300px]">
           {description}
         </p>
-        <a 
+        <a
           href={linkUrl}
           target="_blank"
           rel="noopener noreferrer"

@@ -27,13 +27,6 @@
     "openPositions": "Open positions",
     "browsePositions": "View open positions"
   },
-  "Footer": {
-    "tagline": "Connecting talent and innovation to accelerate NETZSCH's global digital transformation",
-    "copyright": "© 2025 Techco.lab. All rights reserved.",
-    "imprint": "Legal Notice",
-    "cookieManagement": "Manage Cookies",
-    "privacyPolicy": "Privacy Policy"
-  },
   "NotFound": {
     "title": "Page not found",
     "description": "The page you're looking for doesn't exist or has been moved. Let's get you back on track.",
@@ -499,9 +492,14 @@
     "locationPlaceholder": "Select location",
     "clearFilters": "Clear filters",
     "noPositions": "No positions available at the moment — but great talent never goes unnoticed. Send us your profile anyway!",
-    "applyNow": "Apply →",
+    "applyNow": "Apply",
     "viewDetails": "View details",
-    "hybrid": "Hybrid"
+    "hybrid": "Hybrid",
+    "remote": "Remote",
+    "onsite": "On-site",
+    "workTypeHybrid": "Hybrid work in",
+    "workTypeRemote": "Remote -",
+    "workTypeOnsite": "On-site in"
   },
   "PositionDetails": {
     "pageTitle": "Position Details | Techco.lab",
@@ -512,7 +510,10 @@
     "applyNow": "Apply Now",
     "interested": "Interested?",
     "interestedDescription": "Apply now and join our digital innovation team.",
-    "notAcceptingApplications": "This position is not accepting applications at the moment. Please check back later or explore other opportunities."
+    "notAcceptingApplications": "This position is not accepting applications at the moment. Please check back later or explore other opportunities.",
+    "hybrid": "Hybrid",
+    "remote": "Remote",
+    "onsite": "On-site"
   },
   "Imprint": {
     "title": "Legal Notice",
@@ -561,5 +562,81 @@
     "loading": "Loading...",
     "error": "Something went wrong",
     "backToHome": "Back to home"
+  },
+  "Footer": {
+    "tagline": "Connecting talent and innovation to accelerate NETZSCH's global digital transformation",
+    "copyright": "© 2025 Techco.lab. All rights reserved.",
+    "imprint": "Legal Notice",
+    "cookieManagement": "Manage Cookies",
+    "privacyPolicy": "Privacy Policy",
+    "contact": {
+      "title": "Contact",
+      "locations": "Locations",
+      "careers": "Careers",
+      "viewPositions": "View open positions"
+    }
+  },
+  "FAQ": {
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Everything you need to know about working at Techco.lab",
+    "items": [
+      {
+        "question": "What is the work model at Techco.lab?",
+        "answer": "We offer a hybrid work model with flexible schedules. You can work from home most days and visit our offices in Curitiba or Pomerode when needed for team collaboration, meetings, or events. There are no mandatory office days."
+      },
+      {
+        "question": "What benefits does Techco.lab offer?",
+        "answer": "We provide a comprehensive benefits package including CLT contract, profit sharing (PPL), health and dental insurance, wellness platform (GoGood), education subsidy, OpenEnglish access, NOA & Alura learning platforms, food voucher, referral bonus, and company equipment."
+      },
+      {
+        "question": "Where are Techco.lab offices located?",
+        "answer": "We have two main locations in Southern Brazil: Nex Coworking in Curitiba (PR), a collaborative tech environment, and NEM Headquarters in Pomerode (SC), where engineering excellence meets digital transformation."
+      },
+      {
+        "question": "What technologies does Techco.lab work with?",
+        "answer": "We work with cutting-edge technologies including cloud platforms (Azure, AWS), SAP integrations, Power BI, Salesforce, ServiceNow, React, TypeScript, Python, and various AI/ML frameworks for industrial applications."
+      },
+      {
+        "question": "How is the hiring process at Techco.lab?",
+        "answer": "Our hiring process typically includes an initial screening, technical assessment relevant to the role, interviews with the team and leadership, and a final offer. We value cultural fit, technical skills, and growth mindset throughout the process."
+      },
+      {
+        "question": "What career growth opportunities exist at Techco.lab?",
+        "answer": "We invest heavily in professional development through education subsidies, certifications, learning platforms (NOA, Alura, OpenEnglish), mentorship programs, and exposure to global projects. You'll work on impactful solutions that reach 50+ countries."
+      }
+    ]
+  },
+  "Differentiators": {
+    "badge": "Why Choose Us",
+    "title": "What Makes Us",
+    "titleHighlight": "Different",
+    "subtitle": "Discover why Techco.lab is the ideal place to build your career in technology and innovation.",
+    "items": {
+      "global": {
+        "title": "Global Impact",
+        "description": "Your work reaches 50+ countries. Build solutions that transform manufacturing operations worldwide, not just local projects."
+      },
+      "industry": {
+        "title": "Industry 4.0 Pioneer",
+        "description": "Work on real industrial AI, IoT, and digital transformation projects that shape the future of manufacturing."
+      },
+      "growth": {
+        "title": "Accelerated Growth",
+        "description": "Education subsidies, certifications, learning platforms, and exposure to cutting-edge technologies accelerate your career."
+      },
+      "team": {
+        "title": "World-Class Team",
+        "description": "Collaborate with talented professionals from Brazil, Germany, and around the world in a multicultural environment."
+      },
+      "innovation": {
+        "title": "True Innovation",
+        "description": "We don't just talk about innovation. We build industrial AI, predictive analytics, and connected platforms that solve real problems."
+      },
+      "stability": {
+        "title": "Stability + Startup Mindset",
+        "description": "Enjoy the stability of a 150+ year old German group while working with the agility and innovation of a tech startup."
+      }
+    }
   }
 }

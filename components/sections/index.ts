@@ -18,3 +18,5 @@ export { BenefitsSection } from './BenefitsSection';
 export { RealDealSection } from './RealDealSection';
 export { CultureTestimonialsSection } from './CultureTestimonialsSection';
 export { CulturePreFooterSection } from './CulturePreFooterSection';
+export { FAQSection } from "./FAQSection";
+export { DifferentiatorsSection } from "./DifferentiatorsSection";

@@ -27,13 +27,6 @@
     "openPositions": "Vagas abertas",
     "browsePositions": "Ver vagas abertas"
   },
-  "Footer": {
-    "tagline": "Conectando talentos e inovação para acelerar a transformação digital global da NETZSCH",
-    "copyright": "© 2025 Techco.lab. Todos os direitos reservados.",
-    "imprint": "Aviso Legal",
-    "cookieManagement": "Gerenciar Cookies",
-    "privacyPolicy": "Política de Privacidade"
-  },
   "NotFound": {
     "title": "Página não encontrada",
     "description": "A página que você está procurando não existe ou foi movida. Vamos te colocar de volta no caminho certo.",
@@ -493,9 +486,14 @@
     "locationPlaceholder": "Selecione a localização",
     "clearFilters": "Limpar filtros",
     "noPositions": "Nenhuma vaga disponível no momento — mas grandes talentos nunca passam despercebidos. Envie seu perfil mesmo assim!",
-    "applyNow": "Apply →",
+    "applyNow": "Candidatar-se",
     "viewDetails": "Ver detalhes",
-    "hybrid": "Híbrido"
+    "hybrid": "Híbrido",
+    "remote": "Remoto",
+    "onsite": "Presencial",
+    "workTypeHybrid": "Trabalho híbrido em",
+    "workTypeRemote": "Remoto -",
+    "workTypeOnsite": "Presencial em"
   },
   "PositionDetails": {
     "pageTitle": "Detalhes da Vaga | Techco.lab",
@@ -506,7 +504,10 @@
     "applyNow": "Candidatar-se",
     "interested": "Interessado?",
     "interestedDescription": "Candidate-se agora e faça parte da nossa equipe de inovação digital.",
-    "notAcceptingApplications": "Esta vaga não está recebendo candidaturas no momento. Por favor, volte mais tarde ou confira outras oportunidades."
+    "notAcceptingApplications": "Esta vaga não está recebendo candidaturas no momento. Por favor, volte mais tarde ou confira outras oportunidades.",
+    "hybrid": "Híbrido",
+    "remote": "Remoto",
+    "onsite": "Presencial"
   },
   "Imprint": {
     "title": "Aviso Legal",
@@ -555,5 +556,81 @@
     "loading": "Carregando...",
     "error": "Algo deu errado",
     "backToHome": "Voltar ao início"
+  },
+  "Footer": {
+    "tagline": "Conectando talentos e inovação para acelerar a transformação digital global da NETZSCH",
+    "copyright": "© 2025 Techco.lab. Todos os direitos reservados.",
+    "imprint": "Aviso Legal",
+    "cookieManagement": "Gerenciar Cookies",
+    "privacyPolicy": "Política de Privacidade",
+    "contact": {
+      "title": "Contato",
+      "locations": "Localizações",
+      "careers": "Carreiras",
+      "viewPositions": "Ver vagas abertas"
+    }
+  },
+  "FAQ": {
+    "title": "Perguntas",
+    "titleHighlight": "Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre trabalhar na Techco.lab",
+    "items": [
+      {
+        "question": "Qual é o modelo de trabalho na Techco.lab?",
+        "answer": "Oferecemos um modelo de trabalho híbrido com horários flexíveis. Você pode trabalhar de casa na maioria dos dias e visitar nossos escritórios em Curitiba ou Pomerode quando necessário para colaboração em equipe, reuniões ou eventos. Não há dias obrigatórios de escritório."
+      },
+      {
+        "question": "Quais benefícios a Techco.lab oferece?",
+        "answer": "Fornecemos um pacote completo de benefícios incluindo contrato CLT, participação nos lucros (PPL), plano de saúde e odontológico, plataforma de bem-estar (GoGood), subsídio educacional, acesso ao OpenEnglish, plataformas NOA e Alura, vale-alimentação, bônus por indicação e equipamentos."
+      },
+      {
+        "question": "Onde ficam os escritórios da Techco.lab?",
+        "answer": "Temos duas localizações principais no Sul do Brasil: Nex Coworking em Curitiba (PR), um ambiente colaborativo de tecnologia, e NEM Headquarters em Pomerode (SC), onde a excelência em engenharia encontra a transformação digital."
+      },
+      {
+        "question": "Com quais tecnologias a Techco.lab trabalha?",
+        "answer": "Trabalhamos com tecnologias de ponta incluindo plataformas cloud (Azure, AWS), integrações SAP, Power BI, Salesforce, ServiceNow, React, TypeScript, Python e diversos frameworks de IA/ML para aplicações industriais."
+      },
+      {
+        "question": "Como é o processo seletivo na Techco.lab?",
+        "answer": "Nosso processo seletivo normalmente inclui uma triagem inicial, avaliação técnica relevante para a vaga, entrevistas com a equipe e liderança, e uma oferta final. Valorizamos fit cultural, habilidades técnicas e mentalidade de crescimento em todo o processo."
+      },
+      {
+        "question": "Quais oportunidades de crescimento existem na Techco.lab?",
+        "answer": "Investimos fortemente no desenvolvimento profissional através de subsídios educacionais, certificações, plataformas de aprendizado (NOA, Alura, OpenEnglish), programas de mentoria e exposição a projetos globais. Você trabalhará em soluções impactantes que alcançam mais de 50 países."
+      }
+    ]
+  },
+  "Differentiators": {
+    "badge": "Por Que Nos Escolher",
+    "title": "O Que Nos Torna",
+    "titleHighlight": "Diferentes",
+    "subtitle": "Descubra por que a Techco.lab é o lugar ideal para construir sua carreira em tecnologia e inovação.",
+    "items": {
+      "global": {
+        "title": "Impacto Global",
+        "description": "Seu trabalho alcança mais de 50 países. Construa soluções que transformam operações de manufatura no mundo todo, não apenas projetos locais."
+      },
+      "industry": {
+        "title": "Pioneiros na Indústria 4.0",
+        "description": "Trabalhe em projetos reais de IA industrial, IoT e transformação digital que moldam o futuro da manufatura."
+      },
+      "growth": {
+        "title": "Crescimento Acelerado",
+        "description": "Subsídios educacionais, certificações, plataformas de aprendizado e exposição a tecnologias de ponta aceleram sua carreira."
+      },
+      "team": {
+        "title": "Time de Classe Mundial",
+        "description": "Colabore com profissionais talentosos do Brasil, Alemanha e do mundo todo em um ambiente multicultural."
+      },
+      "innovation": {
+        "title": "Inovação de Verdade",
+        "description": "Não apenas falamos sobre inovação. Construímos IA industrial, analytics preditivo e plataformas conectadas que resolvem problemas reais."
+      },
+      "stability": {
+        "title": "Estabilidade + Mentalidade Startup",
+        "description": "Aproveite a estabilidade de um grupo alemão com mais de 150 anos enquanto trabalha com a agilidade e inovação de uma startup de tecnologia."
+      }
+    }
   }
 }

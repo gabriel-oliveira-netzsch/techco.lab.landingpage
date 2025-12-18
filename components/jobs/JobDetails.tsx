@@ -3,7 +3,22 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
-import { Loader2, ArrowLeft, MapPin, Briefcase, Clock, AlertCircle, X } from 'lucide-react';
+import {
+  Loader2,
+  ArrowLeft,
+  MapPin,
+  Briefcase,
+  Clock,
+  AlertCircle,
+  X,
+  Computer,
+} from "lucide-react";
+import {
+  trackJobView,
+  trackJobApplicationStart,
+  trackJobApplicationComplete,
+  hasStatisticsConsent,
+} from "@/lib/analytics";
 
 interface JobAdSection {
   title: string;
@@ -26,6 +41,7 @@ interface JobData {
     region: string;
     city: string;
     remote: boolean;
+    hybrid: boolean;
     regionCode: string;
   };
   typeOfEmployment?: {
@@ -65,6 +81,9 @@ interface JobDetailsProps {
     interested: string;
     interestedDescription: string;
     notAcceptingApplications: string;
+    hybrid: string;
+    remote: string;
+    onsite: string;
   };
 }
 
@@ -76,7 +95,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
   const [error, setError] = useState<string | null>(null);
   const [showAlert, setShowAlert] = useState(false);
 
-  const prefix = locale === 'en' ? '' : `/${locale}`;
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   // Fetch job details
   useEffect(() => {
@@ -92,6 +111,10 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
           setError(data.error);
         } else {
           setJob(data.job);
+          // Track job view
+          if (hasStatisticsConsent() && data.job) {
+            trackJobView(data.job.id, data.job.title);
+          }
         }
       } catch {
         setError(translations.error);
@@ -105,10 +128,19 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
 
   // Fetch publication when user clicks apply
   const handleApplyClick = useCallback(async () => {
+    // Track application start
+    if (hasStatisticsConsent() && job) {
+      trackJobApplicationStart(job.id, job.title);
+    }
+
     // If we already have publication data, redirect immediately
     if (publication) {
       const applyUrl = `https://jobs.smartrecruiters.com/oneclick-ui/company/NETZSCHGroup/publication/${publication.postingId}?dcr_ci=NETZSCHGroup`;
       window.open(applyUrl, "_blank", "noopener,noreferrer");
+      // Track application complete
+      if (hasStatisticsConsent() && job) {
+        trackJobApplicationComplete(job.id, job.title);
+      }
       return;
     }
 
@@ -122,6 +154,10 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
         setPublication(data.publication);
         const applyUrl = `https://jobs.smartrecruiters.com/oneclick-ui/company/NETZSCHGroup/publication/${data.publication.postingId}?dcr_ci=NETZSCHGroup`;
         window.open(applyUrl, "_blank", "noopener,noreferrer");
+        // Track application complete
+        if (hasStatisticsConsent() && job) {
+          trackJobApplicationComplete(job.id, job.title);
+        }
       } else {
         // No publication found - show alert
         setShowAlert(true);
@@ -131,7 +167,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
     } finally {
       setIsLoadingPublication(false);
     }
-  }, [jobId, publication]);
+  }, [jobId, publication, job]);
 
   if (isLoading) {
     return (
@@ -159,6 +195,18 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
   }
 
   const sections = job.jobAd?.sections;
+
+  // Get work type label based on location flags
+  const getWorkTypeLabel = (): string => {
+    if (job.location.remote) {
+      return translations.remote;
+    }
+    if (job.location.hybrid) {
+      return translations.hybrid;
+    }
+    // Default to on-site if neither remote nor hybrid
+    return translations.onsite;
+  };
 
   return (
     <>
@@ -255,6 +303,10 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
                 {job.typeOfEmployment.label}
               </span>
             )}
+            <span className="bg-white/20 text-white px-3 py-1.5 rounded-full flex items-center gap-2">
+              <Computer className="size-4" />
+              {getWorkTypeLabel()}
+            </span>
           </motion.div>
         </div>
       </section>

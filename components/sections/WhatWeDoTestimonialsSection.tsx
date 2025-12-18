@@ -87,6 +87,7 @@ export function WhatWeDoTestimonialsSection() {
                 <Image
                   src={currentTestimonial.image}
                   alt={currentTestimonial.author}
+                  title={`${currentTestimonial.author} - ${currentTestimonial.role}`}
                   fill
                   className="object-contain w-full h-full md:object-cover"
                 />

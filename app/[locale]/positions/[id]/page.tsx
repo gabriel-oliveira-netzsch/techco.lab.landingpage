@@ -32,15 +32,18 @@ export default async function PositionDetailsPage({ params }: Props) {
   const tCommon = await getTranslations({ locale, namespace: 'Common' });
 
   const translations = {
-    backToPositions: t('backToPositions'),
-    loading: tCommon('loading'),
-    error: tCommon('error'),
-    notFound: t('notFound'),
-    viewAllPositions: t('viewAllPositions'),
-    applyNow: t('applyNow'),
-    interested: t('interested'),
-    interestedDescription: t('interestedDescription'),
-    notAcceptingApplications: t('notAcceptingApplications'),
+    backToPositions: t("backToPositions"),
+    loading: tCommon("loading"),
+    error: tCommon("error"),
+    notFound: t("notFound"),
+    viewAllPositions: t("viewAllPositions"),
+    applyNow: t("applyNow"),
+    interested: t("interested"),
+    interestedDescription: t("interestedDescription"),
+    notAcceptingApplications: t("notAcceptingApplications"),
+    hybrid: t("hybrid"),
+    remote: t("remote"),
+    onsite: t("onsite"),
   };
 
   return (

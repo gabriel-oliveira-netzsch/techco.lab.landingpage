@@ -5,6 +5,10 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  trackTestimonialInteraction,
+  hasStatisticsConsent,
+} from "@/lib/analytics";
 
 interface TestimonialItem {
   quote: string;
@@ -20,15 +24,28 @@ export function TestimonialsSection() {
   const testimonials = t.raw("items") as TestimonialItem[];
 
   const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    const newIndex =
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    if (hasStatisticsConsent()) {
+      trackTestimonialInteraction("previous", newIndex);
+    }
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
+    const newIndex =
+      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+    if (hasStatisticsConsent()) {
+      trackTestimonialInteraction("next", newIndex);
+    }
+  };
+
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+    if (hasStatisticsConsent()) {
+      trackTestimonialInteraction("dot", index);
+    }
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -87,6 +104,7 @@ export function TestimonialsSection() {
                     <Image
                       src={currentTestimonial.image}
                       alt={currentTestimonial.author}
+                      title={`${currentTestimonial.author} - ${currentTestimonial.role}`}
                       width={64}
                       height={64}
                       className="object-cover w-full h-full"
@@ -127,7 +145,7 @@ export function TestimonialsSection() {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => handleDotClick(index)}
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex
                       ? "bg-[#00B894] w-6"
