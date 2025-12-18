@@ -143,7 +143,12 @@ export async function GET(request: NextRequest) {
     const jobsData = await fetchJobs(accessToken, city, limit, pageId);
 
     // Filter only PUBLIC jobs and apply search filter
-    let filteredJobs = jobsData.content.filter((job) => job);
+    let filteredJobs = jobsData.content.filter(
+      (job) =>
+        job.postingStatus === "PUBLIC" &&
+        ["sourcing", "interview", "offer"].includes(job.status.toLowerCase()) &&
+        job.department?.label === "techco.lab"
+    );
 
     // Apply search filter if provided
     if (search) {
