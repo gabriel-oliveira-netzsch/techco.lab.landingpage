@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "OurCulture" });
 
   return {
-    title: `${t("hero.title")} | Techco.lab`,
+    title: `${t("hero.title")} ${t("hero.titleHighlight")} | Techco.lab`,
     description: t("hero.subtitle"),
     alternates: {
       canonical:
