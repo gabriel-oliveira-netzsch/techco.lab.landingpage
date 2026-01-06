@@ -499,7 +499,29 @@
     "onsite": "On-site",
     "workTypeHybrid": "Hybrid work in",
     "workTypeRemote": "Remote -",
-    "workTypeOnsite": "On-site in"
+    "workTypeOnsite": "On-site in",
+    "talentPool": {
+      "title": "Didn't find your ideal position yet?",
+      "subtitle": "No problem — we're always looking for the next talent! Add your profile to our database and we'll reach out when the right opportunity appears.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "cvLabel": "Upload CV",
+      "cvDropzoneText": "Click to upload or drag and drop",
+      "cvFormats": "PDF, DOC, or DOCX (max 10MB)",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "successTitle": "Profile submitted!",
+      "successMessage": "Thank you for your interest. We'll be in touch when a matching opportunity arises.",
+      "errorTitle": "Something went wrong",
+      "errorMessage": "We couldn't submit your profile. Please try again.",
+      "tryAgain": "Try again",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidFileType": "Invalid file type. Please upload PDF, DOC, or DOCX",
+      "fileTooLarge": "File is too large. Maximum size is 10MB"
+    }
   },
   "PositionDetails": {
     "pageTitle": "Position Details | Techco.lab",

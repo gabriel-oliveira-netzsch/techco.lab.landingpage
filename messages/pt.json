@@ -493,7 +493,29 @@
     "onsite": "Presencial",
     "workTypeHybrid": "Trabalho híbrido em",
     "workTypeRemote": "Remoto -",
-    "workTypeOnsite": "Presencial em"
+    "workTypeOnsite": "Presencial em",
+    "talentPool": {
+      "title": "Não encontrou sua vaga ideal?",
+      "subtitle": "Sem problemas — estamos sempre em busca do próximo talento! Adicione seu perfil ao nosso banco de dados e entraremos em contato quando a oportunidade certa aparecer.",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Digite seu nome completo",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Digite seu endereço de email",
+      "cvLabel": "Upload do CV",
+      "cvDropzoneText": "Clique para enviar ou arraste e solte",
+      "cvFormats": "PDF, DOC ou DOCX (máx 10MB)",
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "successTitle": "Perfil enviado!",
+      "successMessage": "Obrigado pelo interesse. Entraremos em contato quando surgir uma oportunidade compatível.",
+      "errorTitle": "Algo deu errado",
+      "errorMessage": "Não foi possível enviar seu perfil. Por favor, tente novamente.",
+      "tryAgain": "Tentar novamente",
+      "required": "Este campo é obrigatório",
+      "invalidEmail": "Por favor, insira um email válido",
+      "invalidFileType": "Tipo de arquivo inválido. Por favor, envie PDF, DOC ou DOCX",
+      "fileTooLarge": "Arquivo muito grande. O tamanho máximo é 10MB"
+    }
   },
   "PositionDetails": {
     "pageTitle": "Detalhes da Vaga | Techco.lab",

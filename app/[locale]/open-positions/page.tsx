@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { GlobalFooter } from "@/components/GlobalFooter";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { JobsList } from "@/components/jobs";
+import { JobsList, TalentPoolSection } from "@/components/jobs";
 import { ArrowRightIcon } from "@/components/icons";
 import { JobsPageTracker } from "@/components/analytics/JobsPageTracker";
 
@@ -55,6 +55,29 @@ export default async function OpenPositionsPage({ params }: Props) {
     workTypeOnsite: t("workTypeOnsite"),
   };
 
+  const talentPoolTranslations = {
+    title: t("talentPool.title"),
+    subtitle: t("talentPool.subtitle"),
+    nameLabel: t("talentPool.nameLabel"),
+    namePlaceholder: t("talentPool.namePlaceholder"),
+    emailLabel: t("talentPool.emailLabel"),
+    emailPlaceholder: t("talentPool.emailPlaceholder"),
+    cvLabel: t("talentPool.cvLabel"),
+    cvDropzoneText: t("talentPool.cvDropzoneText"),
+    cvFormats: t("talentPool.cvFormats"),
+    submit: t("talentPool.submit"),
+    submitting: t("talentPool.submitting"),
+    successTitle: t("talentPool.successTitle"),
+    successMessage: t("talentPool.successMessage"),
+    errorTitle: t("talentPool.errorTitle"),
+    errorMessage: t("talentPool.errorMessage"),
+    tryAgain: t("talentPool.tryAgain"),
+    required: t("talentPool.required"),
+    invalidEmail: t("talentPool.invalidEmail"),
+    invalidFileType: t("talentPool.invalidFileType"),
+    fileTooLarge: t("talentPool.fileTooLarge"),
+  };
+
   return (
     <div
       data-name="OpenPositions"
@@ -97,6 +120,9 @@ export default async function OpenPositionsPage({ params }: Props) {
             <JobsList translations={translations} locale={locale} />
           </div>
         </section>
+
+        {/* Talent Pool Form Section */}
+        <TalentPoolSection translations={talentPoolTranslations} />
       </main>
       <GlobalFooter />
     </div>
