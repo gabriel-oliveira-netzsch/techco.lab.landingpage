@@ -16,10 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('pageTitle'),
     description: t('pageDescription'),
     alternates: {
-      canonical:
-        locale === 'en'
-          ? `https://ntechcolab.com/positions/${id}`
-          : `https://ntechcolab.com/${locale}/positions/${id}`,
+      canonical: `https://ntechcolab.com/${locale}/positions/${id}`,
+      languages: {
+        en: `https://ntechcolab.com/en/positions/${id}`,
+        'pt-BR': `https://ntechcolab.com/pt-BR/positions/${id}`,
+      },
     },
   };
 }

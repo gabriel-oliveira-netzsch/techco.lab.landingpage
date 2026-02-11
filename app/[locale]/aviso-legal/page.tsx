@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical:
         locale === 'en'
-          ? 'https://ntechcolab.com/imprint'
+          ? 'https://ntechcolab.com/en/imprint'
           : `https://ntechcolab.com/${locale}/aviso-legal`,
       languages: {
-        en: 'https://ntechcolab.com/imprint',
+        en: 'https://ntechcolab.com/en/imprint',
         'pt-BR': 'https://ntechcolab.com/pt-BR/aviso-legal',
       },
     },

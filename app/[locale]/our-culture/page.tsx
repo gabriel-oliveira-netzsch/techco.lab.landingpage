@@ -25,12 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${t("hero.title")} ${t("hero.titleHighlight")} | Techco.lab`,
     description: t("hero.subtitle"),
     alternates: {
-      canonical:
-        locale === "en"
-          ? "https://ntechcolab.com/our-culture"
-          : `https://ntechcolab.com/${locale}/our-culture`,
+      canonical: `https://ntechcolab.com/${locale}/our-culture`,
       languages: {
-        en: "https://ntechcolab.com/our-culture",
+        en: "https://ntechcolab.com/en/our-culture",
         "pt-BR": "https://ntechcolab.com/pt-BR/our-culture",
       },
     },

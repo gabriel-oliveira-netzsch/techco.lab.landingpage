@@ -27,12 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("description"),
     keywords: t("keywords"),
     alternates: {
-      canonical:
-        locale === "en"
-          ? "https://ntechcolab.com"
-          : `https://ntechcolab.com/${locale}`,
+      canonical: `https://ntechcolab.com/${locale}`,
       languages: {
-        en: "https://ntechcolab.com",
+        en: "https://ntechcolab.com/en",
         "pt-BR": "https://ntechcolab.com/pt-BR",
       },
     },

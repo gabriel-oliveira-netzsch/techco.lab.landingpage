@@ -15,13 +15,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${t('title')} | Techco.lab`,
     description: t('subtitle'),
     alternates: {
-      canonical:
-        locale === 'en'
-          ? 'https://ntechcolab.com/privacy-policy'
-          : `https://ntechcolab.com/${locale}/politica-de-privacidade`,
+      canonical: `https://ntechcolab.com/${locale}/privacy-policy`,
       languages: {
-        en: 'https://ntechcolab.com/privacy-policy',
-        'pt-BR': 'https://ntechcolab.com/pt-BR/politica-de-privacidade',
+        en: 'https://ntechcolab.com/en/privacy-policy',
+        'pt-BR': 'https://ntechcolab.com/pt-BR/privacy-policy',
       },
     },
   };

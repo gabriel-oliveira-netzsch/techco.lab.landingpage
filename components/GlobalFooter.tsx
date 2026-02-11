@@ -16,7 +16,7 @@ export function GlobalFooter() {
 
   const homeLink = prefix || "/";
   const imprintPath = isPTBR ? "aviso-legal" : "imprint";
-  const privacyPath = isPTBR ? "politica-de-privacidade" : "privacy-policy";
+  const privacyPath = "privacy-policy"; // Same route for both languages
 
   // Handler to reopen the Cookiebot consent banner
   const handleCookieManagement = (e: React.MouseEvent<HTMLAnchorElement>) => {
