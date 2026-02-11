@@ -69,6 +69,7 @@ interface PublicationData {
 }
 
 interface JobDetailsProps {
+  initialJob: JobData;
   jobId: string;
   locale: string;
   translations: {
@@ -87,44 +88,20 @@ interface JobDetailsProps {
   };
 }
 
-export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
-  const [job, setJob] = useState<JobData | null>(null);
+export function JobDetails({ initialJob, jobId, locale, translations }: JobDetailsProps) {
+  const [job] = useState<JobData>(initialJob);
   const [publication, setPublication] = useState<PublicationData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
   const [isLoadingPublication, setIsLoadingPublication] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [showAlert, setShowAlert] = useState(false);
 
   const prefix = locale === "en" ? "" : `/${locale}`;
 
-  // Fetch job details
+  // Track job view on mount
   useEffect(() => {
-    const fetchJob = async () => {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const response = await fetch(`/api/jobs/${jobId}`);
-        const data = await response.json();
-
-        if (data.error) {
-          setError(data.error);
-        } else {
-          setJob(data.job);
-          // Track job view
-          if (hasStatisticsConsent() && data.job) {
-            trackJobView(data.job.id, data.job.title);
-          }
-        }
-      } catch {
-        setError(translations.error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchJob();
-  }, [jobId, translations.error]);
+    if (hasStatisticsConsent() && job) {
+      trackJobView(job.id, job.title);
+    }
+  }, [job]);
 
   // Fetch publication when user clicks apply
   const handleApplyClick = useCallback(async () => {
@@ -168,31 +145,6 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
       setIsLoadingPublication(false);
     }
   }, [jobId, publication, job]);
-
-  if (isLoading) {
-    return (
-      <div className="flex flex-col items-center justify-center py-24">
-        <Loader2 className="size-10 text-[#00B894] animate-spin mb-4" />
-        <p className="text-[#6b7280] text-[15px]">{translations.loading}</p>
-      </div>
-    );
-  }
-
-  if (error || !job) {
-    return (
-      <div className="flex flex-col items-center justify-center py-24">
-        <h1 className="text-[28px] font-bold text-[#4c4d58] mb-4">
-          {translations.notFound}
-        </h1>
-        <Link
-          href={`${prefix}/open-positions`}
-          className="text-[#00B894] hover:underline font-medium"
-        >
-          {translations.viewAllPositions}
-        </Link>
-      </div>
-    );
-  }
 
   const sections = job.jobAd?.sections;
 
