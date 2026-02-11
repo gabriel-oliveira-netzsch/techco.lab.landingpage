@@ -521,6 +521,12 @@
       "invalidEmail": "Please enter a valid email address",
       "invalidFileType": "Invalid file type. Please upload PDF, DOC, or DOCX",
       "fileTooLarge": "File is too large. Maximum size is 10MB"
+    },
+    "talentPoolCTA": {
+      "title": "Didn't find your ideal position yet?",
+      "subtitle": "No problem — we're always looking for the next talent! Add your profile to our database and we'll reach out when the right opportunity appears.",
+      "buttonText": "Join our Talent Pool",
+      "modalTitle": "Join our Talent Pool"
     }
   },
   "PositionDetails": {
@@ -536,6 +542,132 @@
     "hybrid": "Hybrid",
     "remote": "Remote",
     "onsite": "On-site"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "How we protect your data",
+    "lastUpdated": "Last updated: January 2024",
+    "intro": "Thank you for visiting the TechCo Lab website. Protecting your personal data is important to NETZSCH. This Privacy Policy explains how we collect and process personal data in connection with the use of this website.",
+    "controller": {
+      "title": "I. CONTROLLER",
+      "description": "The responsible entity (controller) for data processing on this website is:",
+      "company": {
+        "name": "Erich NETZSCH B.V. & Co. Holding KG",
+        "street": "Gebrüder-Netzsch-Strasse 19",
+        "city": "95100 Selb, Germany",
+        "phone": "Phone: +49 9287 75-0",
+        "fax": "Fax: +49 9287 75-704",
+        "email": "Email: info@netzsch.com",
+        "website": "Website: netzsch.com"
+      },
+      "contact": {
+        "description": "For matters specifically related to this website, including the exercise of data subject rights, please contact:",
+        "title": "TechCo Lab Privacy Contact",
+        "email": "Email: techcolab@netzsch.com"
+      }
+    },
+    "dataProcessing": {
+      "title": "II. DATA PROCESSED WHEN VISITING THE WEBSITE",
+      "description": "When you access the TechCo Lab website for informational purposes only, your browser automatically transmits certain technical data. We process:",
+      "items": [
+        "IP address",
+        "Date and time of access",
+        "Requesting provider",
+        "Browser type and version",
+        "Operating system",
+        "Referrer URL"
+      ],
+      "purpose": "Purpose: to enable the website to function, maintain security, and improve performance.",
+      "legalBasis": "Legal basis: Art. 6 (1) (f) GDPR – legitimate interest in ensuring a secure and functional website.",
+      "note": "This technical data is evaluated only in aggregate form. We do not use it to personally identify you."
+    },
+    "cookies": {
+      "title": "III. COOKIES AND CONSENT MANAGEMENT",
+      "description": "We use cookies. Cookies are small text files stored on your device that help provide essential website functionalities and remember your preferences.",
+      "usercentrics": "We use Usercentrics (Usercentrics A/S, Denmark) to obtain and document your consent regarding the use of non-essential cookies.",
+      "purpose": "Purpose: manage consent preferences and ensure compliance with data protection legislation.",
+      "revoke": "You may refuse or revoke your consent at any time via the \"Cookie Settings\" link displayed on the website. Please note that disabling cookies may limit certain website functionalities."
+    },
+    "analytics": {
+      "title": "IV. GOOGLE ANALYTICS 4 (GA4)",
+      "description": "We use Google Analytics 4 to analyze how visitors interact with the website. With your consent, Google Analytics processes information such as page views, session statistics, device and browser data, and approximate location.",
+      "purpose": "Purpose: statistical analysis and continuous improvement of the TechCo Lab website.",
+      "legalBasis": "Legal basis: Art. 6 (1) (a) GDPR – consent.",
+      "activation": "Google Analytics is activated only after consent is provided via Usercentrics.",
+      "retention": "Data retention: Google Analytics data is configured to be retained for 2 months.",
+      "signals": "Google Signals: DISABLED – we do not use Google Signals or personalized advertising features in GA4."
+    },
+    "maps": {
+      "title": "V. GOOGLE MAPS",
+      "description": "The website offers embedded maps via the Google Maps API.",
+      "purpose": "Purpose: display geographic locations and facilitate navigation for users.",
+      "loading": "Embedded maps are loaded only after consent confirmation via Usercentrics.",
+      "legalBasis": "Legal basis: Art. 6 (1) (a) GDPR – consent."
+    },
+    "contact": {
+      "title": "VI. CONTACT FORM AND INQUIRIES",
+      "description": "On the website, you can contact TechCo Lab through the contact page. If you submit an inquiry, we will process the personal data you actively provide:",
+      "categories": "Data categories:",
+      "items": [
+        "Name",
+        "Surname",
+        "Email address",
+        "City",
+        "Phone number",
+        "Message text",
+        "Resume and other information contained in uploaded files"
+      ],
+      "voluntary": "Submitting a resume is voluntary. If you choose to submit it, it will be used exclusively to evaluate your profile in relation to your inquiry.",
+      "purpose": "Purpose: respond to user inquiries and address the issues presented.",
+      "legalBasis": "Legal basis: Art. 6 (1) (b) GDPR – processing necessary for contract execution or pre-contractual measures; or Art. 6 (1) (f) GDPR – legitimate interest in effective communication."
+    },
+    "recruitment": {
+      "title": "VII. CANDIDATE MANAGEMENT VIA SMARTRECRUITERS",
+      "description": "This website displays job opportunities obtained via the SmartRecruiters API. Vacancies are made available for informational purposes only.",
+      "redirect": "If you decide to apply for a position, you will be redirected to the SmartRecruiters platform. All candidate data processing occurs in accordance with the specific privacy notices available on that platform."
+    },
+    "recipients": {
+      "title": "VIII. RECIPIENTS OF PERSONAL DATA",
+      "description": "We may share personal data with service providers who support the operation of the website, specifically:",
+      "items": [
+        "Hosting provider (virtual machine infrastructure in Brazil)",
+        "Cloudflare (CDN and security services)",
+        "Usercentrics (consent management)",
+        "Google (analytics and maps)"
+      ],
+      "note": "These providers act as processors or independent controllers, depending on the service. We do not sell personal data to third parties."
+    },
+    "transfers": {
+      "title": "IX. INTERNATIONAL DATA TRANSFERS",
+      "description": "Some of our service providers process technical data in countries outside the European Union or the European Economic Area, including the United States.",
+      "safeguards": "When required by applicable law, such transfers are protected by appropriate mechanisms, such as the European Union's Standard Contractual Clauses."
+    },
+    "security": {
+      "title": "X. DATA SECURITY",
+      "description": "We use HTTPS/SSL encryption and appropriate technical and organizational measures to protect the website and any submitted personal data against loss, misuse, or unauthorized access."
+    },
+    "rights": {
+      "title": "XI. YOUR RIGHTS",
+      "description": "Depending on your location and applicable law (including GDPR), you have the right to:",
+      "items": [
+        "Confirmation and access to your personal data (Art. 15 GDPR)",
+        "Rectification of inaccurate or incomplete data (Art. 16)",
+        "Deletion of data (Art. 17)",
+        "Restriction of processing (Art. 18)",
+        "Data portability, when processing is based on consent or contract (Art. 20)",
+        "Objection to processing based on legitimate interest (Art. 21)",
+        "Withdrawal of consent at any time (Art. 7(3))"
+      ],
+      "exercise": "To exercise any of these rights, please contact: techcolab@netzsch.com",
+      "complaint": "You also have the right to lodge a complaint with a competent data protection supervisory authority."
+    },
+    "contactSection": {
+      "title": "CONTACT",
+      "description": "For any questions related to this Privacy Policy or your personal data, please contact directly:",
+      "title2": "TechCo Lab Privacy Contact",
+      "email": "Email: techcolab@netzsch.com",
+      "address": "Address: Vila Itoupava, Blumenau, SC, and TechCo Lab Germany"
+    }
   },
   "Imprint": {
     "title": "Legal Notice",

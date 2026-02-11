@@ -16,6 +16,7 @@ export function GlobalFooter() {
 
   const homeLink = prefix || "/";
   const imprintPath = isPTBR ? "aviso-legal" : "imprint";
+  const privacyPath = isPTBR ? "politica-de-privacidade" : "privacy-policy";
 
   // Handler to reopen the Cookiebot consent banner
   const handleCookieManagement = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -152,13 +153,12 @@ export function GlobalFooter() {
               >
                 {t("cookieManagement")}
               </a>
-              <ExternalLink
-                href="https://karriere.netzsch.com/en/data-protection/#:~:text=We%20collect%2C%20process%20and%20use,country%2Dspecific%20data%20protection%20regulations."
-                linkText={t("privacyPolicy")}
+              <Link
+                href={`${prefix}/${privacyPath}`}
                 className="hover:opacity-80 transition-opacity"
               >
                 {t("privacyPolicy")}
-              </ExternalLink>
+              </Link>
             </div>
           </div>
         </div>

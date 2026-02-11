@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/our-culture',
     '/open-positions',
     '/imprint',
+    '/privacy-policy',
   ];
 
   const locales = ['en', 'pt-BR'];

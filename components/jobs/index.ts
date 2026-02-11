@@ -4,4 +4,5 @@ export { JobsList } from './JobsList';
 export { JobDetails } from './JobDetails';
 export { TalentPoolForm } from './TalentPoolForm';
 export { TalentPoolSection } from './TalentPoolSection';
+export { TalentPoolCTA } from './TalentPoolCTA';
 

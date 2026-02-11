@@ -390,7 +390,7 @@ export function JobDetails({ jobId, locale, translations }: JobDetailsProps) {
               transition={{ duration: 0.4, delay: 0.3 }}
               className="lg:col-span-1"
             >
-              <div className="bg-[#f9fafb] rounded-[16px] p-6 sticky top-8">
+              <div className="bg-[#f9fafb] rounded-[16px] p-6 sticky top-24 z-10">
                 <h3 className="text-[18px] font-bold text-[#4c4d58] mb-3">
                   {translations.interested}
                 </h3>
