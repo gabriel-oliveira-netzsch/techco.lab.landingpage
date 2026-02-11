@@ -3,7 +3,9 @@
     "home": {
       "title": "Techco.lab | Hub Digital de Inovação da NETZSCH",
       "description": "A Techco.lab desenvolve soluções de IA industrial para a NETZSCH – plataformas conectadas, analytics preditivo e experiências digitais que transformam operações de manufatura em mais de 50 países.",
-      "keywords": "Techco.lab, NETZSCH, inovação digital, carreiras tecnologia Brasil, trabalho híbrido, vagas tech Sul Brasil, vagas Curitiba, vagas Pomerode, contrato CLT, participação lucros, plataforma bem-estar, plano saúde, subsídio educacional, openenglish, NOA, Alura, vale alimentação, trabalho híbrido, equidade salarial, recrutador tech, UI UX designer, engenheiro dados, desenvolvedor software, transformação digital, crescimento carreira, Grupo NETZSCH"
+      "keywords": "Techco.lab, NETZSCH, inovação digital, carreiras tecnologia Brasil, trabalho híbrido, vagas tech Sul Brasil, vagas Curitiba, vagas Pomerode, contrato CLT, participação lucros, plataforma bem-estar, plano saúde, subsídio educacional, openenglish, NOA, Alura, vale alimentação, trabalho híbrido, equidade salarial, recrutador tech, UI UX designer, engenheiro dados, desenvolvedor software, transformação digital, crescimento carreira, Grupo NETZSCH",
+      "serviceName": "Soluções de Inovação Digital Industrial",
+      "serviceDescription": "Desenvolvemos plataformas conectadas, analytics preditivo com IA, interfaces digitais inteligentes e inteligência em tempo real para transformar operações de manufatura em mais de 50 países."
     },
     "careers": {
       "title": "Techco.lab | Carreiras em Inovação Digital na NETZSCH",
@@ -159,6 +161,10 @@
     }
   },
   "WhatWeDo": {
+    "pageTitle": "O Que Fazemos | Techco.lab",
+    "pageDescription": "Estratégia digital, desenvolvimento de software, soluções de dados e IA, e design de experiência — descobra como a Techco.lab transforma a NETZSCH através de tecnologia e inovação aplicada.",
+    "serviceName": "Serviços de Transformação Digital e Inovação Tecnológica",
+    "serviceDescription": "Oferecemos estratégia digital e consultoria, desenvolvimento de software cloud-ready, soluções de dados e IA com machine learning, e design de experiência (UX/UI) para transformar operações industriais globais.",
     "title": "O que fazemos de",
     "titleHighlight": "melhor",
     "subtitle": "Focamos em iniciativas estratégicas e técnicas que moldam a espinha dorsal digital da NETZSCH e desbloqueiam novas oportunidades para equipes ao redor do mundo.",
@@ -274,6 +280,10 @@
     }
   },
   "OurCulture": {
+    "pageTitle": "Nossa Cultura | Techco.lab",
+    "pageDescription": "Conheça a cultura da Techco.lab: valores de protagonismo e colaboração, certificação Great Place to Work®, benefícios completos (CLT, PPL, plano de saúde, educação, trabalho híbrido) e um ambiente onde inovação acontece.",
+    "serviceName": "Cultura Organizacional e Benefícios",
+    "serviceDescription": "Uma cultura certificada Great Place to Work® com benefícios completos — CLT, participação nos lucros, plano de saúde, subsídio educacional, trabalho híbrido e programas de bem-estar.",
     "hero": {
       "title": "Em que",
       "titleHighlight": "acreditamos",
@@ -477,6 +487,10 @@
     }
   },
   "OpenPositions": {
+    "pageTitle": "Vagas Abertas | Techco.lab",
+    "pageDescription": "Explore vagas abertas na Techco.lab e junte-se ao nosso time de inovação digital. Trabalho híbrido no Sul do Brasil, projetos globais, benefícios completos e oportunidades de crescimento em tecnologia.",
+    "serviceName": "Oportunidades de Carreira em Tecnologia",
+    "serviceDescription": "Explore vagas abertas na Techco.lab em regime híbrido no Sul do Brasil — oportunidades de carreira em inovação digital, desenvolvimento de software, dados, IA e design.",
     "title": "Por que trabalhar no",
     "titleHighlight": "Techco.Lab",
     "subtitle": "Criamos tecnologia que conecta indústrias e culturas. Ao se juntar ao nosso time, você contribuirá para projetos globais de inovação, colaborará com equipes ao redor do mundo e desenvolverá sua expertise através de impacto real — não apenas teoria.",
@@ -526,6 +540,8 @@
   "PositionDetails": {
     "pageTitle": "Detalhes da Vaga | Techco.lab",
     "pageDescription": "Confira os detalhes desta oportunidade na Techco.lab",
+    "serviceName": "Recrutamento e Seleção em Tecnologia",
+    "serviceDescription": "Conectamos talentos de tecnologia com oportunidades de carreira em inovação digital, oferecendo vagas em regime híbrido, CLT, benefícios completos e projetos globais impactantes.",
     "backToPositions": "Voltar para vagas",
     "notFound": "Vaga não encontrada",
     "viewAllPositions": "Ver todas as vagas",
@@ -538,6 +554,10 @@
     "onsite": "Presencial"
   },
   "PrivacyPolicy": {
+    "pageTitle": "Política de Privacidade | Techco.lab",
+    "pageDescription": "Saiba como a Techco.lab e a NETZSCH coletam, tratam e protegem seus dados pessoais. Informações sobre cookies, analytics, formulários de contato e seus direitos conforme o GDPR.",
+    "serviceName": "Proteção e Privacidade de Dados",
+    "serviceDescription": "Garantimos a proteção dos dados pessoais dos visitantes com práticas de conformidade GDPR, gerenciamento de consentimento e medidas técnicas de segurança.",
     "title": "Política de Privacidade",
     "subtitle": "Como protegemos seus dados",
     "lastUpdated": "Última atualização: janeiro de 2024",
@@ -664,6 +684,10 @@
     }
   },
   "Imprint": {
+    "pageTitle": "Aviso Legal | Techco.lab",
+    "pageDescription": "Informações legais da Erich NETZSCH B.V. & Co. Holding KG — diretoria, registro comercial, responsabilidade pelo conteúdo, direitos autorais e política de publicidade.",
+    "serviceName": "Informações Legais Corporativas",
+    "serviceDescription": "Informações legais e de conformidade da Erich NETZSCH B.V. & Co. Holding KG, incluindo registro comercial, responsabilidade pelo conteúdo e políticas de direitos autorais.",
     "title": "Aviso Legal",
     "subtitle": "Informações legais",
     "company": {

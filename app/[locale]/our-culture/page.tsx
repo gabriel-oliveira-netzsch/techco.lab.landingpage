@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { GlobalFooter } from '@/components/GlobalFooter';
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+import { ServiceSchema } from "@/components/ServiceSchema";
 import {
   CultureHeroSection,
   GPTWSection,
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "OurCulture" });
 
   return {
-    title: `${t("hero.title")} ${t("hero.titleHighlight")} | Techco.lab`,
-    description: t("hero.subtitle"),
+    title: t("pageTitle"),
+    description: t("pageDescription"),
     alternates: {
       canonical: `https://ntechcolab.com/${locale}/our-culture`,
       languages: {
@@ -38,9 +39,17 @@ export default async function OurCulturePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "OurCulture" });
+
   return (
     <div data-name="OurCulture" className="flex flex-col min-h-screen bg-white">
       <BreadcrumbSchema />
+      <ServiceSchema
+        name={t("serviceName")}
+        description={t("serviceDescription")}
+        serviceType="Professional Service"
+        areaServed="Worldwide"
+      />
       <Header currentPage="our-culture" />
       <main className="flex-1">
         <CultureHeroSection />

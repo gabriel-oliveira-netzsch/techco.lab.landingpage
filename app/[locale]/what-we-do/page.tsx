@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { GlobalFooter } from '@/components/GlobalFooter';
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+import { ServiceSchema } from "@/components/ServiceSchema";
 import {
   WhatWeDoHeroSection,
   ProjectsSection,
@@ -19,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "WhatWeDo" });
 
   return {
-    title: `${t("title")} ${t("titleHighlight")} | Techco.lab`,
-    description: t("subtitle"),
+    title: t("pageTitle"),
+    description: t("pageDescription"),
     alternates: {
       canonical: `https://ntechcolab.com/${locale}/what-we-do`,
       languages: {
@@ -35,9 +36,17 @@ export default async function WhatWeDoPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "WhatWeDo" });
+
   return (
     <div data-name="WhatWeDo" className="flex flex-col min-h-screen bg-white">
       <BreadcrumbSchema />
+      <ServiceSchema
+        name={t("serviceName")}
+        description={t("serviceDescription")}
+        serviceType="Professional Service"
+        areaServed="Worldwide"
+      />
       <Header currentPage="what-we-do" />
       <main className="flex-1">
         <WhatWeDoHeroSection />

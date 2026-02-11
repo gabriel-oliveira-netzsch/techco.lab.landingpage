@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { GlobalFooter } from '@/components/GlobalFooter';
+import { ServiceSchema } from '@/components/ServiceSchema';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'Imprint' });
 
   return {
-    title: `${t('title')} | Techco.lab`,
-    description: t('subtitle'),
+    title: t('pageTitle'),
+    description: t('pageDescription'),
     alternates: {
       canonical:
         locale === 'en'
@@ -35,6 +36,12 @@ export default async function ImprintPage({ params }: Props) {
 
   return (
     <div data-name="Imprint" className="flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name={t('serviceName')}
+        description={t('serviceDescription')}
+        serviceType="Professional Service"
+        areaServed="Worldwide"
+      />
       <Header currentPage="imprint" />
       <main className="flex-1">
         {/* Content */}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { GlobalFooter } from "@/components/GlobalFooter";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
+import { ServiceSchema } from "@/components/ServiceSchema";
 import { JobsList, TalentPoolCTA } from "@/components/jobs";
 import { ArrowRightIcon } from "@/components/icons";
 import { JobsPageTracker } from "@/components/analytics/JobsPageTracker";
@@ -17,8 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "OpenPositions" });
 
   return {
-    title: `${t("title")} ${t("titleHighlight")} | Techco.lab`,
-    description: t("subtitle"),
+    title: t("pageTitle"),
+    description: t("pageDescription"),
     alternates: {
       canonical: `https://ntechcolab.com/${locale}/open-positions`,
       languages: {
@@ -65,6 +66,12 @@ export default async function OpenPositionsPage({ params }: Props) {
       className="flex flex-col min-h-screen bg-white"
     >
       <BreadcrumbSchema />
+      <ServiceSchema
+        name={t("serviceName")}
+        description={t("serviceDescription")}
+        serviceType="Employment Service"
+        areaServed="Brazil"
+      />
       <Header currentPage="open-positions" />
       <main className="flex-1">
         {/* Page Hero */}

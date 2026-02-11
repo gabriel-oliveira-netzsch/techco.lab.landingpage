@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { GlobalFooter } from '@/components/GlobalFooter';
+import { ServiceSchema } from '@/components/ServiceSchema';
 import { JobDetails } from '@/components/jobs';
 
 type Props = {
@@ -124,6 +125,12 @@ export default async function PositionDetailsPage({ params }: Props) {
     
     return (
       <div data-name="PositionDetails" className="flex flex-col min-h-screen bg-white">
+        <ServiceSchema
+          name={t("serviceName")}
+          description={t("serviceDescription")}
+          serviceType="Employment Service"
+          areaServed="Brazil"
+        />
         <Header currentPage="open-positions" />
         <main className="flex-1">
           <div className="flex flex-col items-center justify-center py-24">
@@ -145,6 +152,12 @@ export default async function PositionDetailsPage({ params }: Props) {
 
   return (
     <div data-name="PositionDetails" className="flex flex-col min-h-screen bg-white">
+      <ServiceSchema
+        name={t("serviceName")}
+        description={t("serviceDescription")}
+        serviceType="Employment Service"
+        areaServed="Brazil"
+      />
       <Header currentPage="open-positions" />
       <main className="flex-1">
         <JobDetails initialJob={job} jobId={id} locale={locale} translations={translations} />
