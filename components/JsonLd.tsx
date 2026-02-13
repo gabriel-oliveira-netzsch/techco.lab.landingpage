@@ -7,7 +7,7 @@ export function OrganizationJsonLd({ locale = 'en' }: OrganizationJsonLdProps) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Techco.lab',
-    alternateName: 'Techco Lab',
+    alternateName: 'Techco.lab',
     url: 'https://ntechcolab.com',
     logo: 'https://ntechcolab.com/logo.png',
     sameAs: [

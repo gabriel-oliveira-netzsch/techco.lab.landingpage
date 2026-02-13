@@ -165,7 +165,37 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* V. Maps */}
+            {/* V. Google Search Console */}
+            <div className="mb-8">
+              <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
+                {t('searchConsole.title')}
+              </h2>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
+                {t('searchConsole.description')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4 whitespace-pre-line">
+                {t('searchConsole.details')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
+                {t('searchConsole.aggregated')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
+                {t('searchConsole.noCookies')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-2">
+                {t('searchConsole.purpose')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] mb-4">
+                {t('searchConsole.legalBasis')}
+              </p>
+              <p className="text-[15px] text-[#4c4d58] leading-[1.8] whitespace-pre-line">
+                {t('searchConsole.privacyLink')}
+              </p>
+            </div>
+
+            <hr className="border-gray-200 my-8" />
+
+            {/* VI. Maps */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('maps.title')}
@@ -186,7 +216,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* VI. Contact */}
+            {/* VII. Contact */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('contact.title')}
@@ -215,7 +245,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* VII. Recruitment */}
+            {/* VIII. Recruitment */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('recruitment.title')}
@@ -230,7 +260,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* VIII. Recipients */}
+            {/* IX. Recipients */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('recipients.title')}
@@ -250,7 +280,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* IX. Transfers */}
+            {/* X. Transfers */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('transfers.title')}
@@ -265,7 +295,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* X. Security */}
+            {/* XI. Security */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('security.title')}
@@ -277,7 +307,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
             <hr className="border-gray-200 my-8" />
 
-            {/* XI. Rights */}
+            {/* XII. Rights */}
             <div className="mb-8">
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#4c4d58] mb-4">
                 {t('rights.title')}
