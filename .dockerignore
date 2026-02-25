@@ -1,0 +1,52 @@
+# Dependências
+node_modules
+.pnpm-store
+
+# Build output
+.next
+out
+dist
+build
+
+# Arquivos de ambiente (não incluir secrets no build)
+.env
+.env.*
+!.env.example
+
+# Arquivos de desenvolvimento
+.git
+.gitignore
+.vscode
+.idea
+*.md
+!README.md
+
+# Arquivos de teste
+*.test.*
+*.spec.*
+__tests__
+coverage
+playwright-report
+test-results
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Logs e cache
+*.log
+npm-debug.log*
+.npm
+.eslintcache
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Turbo
+.turbo
+

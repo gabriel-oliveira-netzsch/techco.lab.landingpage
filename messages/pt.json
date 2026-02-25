@@ -1,0 +1,824 @@
+{
+  "SEO": {
+    "home": {
+      "title": "Techco.lab | Hub Digital de Inovação da NETZSCH",
+      "description": "A Techco.lab desenvolve soluções de IA industrial para a NETZSCH – plataformas conectadas, analytics preditivo e experiências digitais que transformam operações de manufatura em mais de 50 países.",
+      "keywords": "Techco.lab, NETZSCH, inovação digital, carreiras tecnologia Brasil, trabalho híbrido, vagas tech Sul Brasil, vagas Curitiba, vagas Pomerode, contrato CLT, participação lucros, plataforma bem-estar, plano saúde, subsídio educacional, openenglish, NOA, Alura, vale alimentação, trabalho híbrido, equidade salarial, recrutador tech, UI UX designer, engenheiro dados, desenvolvedor software, transformação digital, crescimento carreira, Grupo NETZSCH",
+      "serviceName": "Soluções de Inovação Digital Industrial",
+      "serviceDescription": "Desenvolvemos plataformas conectadas, analytics preditivo com IA, interfaces digitais inteligentes e inteligência em tempo real para transformar operações de manufatura em mais de 50 países."
+    },
+    "careers": {
+      "title": "Techco.lab | Carreiras em Inovação Digital na NETZSCH",
+      "description": "Junte-se ao Techco.lab — o hub de inovação digital da NETZSCH. Estamos contratando profissionais de tecnologia em regime híbrido no Sul do Brasil. Aproveite contrato CLT, plano de saúde e odontológico, participação nos lucros, programas de bem-estar, trabalho híbrido, subsídio educacional, vale-alimentação e muito mais."
+    },
+    "openGraph": {
+      "title": "Techco.lab | Carreiras em Inovação Digital na NETZSCH",
+      "description": "O Techco.lab conecta inovação e tecnologia na NETZSCH. Oferecemos trabalho híbrido, participação nos lucros, apoio educacional e programas de bem-estar em uma cultura colaborativa.",
+      "url": "https://ntechcolab.com/pt-BR"
+    },
+    "twitter": {
+      "title": "Techco.lab | Carreiras na NETZSCH",
+      "description": "Junte-se à equipe Techco.lab — carreiras em inovação digital híbrida no Sul do Brasil com a NETZSCH."
+    },
+    "aiSummary": "A Techco.lab desenvolve soluções de IA industrial para a NETZSCH, incluindo plataformas conectadas, manutenção preditiva, interfaces inteligentes e análises em tempo real que reduzem tempo de inatividade, otimizam produção e aceleram a transformação digital para fabricantes industriais em mais de 50 países."
+  },
+  "Navigation": {
+    "home": "Início",
+    "whatWeDo": "O que fazemos",
+    "ourCulture": "Cultura",
+    "openPositions": "Vagas abertas",
+    "browsePositions": "Ver vagas abertas"
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você está procurando não existe ou foi movida. Vamos te colocar de volta no caminho certo.",
+    "backHome": "Voltar ao Início",
+    "viewPositions": "Ver Vagas Abertas",
+    "links": {
+      "whatWeDo": "O que fazemos",
+      "ourCulture": "Nossa Cultura",
+      "openPositions": "Vagas Abertas"
+    }
+  },
+  "Home": {
+    "hero": {
+      "titleLine1": "Nós construímos",
+      "typingWords": [
+        "produtos digitais.",
+        "tecnologias inteligentes.",
+        "o futuro digital da NETZSCH."
+      ],
+      "subtitle": "O motor de inovação da NETZSCH construindo plataformas conectadas, análises de IA e experiências digitais para indústrias globais.",
+      "cta": "Junte-se à equipe",
+      "cta2": "Veja o que construímos"
+    },
+    "techHub": {
+      "badge": "UM CATALISADOR PARA TRANSFORMAÇÃO",
+      "titleLine1": "Hub de desenvolvimento",
+      "titleLine2": "de tecnologia da",
+      "titleHighlight": "NETZSCH",
+      "description": "A Techco.lab é o motor de inovação por trás da evolução digital da NETZSCH. Atuando como um hub tecnológico global, aceleramos mudanças, criamos soluções escaláveis e conectamos tecnologia ao impacto real.",
+      "linkProjects": "Veja nossos projetos",
+      "linkCareers": "Ver vagas abertas"
+    },
+    "capabilities": {
+      "badge": "NOSSAS CAPACIDADES",
+      "subtitle": "Explore como nossas capacidades digitais transformam visão em impacto industrial escalável.",
+      "titleLine1": "Onde a inovação encontra a",
+      "titleHighlight": "realidade",
+      "featuredText": "Moldamos a espinha dorsal digital da NETZSCH através de projetos que desbloqueiam novas possibilidades para pessoas, processos e desempenho.",
+      "items": {
+        "ai": {
+          "title": "IA Industrial",
+          "description": "Construímos sistemas de IA que ajudam fábricas e operações a prever problemas, otimizar processos e reduzir tempos de inatividade."
+        },
+        "platforms": {
+          "title": "Plataformas Conectadas",
+          "description": "Desenvolvemos plataformas que conectam equipamentos, dados e equipes para visibilidade em tempo real e controle operacional."
+        },
+        "interfaces": {
+          "title": "Interfaces Digitais",
+          "description": "Criamos interfaces intuitivas que colocam insights acionáveis nas mãos de gerentes, técnicos e operadores."
+        }
+      }
+    },
+    "turningIdeas": {
+      "title": "Transformando ideias em",
+      "titleHighlight": "impacto real.",
+      "description": "Na Techco.lab, a inovação começa com as pessoas. Nossa cultura é construída sobre curiosidade, colaboração e aprendizado contínuo — onde cada ideia pode criar mudanças tangíveis. Reunimos equipes multifuncionais que unem engenharia, design e expertise em dados para desenvolver soluções significativas para a indústria, sustentabilidade e sociedade.",
+      "cta": "Explore nossa cultura",
+      "cta2": "Ver vagas abertas"
+    },
+    "locations": {
+      "title": "Espaços que inspiram",
+      "titleHighlight": "inovação",
+      "subtitle": "Promovemos colaboração e criatividade em duas localizações principais no Brasil.",
+      "curitiba": {
+        "city": "CURITIBA",
+        "title": "Nex Coworking",
+        "description": "Um ambiente colaborativo onde profissionais moldam o futuro da tecnologia."
+      },
+      "pomerode": {
+        "city": "POMERODE",
+        "title": "NEM Headquarters",
+        "description": "Onde a excelência em engenharia encontra a transformação digital."
+      },
+      "linkCuritiba": "Ver localização",
+      "linkPomerode": "Ver localização"
+    },
+    "stats": {
+      "users": "500+",
+      "usersLabel": "usuários ativos",
+      "countries": "35+",
+      "countriesLabel": "países impactados",
+      "projects": "80+",
+      "projectsLabel": "projetos entregues"
+    },
+    "testimonials": {
+      "title": "Colaborando para um",
+      "titleHighlight": "futuro mais inteligente",
+      "items": [
+        {
+          "quote": "Trabalhar em estreita colaboração com a Techco.lab mostrou o quanto uma equipe digital altamente qualificada pode agregar valor a uma organização global como a NETZSCH. Sua mentalidade de experimentação, propriedade e melhoria contínua acelera a forma como inovamos e entregamos soluções ao redor do mundo. Tenho orgulho de como essa equipe está moldando o futuro de nossos produtos digitais.",
+          "author": "Jens Niesner",
+          "role": "CFO e Membro do Conselho Executivo do NETZSCH Group",
+          "image": "/images/491cbd1a-599b-4e23-82aa-ad5eef0bc5ee.png"
+        },
+        {
+          "quote": "A Techco.lab é onde a indústria global encontra talentos digitais ousados. Do Brasil para a Alemanha e para o mundo, construímos plataformas e soluções digitais que otimizam os processos digitais de todo o grupo. Aqui, suas ideias não ficam locais — elas ganham escala mundial. Junte-se a um time multicultural que aprende rápido, cresce rápido e apoia nossas três Unidades de Negócio. Se você quer que seu trabalho tenha impacto global, a Techco.lab é o seu lugar.",
+          "author": "Paul Netzsch",
+          "role": "Membro do Conselho Executivo do NETZSCH Group",
+          "image": "/images/9db26785-eace-438e-a4f6-954e4200bc1b.png"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "Um lugar onde você pode fazer a diferença",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Candidate-se às vagas"
+    },
+    "whatWeDeliver": {
+      "title": "O que entregamos",
+      "subtitle": "Nossas soluções impulsionam a próxima geração de operações industriais",
+      "items": {
+        "platforms": {
+          "title": "Plataformas Conectadas",
+          "description": "Sistemas unificados que conectam máquinas, dados e pessoas em operações globais."
+        },
+        "analytics": {
+          "title": "Analytics Preditivo",
+          "description": "Insights com IA que preveem necessidades de manutenção e otimizam a produção."
+        },
+        "interfaces": {
+          "title": "Interfaces Inteligentes",
+          "description": "Experiências digitais intuitivas que simplificam operações complexas."
+        },
+        "realtime": {
+          "title": "Inteligência em Tempo Real",
+          "description": "Dashboards e alertas ao vivo que mantêm as operações no pico de eficiência."
+        }
+      }
+    }
+  },
+  "WhatWeDo": {
+    "pageTitle": "O Que Fazemos | Techco.lab",
+    "pageDescription": "Estratégia digital, desenvolvimento de software, soluções de dados e IA, e design de experiência — descobra como a Techco.lab transforma a NETZSCH através de tecnologia e inovação aplicada.",
+    "serviceName": "Serviços de Transformação Digital e Inovação Tecnológica",
+    "serviceDescription": "Oferecemos estratégia digital e consultoria, desenvolvimento de software cloud-ready, soluções de dados e IA com machine learning, e design de experiência (UX/UI) para transformar operações industriais globais.",
+    "title": "O que fazemos de",
+    "titleHighlight": "melhor",
+    "subtitle": "Focamos em iniciativas estratégicas e técnicas que moldam a espinha dorsal digital da NETZSCH e desbloqueiam novas oportunidades para equipes ao redor do mundo.",
+    "categories": {
+      "strategy": {
+        "title": "Estratégia Digital & Consultoria",
+        "description": "Descoberta, mapeamento de valor, roadmaps e planejamento de entregas."
+      },
+      "development": {
+        "title": "Desenvolvimento de Software",
+        "description": "Aplicações cloud-ready, microsserviços, fluxos de dados seguros e APIs."
+      },
+      "data": {
+        "title": "Soluções de Dados & IA",
+        "description": "Análises, casos de uso de ML, automação e resultados mensuráveis."
+      },
+      "design": {
+        "title": "Experiência & Design",
+        "description": "Pesquisa, UI/UX, design systems, adoção e usabilidade."
+      }
+    },
+    "projects": {
+      "title": "Últimos",
+      "titleHighlight": "projetos",
+      "subtitle": "Ambientes que promovem inovação contínua e networking.",
+      "items": [
+        {
+          "tags": ["UX", "Design System", "Mapeam & Diagramas"],
+          "title": "IRIS BeadMills",
+          "description": "Projetado para modernizar operações industriais, o IRIS une tecnologia e design em uma plataforma SaaS de nova geração que reimagina interfaces Homem-Máquina desde o início.",
+          "results": [
+            "30% mais rápido na conclusão de tarefas",
+            "45% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Análise & Testes"],
+          "title": "Estratégia Orientada por Dados",
+          "description": "Na A&T, o desafio era libertar a equipe de Estratégia de Negócios do trabalho manual demorado na coleta e processamento de dados. A equipe da Techco.lab mapeou processos, conectou múltiplas fontes de dados e construiu um novo data warehouse do zero. O resultado: uma operação mais rápida e inteligente com análises automatizadas que transformaram esforço manual em tempo de pensamento estratégico e abriram novas oportunidades para insights de negócios.",
+          "results": [
+            "20% mais rápido na consolidação de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Moagem & Dispersão"],
+          "title": "Inteligência Comercial para Crescimento Sustentável",
+          "description": "Em P&S, o objetivo era apoiar o negócio de Peças de Reposição na identificação de segmentação de clientes, momento ideal de compra e potencial de upselling. A Techco.lab desenvolveu uma solução de BI que entrega insights acionáveis em tempo real, permitindo que a equipe de vendas atue com precisão e personalização. O impacto é claro: aumento de receita da reativação de clientes, redução de churn e uma abordagem de gestão mais proativa e orientada por dados.",
+          "results": [
+            "30% mais rápido na conclusão de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Azure", "Power BI", "SAP BW", "Moagem & Dispersão"],
+          "title": "Controle e Previsibilidade em Escala Global",
+          "description": "Em Moagem & Dispersão, a Techco.lab liderou uma iniciativa robusta de BI para a equipe de Controladoria, integrando dados de Vendas, Faturamento e Previsão de Receita de múltiplos sistemas e moedas. Superando desafios técnicos complexos, a equipe entregou dashboards dinâmicos que reduziram o tempo de análise de meia hora para apenas segundos. Hoje, a unidade se beneficia de uma visão global confiável do desempenho comercial, capacitando tomadas de decisão rápidas, confiantes e estratégicas.",
+          "results": [
+            "50% mais rápido na conclusão de tarefas",
+            "40% de redução no tempo de onboarding",
+            "Implantação global em 5 sites de produção"
+          ]
+        },
+        {
+          "tags": ["SAP", "Salesforce", "E-commerce", "Moagem & Dispersão"],
+          "title": "Portal do Cliente — Experiência Digital para Excelência em Pós-Vendas",
+          "description": "O Portal do Cliente simplifica a jornada completa do cliente ao unificar identificação de peças de reposição, pedidos, informações de equipamentos e recursos de conhecimento em uma plataforma. Integrado com SAP e Salesforce, aumenta a eficiência, reduz necessidades de suporte e capacita decisões mais inteligentes para clientes e equipes de serviço.",
+          "results": [
+            "Maior autonomia do cliente através de autoatendimento intuitivo",
+            "Maior precisão na seleção e pedido de peças de reposição",
+            "Experiência digital consistente em todas as regiões e equipes"
+          ]
+        },
+        {
+          "tags": ["ServiceNow", "Azure", "SAP HCM", "Moagem & Dispersão"],
+          "title": "ServiceNow",
+          "description": "A plataforma é usada como pilar estratégico para digitalizar processos que antes eram manuais e descentralizados. Com ela, reduzimos etapas repetitivas, eliminamos retrabalho, criamos fluxos de trabalho digitais e conectados entre departamentos e sistemas dentro da empresa, sempre apoiando nossas áreas de negócio com soluções escaláveis e sustentáveis adaptadas às necessidades da empresa e seus colaboradores.",
+          "results": [
+            "Uma média de 2.750+ solicitações mensais de TI (IT365)",
+            "Uma média de 1.000+ solicitações mensais de RH (HRSD)",
+            "Uma média de 350+ solicitações mensais de gestão de demandas e projetos (SPM)",
+            "Tomada de decisão mais rápida e segura",
+            "Menos retrabalho e maior visibilidade em cada etapa dos processos"
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "O que nossa equipe diz",
+      "items": [
+        {
+          "quote": "A Techco.lab é um lugar que respira tecnologia, onde a curiosidade impulsiona a inovação e cada desafio estimula o crescimento profissional em escala global. É um ambiente colaborativo que nos incentiva a pensar grande e criar soluções com impacto real.",
+          "author": "Alberto Reuters",
+          "role": "Gerente da Techco.lab",
+          "image": "/images/056ebec4-48f0-4120-85c0-de572c487a5e.png"
+        },
+        {
+          "quote": "Como fundador da Techco.lab, fico impressionado com a mentalidade prática e a flexibilidade dos profissionais de tecnologia brasileiros. Suas qualificações e dedicação à qualidade atingem – e muitas vezes superam – padrões globais. É isso que torna a Techco.lab uma parceira excepcional: uma equipe com expertise e atitude proativa para entregar resultados reais.",
+          "author": "Stefan Lautenschlager",
+          "role": "Head de Data & Analytics do Grupo NETZSCH",
+          "image": "/images/b0f7b7e5-ffc6-400f-9328-d48afe194e74.png"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "O futuro da inovação digital começa aqui —",
+      "titleHighlight": "com você.",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Ver vagas abertas"
+    }
+  },
+  "OurCulture": {
+    "pageTitle": "Nossa Cultura | Techco.lab",
+    "pageDescription": "Conheça a cultura da Techco.lab: valores de protagonismo e colaboração, certificação Great Place to Work®, benefícios completos (CLT, PPL, plano de saúde, educação, trabalho híbrido) e um ambiente onde inovação acontece.",
+    "serviceName": "Cultura Organizacional e Benefícios",
+    "serviceDescription": "Uma cultura certificada Great Place to Work® com benefícios completos — CLT, participação nos lucros, plano de saúde, subsídio educacional, trabalho híbrido e programas de bem-estar.",
+    "hero": {
+      "title": "Em que",
+      "titleHighlight": "acreditamos",
+      "subtitle": "Focamos em iniciativas estratégicas e técnicas que constroem a base digital da NETZSCH e liberam novas oportunidades para times no mundo todo.",
+      "values": [
+        {
+          "title": "Protagonismo",
+          "description": "Assumimos responsabilidade pelos resultados e elevamos o padrão."
+        },
+        {
+          "title": "Colaboração",
+          "description": "Debatemos com intensidade, decidimos rápido e entregamos juntos."
+        },
+        {
+          "title": "Aprendizado",
+          "description": "Experimentamos, refletimos e iteramos."
+        },
+        {
+          "title": "Integridade",
+          "description": "Comunicação clara, transparência e responsabilidade."
+        },
+        {
+          "title": "Reconhecimento",
+          "description": "Paramos para reconhecer conquistas — de grandes lançamentos a correções complexas."
+        }
+      ]
+    },
+    "gptw": {
+      "title": "Somos um",
+      "titleHighlight": "Great Place to Work®",
+      "description": "Na NETZSCH, construir tecnologia de alto impacto começa com construir um ambiente onde as pessoas prosperam. Nossa certificação GPTW reflete exatamente isso: o reconhecimento de quem vive o dia a dia aqui — nossos colaboradores. É a confirmação de que cultivamos um espaço que valoriza bem-estar, aprendizado contínuo, respeito e excelência, criando as condições ideais para times fortes, inovadores e preparados para o futuro."
+    },
+    "milestones": {
+      "title": "Marcos",
+      "titleHighlight": "importam.",
+      "subtitle": "Celebramos o progresso — não apenas os resultados finais.",
+      "items": [
+        {
+          "title": "Lançamentos e entregas",
+          "description": "Entregamos métricas relevantes para os clientes."
+        },
+        {
+          "title": "Vitórias de processo",
+          "description": "Quando os fluxos internos ficam mais fluidos, todo mundo ganha."
+        },
+        {
+          "title": "Crescimento pessoal",
+          "description": "Reconhecemos pessoas que evoluem — em habilidades, confiança e protagonismo."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Por que trabalhar no",
+      "titleHighlight": "Techco.lab",
+      "subtitle": "Aqui no Techco.lab, valorizamos as pessoas tanto quanto a inovação — oferecendo projetos desafiadores, crescimento profissional e um pacote completo de benefícios para o seu bem-estar.",
+      "discoverTitle": "Descubra os benefícios que você encontrará ao fazer parte do time.",
+      "items": [
+        {
+          "title": "Contrato CLT",
+          "icon": "file-text",
+          "description": "Benefícios completos de emprego e estabilidade conforme a legislação trabalhista brasileira (CLT)."
+        },
+        {
+          "title": "PPL",
+          "icon": "coins",
+          "description": "Receba uma parte dos lucros anuais da empresa como parte do nosso sucesso coletivo."
+        },
+        {
+          "title": "Reconhecimento",
+          "icon": "award",
+          "description": "Celebre seus marcos com reconhecimentos especiais pelos anos de contribuição."
+        },
+        {
+          "title": "Programa de Ideias",
+          "icon": "lightbulb",
+          "description": "Um programa interno que celebra inovação — ganhe prêmios pelas suas melhores ideias."
+        },
+        {
+          "title": "Saúde e odontológico",
+          "icon": "heart",
+          "description": "Plano de saúde e odontológico completo para sua tranquilidade."
+        },
+        {
+          "title": "Bem-estar",
+          "icon": "activity",
+          "description": "Cuide do corpo e da mente com os recursos de saúde e bem-estar da GoGood."
+        },
+        {
+          "title": "Descontos em farmácias",
+          "icon": "pill",
+          "description": "Obtenha descontos especiais em farmácias parceiras para suas necessidades de saúde e bem-estar."
+        },
+        {
+          "title": "Descontos em combustível",
+          "icon": "fuel",
+          "description": "Aproveite preços reduzidos ao abastecer em postos parceiros selecionados da rede."
+        },
+        {
+          "title": "Subsídio educação",
+          "icon": "graduation-cap",
+          "description": "Investimos no seu crescimento com apoio financeiro parcial para educação contínua."
+        },
+        {
+          "title": "OpenEnglish",
+          "icon": "languages",
+          "description": "Acesso completo à plataforma OpenEnglish para impulsionar suas habilidades em idiomas."
+        },
+        {
+          "title": "NOA & Alura",
+          "icon": "monitor",
+          "description": "Seu hub unificado para desenvolvimento rápido e prático de habilidades — a qualquer hora, em qualquer lugar."
+        },
+        {
+          "title": "Trabalho híbrido",
+          "icon": "home",
+          "description": "Horário flexível sem dias obrigatórios no escritório — equilibre sua vida do seu jeito."
+        },
+        {
+          "title": "Indicação",
+          "icon": "users",
+          "description": "Ganhe recompensas ao nos ajudar a encontrar novos talentos para o time."
+        },
+        {
+          "title": "Vale alimentação",
+          "icon": "utensils",
+          "description": "Cartão pré-pago para usar em supermercados ou restaurantes."
+        },
+        {
+          "title": "Equidade salarial",
+          "icon": "scale",
+          "description": "Salário transparente, justo e competitivo de acordo com o cargo e desempenho."
+        },
+        {
+          "title": "Equipamentos",
+          "icon": "laptop",
+          "description": "Trabalhe com conforto usando os equipamentos e periféricos fornecidos pela empresa."
+        }
+      ]
+    },
+    "realDeal": {
+      "title": "O que realmente",
+      "titleHighlight": "importa",
+      "description": "A gente não promete mesa de pingue-pongue ou \"férias ilimitadas\". O que prometemos são benefícios reais, espaço para crescer, flexibilidade quando você precisar e um ambiente onde você não odeia as segundas-feiras.",
+      "highlight": "Investimos em pessoas porque boas pessoas são difíceis de encontrar.",
+      "highlight2": "E ainda mais difíceis de substituir."
+    },
+    "testimonials": {
+      "title": "Nas palavras do",
+      "titleHighlight": "time",
+      "subtitle": "Algumas palavras das pessoas que fazem este lugar ser o que é.",
+      "items": [
+        {
+          "quote": "Participar do Techco.lab como parte do meu programa de trainee tem sido uma experiência incrível. Foi minha primeira vez no Brasil e todos me receberam de braços abertos. A equipe é divertida, prestativa e torna o trabalho genuinamente empolgante! Cada dia traz um novo desafio e estou constantemente aprendendo por meio de projetos práticos e de uma ótima mentoria. Estar cercado por pessoas tão talentosas e experientes me incentiva a continuar crescendo e me desenvolvendo.",
+          "author": "Linh Dao",
+          "role": "Pioneer of Innovation Talent Program",
+          "image": "/images/0e1a1c14-946d-4ede-bb95-64a7909468cb.png"
+        },
+        {
+          "quote": "Eu já fazia parte da NETZSCH quando tive a honra de me tornar a primeira funcionária do Techco.lab. O trabalho aqui é dinâmico, com desafios que nos levam ao nosso potencial máximo e agregam valor tanto pessoal quanto profissionalmente. Vivenciei oportunidades únicas e é gratificante ver o quanto essa jornada contribuiu para o meu desenvolvimento.",
+          "author": "Ana Leite",
+          "role": "Data Analyst",
+          "image": "/images/4df54223-6a28-4f37-9228-52eefd53325f.png"
+        },
+        {
+          "quote": "Ingressar no Techco.lab em 2023 foi um ponto de virada na minha carreira. A cultura, os valores compartilhados e a oportunidade de trabalhar com pessoas tão talentosas e criativas me impulsionam a crescer todos os dias. Nossa equipe encontra o equilíbrio certo entre foco e diversão: rimos muito, colaboramos profundamente e, quando é hora de entregar, todos dão o seu melhor. Fazer parte deste ambiente e contribuir com soluções significativas para nossos clientes internos tem sido genuinamente gratificante.",
+          "author": "Kelvin Okuda",
+          "role": "Team Lead - Business Intelligence & Analytics",
+          "image": "/images/b2ec0e89-72b4-4fa0-9636-25eeff55998f.png"
+        },
+        {
+          "quote": "Trabalhar no Techco.lab mudou a forma como cresço e aprendo. Vindo da vida caótica de agência, encontrei uma cultura honesta, colaborativa e nunca julgadora. As pessoas ensinam o que você não sabe e mergulhar no software e nos equipamentos me levou a tópicos de engenharia que nunca imaginei explorar. O que torna o Techco.lab especial é a sensação de construir algo maior juntos. As ideias são ouvidas, a equipe é aberta e o impacto é real.",
+          "author": "Gabriel Oliveira",
+          "role": "UX/UI Designer",
+          "image": "/images/356d526b-e063-48f1-a6e4-2e45883cf82c.jpg"
+        },
+        {
+          "quote": "Poder conectar pessoas com o desejo de trabalhar em uma boa empresa de tecnologia é uma conquista que o Techco.lab me permitiu realizar. Quando há foco nas pessoas, na cultura e no futuro, é aí que tudo começa. A união constante da equipe e os valores criam um crescimento que posso atestar em cada profissional e em mim mesma ao longo do caminho.",
+          "author": "Julia Fritzke",
+          "role": "Recruiting Analyst - Human Resources",
+          "image": "/images/df90fe5f-328d-4840-8548-766c3ba8877e.png"
+        },
+        {
+          "quote": "Como analista de dados no Techco.lab, tive a oportunidade de trabalhar em projetos de impacto global. O investimento da empresa no crescimento por meio de certificações e sua abertura para resolução criativa de problemas tem sido muito importante para o meu desenvolvimento. Além disso, colaborar com colegas tão capacitados e engajados tem sido uma das melhores partes de trabalhar aqui. A equipe combina excelência técnica com um espírito colaborativo e divertido, apoiada por uma liderança que genuinamente incentiva a inovação. É um ambiente onde me sinto empolgado para trazer minhas melhores ideias.",
+          "author": "Lucas Shizuno",
+          "role": "Data Analyst - Business Intelligence & Analytics",
+          "image": "/images/3d1ab60a-e713-4253-a77b-abbf7ddc985c.png"
+        },
+        {
+          "quote": "Trabalhar na Techco.lab é fazer parte de um ambiente que realmente valoriza pessoas e inovação. O time é extremamente qualificado, colaborativo e sempre disposto a compartilhar conhecimento, criando um espaço acolhedor onde todos se sentem apoiados e reconhecidos. A empresa investe em aprendizado contínuo e estimula a criatividade na solução de problemas, oferecendo as ferramentas certas para crescer. Aqui, atuamos em projetos estratégicos e de alto impacto, onde nossas ideias importam. O que diferencia a Techco.lab é sua liderança humana. Líderes que inspiram, empoderam e criam um ambiente onde a inovação acontece naturalmente — dinâmico, criativo e estimulante.",
+          "author": "Daniel Lima",
+          "role": "BIA Business Partner - Business Intelligence & Analytics",
+          "image": "/images/bd21d7e0-2bf2-4ac0-828f-0363d0d2494e.png"
+        }
+      ]
+    },
+    "preFooter": {
+      "title": "O futuro da inovação digital começa aqui —",
+      "titleHighlight": "com você.",
+      "subtitle": "Pronto para fazer parte dessa transformação?",
+      "cta": "Ver vagas abertas"
+    }
+  },
+  "OpenPositions": {
+    "pageTitle": "Vagas Abertas | Techco.lab",
+    "pageDescription": "Explore vagas abertas na Techco.lab e junte-se ao nosso time de inovação digital. Trabalho híbrido no Sul do Brasil, projetos globais, benefícios completos e oportunidades de crescimento em tecnologia.",
+    "serviceName": "Oportunidades de Carreira em Tecnologia",
+    "serviceDescription": "Explore vagas abertas na Techco.lab em regime híbrido no Sul do Brasil — oportunidades de carreira em inovação digital, desenvolvimento de software, dados, IA e design.",
+    "title": "Por que trabalhar no",
+    "titleHighlight": "Techco.lab",
+    "subtitle": "Criamos tecnologia que conecta indústrias e culturas. Ao se juntar ao nosso time, você contribuirá para projetos globais de inovação, colaborará com equipes ao redor do mundo e desenvolverá sua expertise através de impacto real — não apenas teoria.",
+    "cultureQuestion": "Quer saber mais sobre nossos benefícios, cultura e como trabalhamos?",
+    "cultureLink": "Conheça Nossa Cultura",
+    "searchPlaceholder": "Digite cargo ou palavra-chave",
+    "locationPlaceholder": "Selecione a localização",
+    "clearFilters": "Limpar filtros",
+    "noPositions": "Nenhuma vaga disponível no momento — mas grandes talentos nunca passam despercebidos. Envie seu perfil mesmo assim!",
+    "applyNow": "Candidatar-se",
+    "viewDetails": "Ver detalhes",
+    "hybrid": "Híbrido",
+    "remote": "Remoto",
+    "onsite": "Presencial",
+    "workTypeHybrid": "Trabalho híbrido em",
+    "workTypeRemote": "Remoto -",
+    "workTypeOnsite": "Presencial em",
+    "talentPool": {
+      "title": "Não encontrou sua vaga ideal?",
+      "subtitle": "Sem problemas — estamos sempre em busca do próximo talento! Adicione seu perfil ao nosso banco de dados e entraremos em contato quando a oportunidade certa aparecer.",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Digite seu nome completo",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Digite seu endereço de email",
+      "cvLabel": "Upload do CV",
+      "cvDropzoneText": "Clique para enviar ou arraste e solte",
+      "cvFormats": "PDF, DOC ou DOCX (máx 10MB)",
+      "submit": "Enviar",
+      "submitting": "Enviando...",
+      "successTitle": "Perfil enviado!",
+      "successMessage": "Obrigado pelo interesse. Entraremos em contato quando surgir uma oportunidade compatível.",
+      "errorTitle": "Algo deu errado",
+      "errorMessage": "Não foi possível enviar seu perfil. Por favor, tente novamente.",
+      "tryAgain": "Tentar novamente",
+      "required": "Este campo é obrigatório",
+      "invalidEmail": "Por favor, insira um email válido",
+      "invalidFileType": "Tipo de arquivo inválido. Por favor, envie PDF, DOC ou DOCX",
+      "fileTooLarge": "Arquivo muito grande. O tamanho máximo é 10MB"
+    },
+    "talentPoolCTA": {
+      "title": "Não encontrou sua vaga ideal?",
+      "subtitle": "Sem problemas — estamos sempre em busca do próximo talento! Adicione seu perfil ao nosso banco de dados e entraremos em contato quando a oportunidade certa aparecer.",
+      "buttonText": "Junte-se ao nosso Banco de Talentos",
+      "modalTitle": "Junte-se ao nosso Banco de Talentos"
+    }
+  },
+  "PositionDetails": {
+    "pageTitle": "Detalhes da Vaga | Techco.lab",
+    "pageDescription": "Confira os detalhes desta oportunidade na Techco.lab",
+    "serviceName": "Recrutamento e Seleção em Tecnologia",
+    "serviceDescription": "Conectamos talentos de tecnologia com oportunidades de carreira em inovação digital, oferecendo vagas em regime híbrido, CLT, benefícios completos e projetos globais impactantes.",
+    "backToPositions": "Voltar para vagas",
+    "notFound": "Vaga não encontrada",
+    "viewAllPositions": "Ver todas as vagas",
+    "applyNow": "Candidatar-se",
+    "interested": "Interessado?",
+    "interestedDescription": "Candidate-se agora e faça parte da nossa equipe de inovação digital.",
+    "notAcceptingApplications": "Esta vaga não está recebendo candidaturas no momento. Por favor, volte mais tarde ou confira outras oportunidades.",
+    "hybrid": "Híbrido",
+    "remote": "Remoto",
+    "onsite": "Presencial"
+  },
+  "PrivacyPolicy": {
+    "pageTitle": "Política de Privacidade | Techco.lab",
+    "pageDescription": "Saiba como a Techco.lab e a NETZSCH coletam, tratam e protegem seus dados pessoais. Informações sobre cookies, analytics, formulários de contato e seus direitos conforme o GDPR.",
+    "serviceName": "Proteção e Privacidade de Dados",
+    "serviceDescription": "Garantimos a proteção dos dados pessoais dos visitantes com práticas de conformidade GDPR, gerenciamento de consentimento e medidas técnicas de segurança.",
+    "title": "Política de Privacidade",
+    "subtitle": "Como protegemos seus dados",
+    "lastUpdated": "Última atualização: janeiro de 2026",
+    "intro": "Agradecemos por visitar o site do Techco.lab. A proteção dos seus dados pessoais é importante para a NETZSCH. Esta Política de Privacidade explica como coletamos e tratamos dados pessoais em conexão com o uso deste site.",
+    "controller": {
+      "title": "I. CONTROLADOR",
+      "description": "A entidade responsável (controlador) pelo tratamento de dados neste site é:",
+      "company": {
+        "name": "Erich NETZSCH B.V. & Co. Holding KG",
+        "street": "Gebrüder-Netzsch-Strasse 19",
+        "city": "95100 Selb, Alemanha",
+        "phone": "Telefone: +49 9287 75-0",
+        "fax": "Fax: +49 9287 75-704",
+        "email": "E-mail: info@netzsch.com",
+        "website": "Website: netzsch.com"
+      },
+      "contact": {
+        "description": "Para assuntos relacionados especificamente a este site, incluindo o exercício dos direitos dos titulares de dados, entre em contato:",
+        "title": "Techco.lab Privacy Contact",
+        "email": "E-mail: techcolab@netzsch.com"
+      }
+    },
+    "dataProcessing": {
+      "title": "II. DADOS TRATADOS AO VISITAR O SITE",
+      "description": "Quando você acessa o site do Techco.lab para fins meramente informativos, seu navegador transmite automaticamente determinados dados técnicos. Nós tratamos:",
+      "items": [
+        "Endereço IP",
+        "Data e hora do acesso",
+        "Provedor solicitante",
+        "Tipo e versão do navegador",
+        "Sistema operacional",
+        "URL de referência (Referrer URL)"
+      ],
+      "purpose": "Finalidade: viabilizar o funcionamento do site, manter a segurança e melhorar o desempenho.",
+      "legalBasis": "Base legal: Art. 6 (1) (f) do GDPR – interesse legítimo em garantir um site seguro e funcional.",
+      "note": "Esses dados técnicos são avaliados apenas de forma agregada. Não os utilizamos para identificá-lo pessoalmente."
+    },
+    "cookies": {
+      "title": "III. COOKIES E GERENCIAMENTO DE CONSENTIMENTO",
+      "description": "Utilizamos cookies. Cookies são pequenos arquivos de texto armazenados em seu dispositivo que auxiliam na oferta de funcionalidades essenciais do site e na memorização de suas preferências.",
+      "usercentrics": "Utilizamos o Usercentrics (Usercentrics A/S, Dinamarca) para obter e documentar seu consentimento quanto ao uso de cookies não essenciais.",
+      "purpose": "Finalidade: gerenciar preferências de consentimento e assegurar conformidade com a legislação de proteção de dados.",
+      "revoke": "Você pode recusar ou revogar seu consentimento a qualquer momento por meio do link \"Configurações de Cookies\" exibido no site. Observe que a desativação de cookies pode limitar determinadas funcionalidades do site."
+    },
+    "analytics": {
+      "title": "IV. GOOGLE ANALYTICS 4 (GA4)",
+      "description": "Utilizamos o Google Analytics 4 para analisar como os visitantes interagem com o site. Mediante seu consentimento, o Google Analytics processa informações como visualizações de página, estatísticas de sessão, dados de dispositivo e navegador e localização aproximada.",
+      "purpose": "Finalidade: análise estatística e melhoria contínua do site do Techco.lab.",
+      "legalBasis": "Base legal: Art. 6 (1) (a) do GDPR – consentimento.",
+      "activation": "O Google Analytics é ativado somente após o consentimento fornecido por meio do Usercentrics.",
+      "retention": "Retenção de dados: os dados do Google Analytics estão configurados para serem mantidos por 2 meses.",
+      "signals": "Google Signals: DESATIVADO – não utilizamos Google Signals nem recursos de publicidade personalizada no GA4."
+    },
+    "searchConsole": {
+      "title": "V. GOOGLE SEARCH CONSOLE",
+      "description": "Utilizamos o Google Search Console, um serviço fornecido pela Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irlanda), para monitorar e otimizar a visibilidade e o desempenho do nosso site nos resultados de busca do Google.",
+      "details": "O Google Search Console nos fornece informações agregadas e técnicas, tais como:\n\t•\tconsultas de pesquisa que direcionam ao nosso site\n\t•\tnúmero de impressões e cliques\n\t•\ttaxas de cliques\n\t•\terros técnicos de indexação ou rastreamento\n\t•\tmétricas gerais de dispositivos e desempenho",
+      "aggregated": "Esses dados são fornecidos de forma agregada e não nos permitem identificar visitantes individuais.",
+      "noCookies": "Nenhum cookie é definido pelo Google Search Console em nosso site e nenhum rastreamento direto de usuários individuais ocorre por meio deste serviço.",
+      "purpose": "Finalidade: monitoramento de desempenho do site, otimização para motores de busca e estabilidade técnica.",
+      "legalBasis": "Base legal: Art. 6(1)(f) GDPR – interesse legítimo em manter e melhorar a visibilidade e o funcionamento adequado do nosso site.",
+      "privacyLink": "Mais informações podem ser encontradas na Política de Privacidade do Google:\nhttps://policies.google.com/privacy"
+    },
+    "maps": {
+      "title": "VI. GOOGLE MAPS",
+      "description": "O site oferece mapas incorporados por meio da API do Google Maps.",
+      "purpose": "Finalidade: exibição de localizações geográficas e facilitação da navegação para os usuários.",
+      "loading": "Os mapas incorporados são carregados somente após a confirmação de consentimento via Usercentrics.",
+      "legalBasis": "Base legal: Art. 6 (1) (a) do GDPR – consentimento."
+    },
+    "contact": {
+      "title": "VII. FORMULÁRIO DE CONTATO E SOLICITAÇÕES",
+      "description": "No site, você pode entrar em contato com o Techco.lab por meio da página de contato. Caso envie uma solicitação, trataremos os dados pessoais fornecidos ativamente por você:",
+      "categories": "Categorias de dados:",
+      "items": [
+        "Nome",
+        "Sobrenome",
+        "Endereço de e-mail",
+        "Cidade",
+        "Número de telefone",
+        "Texto da mensagem",
+        "Currículo e outras informações contidas nos arquivos enviados"
+      ],
+      "voluntary": "O envio do currículo é voluntário. Caso você opte por enviá-lo, ele será utilizado exclusivamente para avaliar seu perfil em relação à sua solicitação.",
+      "purpose": "Finalidade: responder à solicitação do usuário e tratar as questões apresentadas.",
+      "legalBasis": "Base legal: Art. 6 (1) (b) do GDPR – tratamento necessário para execução de contrato ou medidas pré-contratuais; ou Art. 6 (1) (f) do GDPR – interesse legítimo em comunicação eficaz."
+    },
+    "recruitment": {
+      "title": "VIII. GESTÃO DE CANDIDATOS VIA SMARTRECRUITERS",
+      "description": "Este site exibe oportunidades de emprego obtidas via API do SmartRecruiters. As vagas são disponibilizadas apenas para fins informativos.",
+      "redirect": "Caso você decida se candidatar a uma vaga, será redirecionado para a plataforma SmartRecruiters. Todo o tratamento de dados de candidatos ocorre de acordo com os avisos de privacidade específicos disponibilizados naquela plataforma."
+    },
+    "recipients": {
+      "title": "IX. DESTINATÁRIOS DOS DADOS PESSOAIS",
+      "description": "Podemos compartilhar dados pessoais com prestadores de serviços que apoiam a operação do site, em especial:",
+      "items": [
+        "Provedor de hospedagem (infraestrutura de máquina virtual no Brasil)",
+        "Cloudflare (serviços de CDN e segurança)",
+        "Usercentrics (gerenciamento de consentimento)",
+        "Google (análises e mapas)"
+      ],
+      "note": "Esses prestadores atuam como operadores (processadores) ou controladores independentes, conforme o serviço. Não vendemos dados pessoais a terceiros."
+    },
+    "transfers": {
+      "title": "X. TRANSFERÊNCIAS INTERNACIONAIS DE DADOS",
+      "description": "Alguns de nossos prestadores de serviços tratam dados técnicos em países fora da União Europeia ou do Espaço Econômico Europeu, incluindo os Estados Unidos.",
+      "safeguards": "Quando exigido pela legislação aplicável, tais transferências são protegidas por mecanismos adequados, como as Cláusulas Contratuais Padrão da União Europeia."
+    },
+    "security": {
+      "title": "XI. SEGURANÇA DOS DADOS",
+      "description": "Utilizamos criptografia HTTPS/SSL e medidas técnicas e organizacionais apropriadas para proteger o site e quaisquer dados pessoais enviados contra perda, uso indevido ou acesso não autorizado."
+    },
+    "rights": {
+      "title": "XII. SEUS DIREITOS",
+      "description": "Dependendo da sua localização e da legislação aplicável (incluindo o GDPR), você tem direito a:",
+      "items": [
+        "Confirmação e acesso aos seus dados pessoais (Art. 15 GDPR)",
+        "Retificação de dados inexatos ou incompletos (Art. 16)",
+        "Exclusão de dados (Art. 17)",
+        "Restrição do tratamento (Art. 18)",
+        "Portabilidade de dados, quando o tratamento for baseado em consentimento ou contrato (Art. 20)",
+        "Oposição ao tratamento baseado em interesse legítimo (Art. 21)",
+        "Revogação do consentimento a qualquer momento (Art. 7(3))"
+      ],
+      "exercise": "Para exercer qualquer um desses direitos, entre em contato: techcolab@netzsch.com",
+      "complaint": "Você também tem o direito de apresentar reclamação perante uma autoridade supervisora de proteção de dados competente."
+    },
+    "contactSection": {
+      "title": "CONTATO",
+      "description": "Para quaisquer dúvidas relacionadas a esta Política de Privacidade ou aos seus dados pessoais, entre em contato diretamente:",
+      "title2": "Techco.lab Privacy Contact",
+      "email": "E-mail: techcolab@netzsch.com",
+      "address": "Endereço: Vila Itoupava, Blumenau, SC, e Techco.lab Germany"
+    }
+  },
+  "Imprint": {
+    "pageTitle": "Aviso Legal | Techco.lab",
+    "pageDescription": "Informações legais da Erich NETZSCH B.V. & Co. Holding KG — diretoria, registro comercial, responsabilidade pelo conteúdo, direitos autorais e política de publicidade.",
+    "serviceName": "Informações Legais Corporativas",
+    "serviceDescription": "Informações legais e de conformidade da Erich NETZSCH B.V. & Co. Holding KG, incluindo registro comercial, responsabilidade pelo conteúdo e políticas de direitos autorais.",
+    "title": "Aviso Legal",
+    "subtitle": "Informações legais",
+    "company": {
+      "name": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany",
+      "phone": "Telefone: +49 9287 75-0",
+      "fax": "Fax: +49 9287 75208",
+      "email": "E-mail: info@netzsch.com",
+      "website": "www: https://www.netzsch.com"
+    },
+    "directors": {
+      "title": "Diretor-Geral:",
+      "names": "Moritz Netzsch, Paul Netzsch, Jens Niessner",
+      "court": "Tribunal de registro: Local court Hof",
+      "registerNumber": "Número de registro: HRA 404",
+      "taxNumber": "Número de identificação fiscal de acordo com §27a da lei tributária: DE 133914533"
+    },
+    "responsible": {
+      "title": "Responsável pelo conteúdo de acordo com § 55 Abs.",
+      "subtitle": "2 RStV:",
+      "name": "Yann Jeschke",
+      "company": "Erich NETZSCH B.V. & Co. Holding KG",
+      "street": "Gebrüder-Netzsch-Strasse 19",
+      "city": "95100 Selb, Germany"
+    },
+    "liability": {
+      "title": "Responsabilidade",
+      "content1": "Como provedor de serviços, somos responsáveis pelo conteúdo destes sites de acordo com as disposições gerais (cf. § 7 parágrafo 1 DDG). Não somos obrigados a monitorar conteúdo de terceiros transmitido ou armazenado (cf. §§ 8-10 DDG). Isso não afeta as obrigações de remover ou bloquear o uso de informações de acordo com as leis gerais. No entanto, tal responsabilidade só é possível a partir do momento do conhecimento de uma infração específica. Se tomarmos conhecimento de quaisquer infrações legais, o conteúdo correspondente será removido imediatamente.",
+      "content2": "As páginas deste site contêm links para sites de terceiros externos. Não temos influência sobre o conteúdo desses sites e, por essa razão, não podemos aceitar qualquer responsabilidade por eles; nem adotamos tal conteúdo como nosso. O respectivo provedor ou operador dos sites é responsável pelo conteúdo dos sites vinculados. Verificamos os sites vinculados no momento da vinculação e não identificamos nenhum conteúdo ilegal. Não podemos razoavelmente ser obrigados a monitorar permanentemente o conteúdo das páginas vinculadas sem qualquer motivo específico para fazê-lo. No entanto, se tomarmos conhecimento de quaisquer infrações legais, os links correspondentes serão removidos imediatamente."
+    },
+    "copyright": {
+      "title": "Direitos Autorais",
+      "content1": "O conteúdo e as obras nestas páginas estão sujeitos à lei alemã de direitos autorais. Gostaríamos de salientar que qualquer reprodução/cópia, edição, distribuição e qualquer tipo de uso fora dos limites da lei de direitos autorais requer o consentimento por escrito do respectivo detentor dos direitos autorais.",
+      "content2": "Os direitos autorais de terceiros são respeitados nestas páginas. No entanto, caso ocorra qualquer violação de direitos autorais, por favor nos informe. Assim que as infrações se tornarem conhecidas, todo o conteúdo em questão será excluído imediatamente."
+    },
+    "advertising": {
+      "title": "Oposição à Publicidade",
+      "content": "Finalmente, por meio deste, nos opomos ao uso dos dados de contato publicados aqui no aviso legal para o envio de publicidade não solicitada."
+    }
+  },
+  "Common": {
+    "learnMore": "Saiba mais",
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "backToHome": "Voltar ao início"
+  },
+  "Footer": {
+    "tagline": "Conectando talentos e inovação para acelerar a transformação digital global da NETZSCH",
+    "copyright": "© 2025 Techco.lab. Todos os direitos reservados.",
+    "imprint": "Aviso Legal",
+    "cookieManagement": "Gerenciar Cookies",
+    "privacyPolicy": "Política de Privacidade",
+    "contact": {
+      "title": "Contato",
+      "locations": "Localizações",
+      "careers": "Carreiras",
+      "viewPositions": "Ver vagas abertas"
+    }
+  },
+  "FAQ": {
+    "title": "Perguntas",
+    "titleHighlight": "Frequentes",
+    "subtitle": "Tudo o que você precisa saber sobre trabalhar na Techco.lab",
+    "items": [
+      {
+        "question": "Qual é o modelo de trabalho na Techco.lab?",
+        "answer": "Oferecemos um modelo de trabalho híbrido com horários flexíveis. Você pode trabalhar de casa na maioria dos dias e visitar nossos escritórios em Curitiba ou Pomerode quando necessário para colaboração em equipe, reuniões ou eventos. Não há dias obrigatórios de escritório."
+      },
+      {
+        "question": "Quais benefícios a Techco.lab oferece?",
+        "answer": "Fornecemos um pacote completo de benefícios incluindo contrato CLT, participação nos lucros (PPL), plano de saúde e odontológico, plataforma de bem-estar (GoGood), subsídio educacional, acesso ao OpenEnglish, plataformas NOA e Alura, vale-alimentação, bônus por indicação e equipamentos."
+      },
+      {
+        "question": "Onde ficam os escritórios da Techco.lab?",
+        "answer": "Temos duas localizações principais no Sul do Brasil: Nex Coworking em Curitiba (PR), um ambiente colaborativo de tecnologia, e NEM Headquarters em Pomerode (SC), onde a excelência em engenharia encontra a transformação digital."
+      },
+      {
+        "question": "Com quais tecnologias a Techco.lab trabalha?",
+        "answer": "Trabalhamos com tecnologias de ponta incluindo plataformas cloud (Azure, AWS), integrações SAP, Power BI, Salesforce, ServiceNow, React, TypeScript, Python e diversos frameworks de IA/ML para aplicações industriais."
+      },
+      {
+        "question": "Como é o processo seletivo na Techco.lab?",
+        "answer": "Nosso processo seletivo normalmente inclui uma triagem inicial, avaliação técnica relevante para a vaga, entrevistas com a equipe e liderança, e uma oferta final. Valorizamos fit cultural, habilidades técnicas e mentalidade de crescimento em todo o processo."
+      },
+      {
+        "question": "Quais oportunidades de crescimento existem na Techco.lab?",
+        "answer": "Investimos fortemente no desenvolvimento profissional através de subsídios educacionais, certificações, plataformas de aprendizado (NOA, Alura, OpenEnglish), programas de mentoria e exposição a projetos globais. Você trabalhará em soluções impactantes que alcançam mais de 50 países."
+      }
+    ]
+  },
+  "Differentiators": {
+    "badge": "Por Que Nos Escolher",
+    "title": "O Que Nos Torna",
+    "titleHighlight": "Diferentes",
+    "subtitle": "Descubra por que a Techco.lab é o lugar ideal para construir sua carreira em tecnologia e inovação.",
+    "items": {
+      "global": {
+        "title": "Impacto Global",
+        "description": "Seu trabalho alcança mais de 50 países. Construa soluções que transformam operações de manufatura no mundo todo, não apenas projetos locais."
+      },
+      "industry": {
+        "title": "Pioneiros na Indústria 4.0",
+        "description": "Trabalhe em projetos reais de IA industrial, IoT e transformação digital que moldam o futuro da manufatura."
+      },
+      "growth": {
+        "title": "Crescimento Acelerado",
+        "description": "Subsídios educacionais, certificações, plataformas de aprendizado e exposição a tecnologias de ponta aceleram sua carreira."
+      },
+      "team": {
+        "title": "Time de Classe Mundial",
+        "description": "Colabore com profissionais talentosos do Brasil, Alemanha e do mundo todo em um ambiente multicultural."
+      },
+      "innovation": {
+        "title": "Inovação de Verdade",
+        "description": "Não apenas falamos sobre inovação. Construímos IA industrial, analytics preditivo e plataformas conectadas que resolvem problemas reais."
+      },
+      "stability": {
+        "title": "Estabilidade + Mentalidade Startup",
+        "description": "Aproveite a estabilidade de um grupo alemão com mais de 150 anos enquanto trabalha com a agilidade e inovação de uma startup de tecnologia."
+      }
+    }
+  }
+}
