@@ -1,0 +1,45 @@
+name: Build and Deploy to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  ACR_LOGIN_SERVER: crtechcolabbrsprd.azurecr.io
+  IMAGE_NAME: ntechcolab/landingpage
+  APP_SERVICE_NAME: techco-lab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login no ACR
+        run: |
+          docker login $ACR_LOGIN_SERVER \
+            -u ${{ secrets.ACR_USERNAME }} \
+            -p ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build da imagem
+        run: |
+          IMAGE_TAG=${{ github.sha }}
+          docker build -t $ACR_LOGIN_SERVER/$IMAGE_NAME:$IMAGE_TAG .
+          docker tag $ACR_LOGIN_SERVER/$IMAGE_NAME:$IMAGE_TAG \
+                     $ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }}
+
+      - name: Push da imagem
+        run: |
+          IMAGE_TAG=${{ github.sha }}
+          docker push $ACR_LOGIN_SERVER/$IMAGE_NAME:$IMAGE_TAG
+          docker push $ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }}
+
+      - name: Deploy no App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.APP_SERVICE_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ env.ACR_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
