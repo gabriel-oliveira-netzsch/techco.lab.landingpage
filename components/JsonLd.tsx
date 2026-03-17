@@ -93,10 +93,7 @@ export function JobPostingJsonLd({
       .split('T')[0],
     employmentType: employmentType.toUpperCase().replace('-', '_'),
     hiringOrganization: {
-      '@type': 'Organization',
-      name: 'Techco.lab',
-      sameAs: 'https://ntechcolab.com',
-      logo: 'https://ntechcolab.com/logo.png',
+      '@id': 'https://ntechcolab.com/#organization',
     },
     jobLocation: {
       '@type': 'Place',
