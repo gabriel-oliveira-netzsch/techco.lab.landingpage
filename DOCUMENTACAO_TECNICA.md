@@ -45,9 +45,9 @@ ntechcolab-site/
 │   │   ├── open-positions/       # Página de vagas
 │   │   ├── our-culture/          # Cultura
 │   │   ├── what-we-do/           # Projetos
-│   │   ├── positions/[id]/       # Detalhes de vaga
-│   │   ├── imprint/              # Aviso legal (EN)
-│   │   ├── aviso-legal/          # Aviso legal (PT)
+│   │   ├── positions/[id]/       # Detalhes de vaga (metadados dinâmicos)
+│   │   ├── imprint/              # Aviso legal (EN) — noindex
+│   │   ├── aviso-legal/          # Aviso legal (PT) — noindex
 │   │   ├── privacy-policy/       # Política de privacidade
 │   │   └── not-found.tsx
 │   ├── api/                      # API Routes (BFF)
@@ -62,7 +62,7 @@ ntechcolab-site/
 │   ├── layout.tsx                # Layout raiz
 │   ├── globals.css
 │   ├── robots.ts                 # robots.txt dinâmico
-│   └── sitemap.ts                # sitemap.xml dinâmico
+│   └── sitemap.ts                # sitemap.xml dinâmico (inclui vagas)
 ├── components/
 │   ├── sections/                 # Seções de páginas
 │   ├── jobs/                     # Componentes de vagas
@@ -76,6 +76,7 @@ ntechcolab-site/
 │   └── ...
 ├── lib/
 │   ├── analytics.ts              # Utilitários GA4
+│   ├── smartrecruiters.ts        # Fetch de vagas (sitemap)
 │   ├── utils.ts
 │   └── images.ts
 ├── messages/
@@ -87,6 +88,8 @@ ntechcolab-site/
 ├── hooks/
 │   ├── useTimeOnPage.ts
 │   └── useSectionTracking.ts
+├── public/
+│   └── llms.txt                 # Descoberta por IAs (llmstxt.org)
 ├── middleware.ts                 # i18n + redirect www
 ├── next.config.ts
 ├── Dockerfile
@@ -218,8 +221,9 @@ Cria candidato no talent pool e faz upload do CV.
 | `JobDetails`     | `GET /api/jobs/:id/publication` | Ao clicar em "Apply"                 |
 | `TalentPoolForm` | `POST /api/candidates`          | Envio para talent pool               |
 
+### 4.7 Módulo Compartilhado
 
----
+O `lib/smartrecruiters.ts` exporta `getPublicJobs()` para obter vagas públicas diretamente da API SmartRecruiters. Utilizado pelo **sitemap** para incluir URLs dinâmicas de vagas. Em build sem credenciais configuradas, retorna array vazio sem falhar.
 
 ## 5. Internacionalização (i18n)
 
@@ -228,7 +232,7 @@ Cria candidato no talent pool e faz upload do CV.
 - **Locales:** `en` (padrão), `pt-BR`
 - **Biblioteca:** next-intl
 - **Arquivos de mensagens:** `messages/en.json`, `messages/pt.json`
-- **Prefixo de locale:** sempre presente (`/en`, `/pt-BR`)
+- **Prefixo de locale:** `as-needed` — inglês sem prefixo, português com `/pt-BR`
 
 ### 5.2 Middleware
 
@@ -239,13 +243,17 @@ O `middleware.ts`:
 
 ### 5.3 Rotas Localizadas
 
+Com `localePrefix: "as-needed"`, o inglês usa URLs sem prefixo (alinhado ao canonical escolhido pelo Google):
 
 | Rota EN              | Rota PT-BR              |
 | -------------------- | ----------------------- |
-| `/en`                | `/pt-BR`                |
-| `/en/open-positions` | `/pt-BR/open-positions` |
-| `/en/imprint`        | `/pt-BR/aviso-legal`    |
-| `/en/privacy-policy` | `/pt-BR/privacy-policy` |
+| `/`                  | `/pt-BR`                |
+| `/open-positions`    | `/pt-BR/open-positions` |
+| `/what-we-do`        | `/pt-BR/what-we-do`     |
+| `/our-culture`       | `/pt-BR/our-culture`    |
+| `/imprint`           | `/pt-BR/aviso-legal`    |
+| `/privacy-policy`    | `/pt-BR/privacy-policy` |
+| `/positions/[id]`    | `/pt-BR/positions/[id]` |
 
 
 ---
@@ -407,24 +415,69 @@ services:
 
 ### 10.3 Eventos Customizados
 
-
 | Evento                 | Categoria   | Uso                                   |
 | ---------------------- | ----------- | ------------------------------------- |
 | `view_job`             | recruitment | Visualização de vaga                  |
+| `view_jobs_page`       | recruitment | Visualização da página de vagas       |
 | `begin_application`    | recruitment | Clique em Apply                       |
 | `application_complete` | recruitment | Redirecionamento para SmartRecruiters |
 | `cta_click`            | engagement  | Cliques em CTAs                       |
 | `section_view`         | navigation  | Navegação entre seções                |
+| `language_change`      | settings    | Mudança de idioma                     |
+
+**Referência completa:** `docs_analytics.md`
 
 
 ---
 
 ## 11. SEO e Metadados
 
-- **Sitemap:** `app/sitemap.ts` — rotas estáticas e localizadas
-- **Robots:** `app/robots.ts` — permite crawlers, bloqueia `/api/`, `/_next/`
-- **JSON-LD:** Schema.org Organization e WebSite no layout raiz
-- **Open Graph / Twitter:** Metadados configurados em `app/layout.tsx`
+### 11.1 Sitemap
+
+- **Arquivo:** `app/sitemap.ts`
+- **Conteúdo:** Rotas estáticas, localizadas e **vagas dinâmicas** (via `lib/smartrecruiters.ts`)
+- **Canonicals:** Alinhados com `localePrefix: "as-needed"` (en sem prefixo)
+
+### 11.2 Robots
+
+- **Arquivo:** `app/robots.ts`
+- Permite crawlers, bloqueia `/api/`, `/_next/`, `/static/`
+
+### 11.3 Metadados Dinâmicos
+
+- **Páginas de vagas:** Título e descrição gerados a partir de `job.title` e `job.location.city`
+- **Imprint / Aviso Legal:** `robots: { index: false, follow: true }` — conteúdo legal não indexado
+
+### 11.4 llms.txt
+
+Padrão de descoberta por IAs (similar a `robots.txt` para crawlers). Oferece às LLMs um resumo estruturado em Markdown em vez de rastrear todo o HTML do site.
+
+| Aspecto | Detalhe |
+| ------- | ------- |
+| **Arquivo** | `public/llms.txt` |
+| **URL** | `https://ntechcolab.com/llms.txt` |
+| **Implementação** | Arquivo estático em `public/` — Next.js serve na raiz automaticamente |
+| **Formato** | Markdown, UTF-8 |
+| **Especificação** | [llmstxt.org](https://www.llmstxt.org/) / [ai-visibility.org.uk](https://www.ai-visibility.org.uk/specifications/llms-txt/) |
+
+**Estrutura do arquivo:**
+
+- **H1 + Blockquote:** Nome da organização e resumo em 1–3 frases
+- **About Techco.lab:** Descrição do hub, capacidades (Industrial AI, Connected Platforms, Digital Interfaces, Predictive Analytics)
+- **Careers at Techco.lab:** Benefícios (CLT, PPL, saúde, wellness, educação, híbrido), localizações (Curitiba, Pomerode), link para vagas
+- **Contact:** Website, LinkedIn, e-mail, empresa-mãe
+- **Certifications:** Great Place to Work®
+- **Key Facts:** Métricas e contexto (usuários, países, projetos)
+
+**Nota técnica:** O arquivo deve permanecer em `public/llms.txt`. Não criar route handler em `app/llms.txt/route.ts` — Next.js gera conflito quando existem ambos (erro: "conflicting public file and page file").
+
+**Validação:** [llms-txt.io/validator](https://llms-txt.io/validator) | [directory.llmstxt.cloud](https://directory.llmstxt.cloud/)
+
+### 11.5 Estrutura
+
+- **JSON-LD:** Schema.org Organization, WebSite e JobPosting no layout e páginas
+- **Open Graph / Twitter:** Metadados em `app/layout.tsx`
+- **BreadcrumbSchema:** URLs padronizadas conforme locale
 
 ---
 
@@ -444,4 +497,6 @@ services:
 - [next-intl](https://next-intl.dev/)
 - [Cookiebot](https://www.cookiebot.com/)
 - [Google Analytics 4](https://developers.google.com/analytics/devguides/collection/ga4)
+- [llms.txt — llmstxt.org](https://www.llmstxt.org/)
+- [llms.txt Specification — ai-visibility.org.uk](https://www.ai-visibility.org.uk/specifications/llms-txt/)
 
