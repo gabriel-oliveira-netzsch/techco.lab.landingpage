@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { searchPages } from "@/lib/searchIndex";
+import { getPublicJobs } from "@/lib/smartrecruiters";
 import {
   validateLocale,
   sanitizeSearchQuery,
@@ -25,33 +26,17 @@ export async function GET(request: NextRequest) {
     }
 
     const origin = request.nextUrl.origin;
-    const jobsUrl = new URL("/api/jobs", origin);
-    jobsUrl.searchParams.set("search", q);
+    const prefix = locale === "en" ? "" : `/${locale}`;
 
-    const jobsResponse = await fetch(jobsUrl.toString(), {
-      headers: { Accept: "application/json" },
-      next: { revalidate: 300 },
-    });
-
-    let jobs: Array<{
-      id: string;
-      title: string;
-      city: string;
-      url: string;
-    }> = [];
-
-    if (jobsResponse.ok) {
-      const jobsData = await jobsResponse.json();
-      const prefix = locale === "en" ? "" : `/${locale}`;
-      jobs = (jobsData.jobs || [])
-        .filter((job: { id: unknown }) => isValidJobId(job.id))
-        .map((job: { id: string; title: string; location: { city: string } }) => ({
-          id: job.id,
-          title: String(job.title || "").slice(0, 200),
-          city: String(job.location?.city || "").slice(0, 100),
-          url: `${origin}${prefix}/positions/${job.id}`,
-        }));
-    }
+    const jobsData = await getPublicJobs(q);
+    const jobs = jobsData
+      .filter((job) => isValidJobId(job.id))
+      .map((job) => ({
+        id: job.id,
+        title: String(job.title || "").slice(0, 200),
+        city: String(job.location?.city || "").slice(0, 100),
+        url: `${origin}${prefix}/positions/${job.id}`,
+      }));
 
     // Buscar páginas estáticas
     const matchedPages = searchPages(q, locale);

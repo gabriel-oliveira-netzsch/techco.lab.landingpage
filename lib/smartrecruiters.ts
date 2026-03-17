@@ -129,17 +129,29 @@ async function fetchJobsFromApi(
   return response.json();
 }
 
-export async function getPublicJobs(): Promise<Job[]> {
+export async function getPublicJobs(search?: string): Promise<Job[]> {
   try {
     const accessToken = await getAccessToken();
     const jobsData = await fetchJobsFromApi(accessToken, undefined, 100);
 
-    return jobsData.content.filter(
+    let filtered = jobsData.content.filter(
       (job) =>
         job.postingStatus === "PUBLIC" &&
         ["sourcing", "interview", "offer"].includes(job.status.toLowerCase()) &&
         job.department?.label === "techco.lab"
     );
+
+    if (search && search.trim()) {
+      const searchLower = search.trim().toLowerCase();
+      filtered = filtered.filter(
+        (job) =>
+          job.title.toLowerCase().includes(searchLower) ||
+          job.department?.label?.toLowerCase().includes(searchLower) ||
+          job.location.city.toLowerCase().includes(searchLower)
+      );
+    }
+
+    return filtered;
   } catch {
     return [];
   }
