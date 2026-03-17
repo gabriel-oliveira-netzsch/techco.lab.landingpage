@@ -12,17 +12,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Imprint' });
 
+  const baseUrl = "https://ntechcolab.com";
+  const canonical =
+    locale === "en"
+      ? `${baseUrl}/imprint`
+      : `${baseUrl}/pt-BR/aviso-legal`;
   return {
-    title: t('pageTitle'),
-    description: t('pageDescription'),
+    title: t("pageTitle"),
+    description: t("pageDescription"),
+    robots: { index: false, follow: true },
     alternates: {
-      canonical:
-        locale === 'en'
-          ? 'https://ntechcolab.com/en/imprint'
-          : `https://ntechcolab.com/${locale}/aviso-legal`,
+      canonical,
       languages: {
-        en: 'https://ntechcolab.com/en/imprint',
-        'pt-BR': 'https://ntechcolab.com/pt-BR/aviso-legal',
+        en: `${baseUrl}/imprint`,
+        "pt-BR": `${baseUrl}/pt-BR/aviso-legal`,
       },
     },
   };

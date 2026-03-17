@@ -22,14 +22,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "OurCulture" });
 
+  const baseUrl = "https://ntechcolab.com";
+  const canonical =
+    locale === "en"
+      ? `${baseUrl}/our-culture`
+      : `${baseUrl}/${locale}/our-culture`;
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
     alternates: {
-      canonical: `https://ntechcolab.com/${locale}/our-culture`,
+      canonical,
       languages: {
-        en: "https://ntechcolab.com/en/our-culture",
-        "pt-BR": "https://ntechcolab.com/pt-BR/our-culture",
+        en: `${baseUrl}/our-culture`,
+        "pt-BR": `${baseUrl}/pt-BR/our-culture`,
       },
     },
   };

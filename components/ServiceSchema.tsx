@@ -17,17 +17,17 @@ export function ServiceSchema({
 }: ServiceSchemaProps) {
   const locale = useLocale();
   const baseUrl = 'https://ntechcolab.com';
-  const prefix = locale === 'en' ? '/en' : `/${locale}`;
+  const pathPrefix = locale === "en" ? "" : `/${locale}`;
 
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
+    "@context": "https://schema.org",
+    "@type": "Service",
     name,
     description,
     provider: {
-      '@type': 'Organization',
-      name: 'Techco.lab',
-      url: baseUrl + prefix,
+      "@type": "Organization",
+      name: "Techco.lab",
+      url: `${baseUrl}${pathPrefix || "/"}`,
       parentOrganization: {
         '@type': 'Organization',
         name: 'NETZSCH Group',

@@ -12,14 +12,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'PrivacyPolicy' });
 
+  const baseUrl = "https://ntechcolab.com";
+  const canonical =
+    locale === "en"
+      ? `${baseUrl}/privacy-policy`
+      : `${baseUrl}/pt-BR/privacy-policy`;
   return {
-    title: t('pageTitle'),
-    description: t('pageDescription'),
+    title: t("pageTitle"),
+    description: t("pageDescription"),
     alternates: {
-      canonical: `https://ntechcolab.com/${locale}/privacy-policy`,
+      canonical,
       languages: {
-        en: 'https://ntechcolab.com/en/privacy-policy',
-        'pt-BR': 'https://ntechcolab.com/pt-BR/privacy-policy',
+        en: `${baseUrl}/privacy-policy`,
+        "pt-BR": `${baseUrl}/pt-BR/privacy-policy`,
       },
     },
   };

@@ -30,20 +30,15 @@ export function LanguageSelector() {
 
   const isPTBR = currentLocale === "pt-BR";
 
-  // Calculate paths for each locale
+  // Calculate paths for each locale (localePrefix: as-needed — en has no prefix)
   const localePaths = useMemo(() => {
-    // Build regex pattern from all locales (escape special characters)
-    const escapedLocales = locales.map((l) => l.replace(/-/g, "\\-"));
-    const localePattern = escapedLocales.join("|");
-    const localeRegex = new RegExp(`^/(${localePattern})`);
-
-    // Remove the current locale prefix
+    const localeRegex = /^\/pt-BR/;
     const pathWithoutLocale = pathname.replace(localeRegex, "") || "/";
+    const pathSuffix = pathWithoutLocale === "/" ? "" : pathWithoutLocale;
 
-    // With localePrefix: 'always', all paths need the locale prefix
     return {
-      en: `/en${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
-      "pt-BR": `/pt-BR${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
+      en: pathSuffix || "/",
+      "pt-BR": `/pt-BR${pathSuffix}`,
     };
   }, [pathname]);
 
