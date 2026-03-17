@@ -504,8 +504,117 @@ Padrão de descoberta por IAs (similar a `robots.txt` para crawlers). Oferece à
 - Variáveis sensíveis via ambiente, não hardcoded
 
 ---
+## 13. Infraestrutura
 
-## 13. Referências
+### 13.1 Contexto Azure
+
+| Aspecto | Valor |
+| ------- | ----- |
+| **Resource Group** | `rg-techco-lab-brs-prd` |
+| **Subscription** | `sub-landingzone-brazilsouth-prod` |
+| **Região** | Brazil South |
+| **Ambiente** | Produção |
+
+**Tags do Resource Group:**
+
+| Tag | Valor |
+| --- | ----- |
+| `businessunit` | NEM |
+| `costcenter` | 531 |
+| `description` | Techco.lab App Service |
+| `owner` | alberto.reuters@netzsch.com |
+| `technicalowner` | hernan.morales@netzsch.com |
+
+### 13.2 Azure Container Registry (ACR)
+
+| Aspecto | Valor |
+| ------- | ----- |
+| **Nome** | `crtechcolabbrsprd` |
+| **Login Server** | `crtechcolabbrsprd.azurecr.io` |
+| **Tier** | Standard |
+| **Acesso** | Todas as redes (público) |
+| **Repositório** | `ntechcolab/landingpage` |
+
+**Autenticação:**
+
+- **Pipeline (push):** Admin credentials via `ACR_USERNAME` e `ACR_PASSWORD` (GitHub Secrets)
+- **App Service (pull):** Managed Identity `uai-techco-lab` com role AcrPull
+
+### 13.3 Azure App Service
+
+| Aspecto | Valor |
+| ------- | ----- |
+| **Nome** | `techco-lab` |
+| **App Service Plan** | ASP-TechcoLab |
+| **SKU** | Basic (B2) |
+| **Sistema** | Linux |
+| **Instâncias** | 1 |
+| **Modelo** | Container |
+| **Imagem** | `crtechcolabbrsprd.azurecr.io/ntechcolab/landingpage` |
+
+**Variáveis de ambiente (App Settings):**
+
+- `DOCKER_REGISTRY_SERVER_URL`
+- `NEXT_PUBLIC_BASE_URL`
+- `NEXT_PUBLIC_COOKIEBOT_CBID`
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- `SMARTRECRUITERS_CLIENT_ID`
+- `SMARTRECRUITERS_CLIENT_SECRET`
+- `WEBSITE_HTTPLOGGING_RETENTION_DAYS`
+
+### 13.4 Camada de Rede
+
+**Fluxo:**
+
+```
+Cloudflare (DNS) → App Service
+```
+
+**Cloudflare:**
+
+- **DNS:** Gerenciado no Cloudflare
+- **Plano:** Free
+- **Modo:** DNS only (cinza)
+- **Domínios:** `ntechcolab.com` e `www.ntechcolab.com` configurados no Cloudflare e como custom domains no App Service
+- **Redirecionamento www → não-www:** Cloudflare
+
+**Domínio padrão:** `techco-lab.azurewebsites.net`
+
+### 13.5 Certificados e SSL
+
+- **Tipo:** Cloudflare Origin Certificate (`.pfx`)
+- **Domínio:** `*.ntechcolab`
+- **Renovação:** Manual
+- **Expiração:** 22/01/2027
+
+### 13.6 Pipeline (CI/CD)
+
+- **Ferramenta:** GitHub Actions
+- **Workflow:** `.github/workflows/deploy.yml`
+- **Trigger:** Push na branch `main`
+- **Deploy:** Exclusivamente via pipeline
+
+**Etapas:**
+
+1. Checkout
+2. Login no ACR (admin credentials)
+3. Build da imagem Docker
+4. Push para ACR
+5. Deploy no App Service via publish profile
+
+**Secrets GitHub:** `ACR_USERNAME`, `ACR_PASSWORD`, `AZURE_WEBAPP_PUBLISH_PROFILE`
+
+**Nota:** As variáveis `NEXT_PUBLIC_*` não são passadas como `--build-arg` no pipeline; são injetadas em runtime via App Settings.
+
+### 13.7 Logs e Observabilidade
+
+- **Log Analytics Workspace:** `log-techcolab-brs-prd` (Brazil South)
+- **Tipos de log:** Application logs
+- **Retenção:** 30 dias (`WEBSITE_HTTPLOGGING_RETENTION_DAYS`)
+
+---
+
+## 14. Referências
 
 - [SmartRecruiters API](https://developers.smartrecruiters.com/)
 - [Next.js App Router](https://nextjs.org/docs/app)
@@ -514,4 +623,6 @@ Padrão de descoberta por IAs (similar a `robots.txt` para crawlers). Oferece à
 - [Google Analytics 4](https://developers.google.com/analytics/devguides/collection/ga4)
 - [llms.txt — llmstxt.org](https://www.llmstxt.org/)
 - [llms.txt Specification — ai-visibility.org.uk](https://www.ai-visibility.org.uk/specifications/llms-txt/)
+
+
 
