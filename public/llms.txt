@@ -26,6 +26,7 @@ Techco.lab is NETZSCH's technology development hub headquartered in Southern Bra
 - [What We Do](https://ntechcolab.com/what-we-do): Projects and digital solutions
 - [Our Culture](https://ntechcolab.com/our-culture): Values, benefits, GPTW certification
 - [Open Positions](https://ntechcolab.com/open-positions): Current job openings at Techco.lab
+- [Search](https://ntechcolab.com/search): Search jobs and pages (use ?q=term)
 
 ## Careers at Techco.lab
 

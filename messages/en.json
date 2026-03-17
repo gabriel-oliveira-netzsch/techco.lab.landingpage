@@ -826,5 +826,15 @@
         "description": "Enjoy the stability of a 150+ year old German group while working with the agility and innovation of a tech startup."
       }
     }
+  },
+  "Search": {
+    "title": "Search",
+    "placeholder": "Search jobs and pages...",
+    "noResults": "No results found for your search.",
+    "tryDifferent": "Try different keywords.",
+    "jobs": "Open positions",
+    "pages": "Pages",
+    "pageTitle": "Search | Techco.lab",
+    "loading": "Loading..."
   }
 }

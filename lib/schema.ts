@@ -20,7 +20,7 @@ export const organizationSchema = {
   url: BASE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${BASE_URL}/images/og-image.jpg`,
+    url: `${BASE_URL}/images/techco_lab_logo.jpeg`,
     width: 1200,
     height: 630,
   },
@@ -69,8 +69,8 @@ export const organizationSchema = {
 } as const;
 
 /**
- * Schema WebSite para Sitelinks Search Box (opcional).
- * Sem potentialAction se não houver busca no site.
+ * Schema WebSite para Sitelinks Search Box.
+ * potentialAction permite que o Google exiba caixa de busca no Knowledge Panel.
  */
 export const websiteSchema = {
   "@context": "https://schema.org",
@@ -81,5 +81,13 @@ export const websiteSchema = {
   inLanguage: ["en", "pt-BR"],
   publisher: {
     "@id": `${BASE_URL}/#organization`,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 } as const;

@@ -49,6 +49,7 @@ ntechcolab-site/
 │   │   ├── imprint/              # Aviso legal (EN) — noindex
 │   │   ├── aviso-legal/          # Aviso legal (PT) — noindex
 │   │   ├── privacy-policy/       # Política de privacidade
+│   │   ├── search/              # Busca (vagas + páginas)
 │   │   └── not-found.tsx
 │   ├── api/                      # API Routes (BFF)
 │   │   ├── jobs/
@@ -57,8 +58,10 @@ ntechcolab-site/
 │   │   │       ├── route.ts      # GET /api/jobs/:id
 │   │   │       └── publication/
 │   │   │           └── route.ts  # GET /api/jobs/:id/publication
-│   │   └── candidates/
-│   │       └── route.ts          # POST /api/candidates
+│   │   ├── candidates/
+│   │   │   └── route.ts          # POST /api/candidates
+│   │   └── search/
+│   │       └── route.ts          # GET /api/search?q=&locale=
 │   ├── layout.tsx                # Layout raiz
 │   ├── globals.css
 │   ├── robots.ts                 # robots.txt dinâmico
@@ -77,6 +80,9 @@ ntechcolab-site/
 ├── lib/
 │   ├── analytics.ts              # Utilitários GA4
 │   ├── smartrecruiters.ts        # Fetch de vagas (sitemap)
+│   ├── schema.ts                 # JSON-LD Organization + WebSite (Knowledge Panel)
+│   ├── searchIndex.ts            # Índice de páginas para busca
+│   ├── searchValidation.ts       # Validação e sanitização de URLs/busca
 │   ├── utils.ts
 │   └── images.ts
 ├── messages/
@@ -253,6 +259,7 @@ Com `localePrefix: "as-needed"`, o inglês usa URLs sem prefixo (alinhado ao can
 | `/our-culture`       | `/pt-BR/our-culture`    |
 | `/imprint`           | `/pt-BR/aviso-legal`    |
 | `/privacy-policy`    | `/pt-BR/privacy-policy` |
+| `/search?q=`         | `/pt-BR/search?q=`       |
 | `/positions/[id]`    | `/pt-BR/positions/[id]` |
 
 
@@ -475,9 +482,15 @@ Padrão de descoberta por IAs (similar a `robots.txt` para crawlers). Oferece à
 
 ### 11.5 Estrutura
 
-- **JSON-LD:** Schema.org Organization, WebSite e JobPosting no layout e páginas
+- **JSON-LD:** Schema.org Organization (com @id, logo, parentOrganization, contactPoint), WebSite (com SearchAction para Sitelinks Search Box) e JobPosting no layout e páginas — centralizado em `lib/schema.ts`
 - **Open Graph / Twitter:** Metadados em `app/layout.tsx`
 - **BreadcrumbSchema:** URLs padronizadas conforme locale
+
+### 11.6 Busca
+
+- **Página:** `/search?q=` e `/pt-BR/search?q=`
+- **API:** `GET /api/search?q=&locale=` — busca vagas (via `/api/jobs`) e páginas estáticas (via `lib/searchIndex.ts`)
+- **Segurança:** `lib/searchValidation.ts` — validação de locale, sanitização de query, validação de job ID e paths internos antes de renderizar links
 
 ---
 
@@ -485,6 +498,8 @@ Padrão de descoberta por IAs (similar a `robots.txt` para crawlers). Oferece à
 
 - Credenciais SmartRecruiters apenas no servidor (nunca expostas ao cliente)
 - Validação de entrada em `/api/candidates` (email, tipo e tamanho de arquivo)
+- Validação em `/api/search`: locale (whitelist en/pt-BR), query (sanitização, limite 200 chars), job ID (regex alphanumérico)
+- Validação de URLs dinâmicas em `SearchPage`: `toSafeInternalPath()` antes de usar em links — evita open redirect e path traversal
 - Usuário não-root no container Docker
 - Variáveis sensíveis via ambiente, não hardcoded
 
