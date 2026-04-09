@@ -104,6 +104,246 @@ ntechcolab-site/
 
 ---
 
+## 3.1 Desenho de Arquitetura (Mermaid)
+
+### 3.1.1 Visão de Contexto (C4 - Nível 1)
+
+```mermaid
+C4Context
+    title Arquitetura de Contexto — Techco.lab
+
+    Person(usuario, "Usuário", "Candidato ou visitante do site")
+    Person(google, "Google / Crawlers", "Indexação e Sitelinks Search Box")
+    Person(llm, "LLMs / IAs", "Descoberta via llms.txt")
+
+    System_Boundary(techcolab, "Techco.lab") {
+        System(site, "ntechcolab.com", "Landing page institucional com vagas, cultura e talent pool")
+    }
+
+    System_Ext(smartrecruiters, "SmartRecruiters API", "Vagas e candidatos")
+    System_Ext(cookiebot, "Cookiebot", "Consentimento GDPR/LGPD")
+    System_Ext(ga4, "Google Analytics 4", "Analytics e conversões")
+    System_Ext(cloudflare, "Cloudflare", "DNS e SSL")
+
+    Rel(usuario, site, "Acessa")
+    Rel(google, site, "Indexa, sitemap, robots")
+    Rel(llm, site, "Lê llms.txt")
+    Rel(site, smartrecruiters, "OAuth + REST")
+    Rel(site, cookiebot, "Banner de cookies")
+    Rel(site, ga4, "Eventos (com consentimento)")
+    Rel(usuario, cloudflare, "Resolve DNS")
+    Rel(cloudflare, site, "Roteia")
+```
+
+### 3.1.2 Visão de Container (C4 - Nível 2)
+
+```mermaid
+C4Container
+    title Arquitetura de Container — Techco.lab
+
+    Person(usuario, "Usuário")
+
+    Container_Boundary(app, "Next.js App (Azure App Service)") {
+        Container(ui, "Frontend React", "Next.js App Router, React 19, next-intl", "Páginas SSR/CSR")
+        Container(bff, "API Routes (BFF)", "Next.js API Routes", "Proxy e orquestração")
+        Container(middleware, "Middleware", "next-intl, redirect www", "Roteamento e i18n")
+    }
+
+    ContainerDb(static, "Arquivos estáticos", "public/, llms.txt", "Next.js serve na raiz")
+    ContainerDb(messages, "Mensagens i18n", "messages/en.json, pt.json", "Traduções")
+
+    System_Ext(sr, "SmartRecruiters", "OAuth 2.0, REST API")
+    System_Ext(cb, "Cookiebot", "Consent management")
+    System_Ext(ga, "GA4", "Analytics")
+
+    Rel(usuario, ui, "HTTPS")
+    Rel(ui, bff, "fetch /api/*")
+    Rel(ui, messages, "Carrega traduções")
+    Rel(ui, static, "Assets, llms.txt")
+    Rel(bff, sr, "Jobs, candidates")
+    Rel(ui, cb, "Banner")
+    Rel(ui, ga, "Eventos")
+    Rel(usuario, middleware, "Todas as requisições")
+```
+
+### 3.1.3 Fluxo de Dados — Recrutamento
+
+```mermaid
+sequenceDiagram
+    participant U as Usuário
+    participant UI as Frontend React
+    participant BFF as API Routes
+    participant SR as SmartRecruiters
+
+    U->>UI: Acessa /open-positions
+    UI->>BFF: GET /api/jobs
+    BFF->>SR: POST /identity/oauth/token
+    SR-->>BFF: access_token
+    BFF->>SR: GET /jobs (OAuth Bearer)
+    SR-->>BFF: content[]
+    BFF->>BFF: Filtra techco.lab, PUBLIC
+    BFF-->>UI: { jobs, cities }
+    UI-->>U: Renderiza lista
+
+    U->>UI: Clica em vaga
+    UI->>BFF: GET /api/jobs/:id
+    BFF->>SR: GET /jobs/:id
+    SR-->>BFF: job details
+    BFF-->>UI: job
+    UI-->>U: Detalhes da vaga
+
+    U->>UI: Clica Apply
+    UI->>BFF: GET /api/jobs/:id/publication
+    BFF->>SR: GET /jobs/:id/publication
+    SR-->>BFF: postingId
+    BFF-->>UI: URL SmartRecruiters
+    UI->>U: Redirect para candidatura
+```
+
+### 3.1.4 Fluxo de Dados — Busca
+
+```mermaid
+sequenceDiagram
+    participant U as Usuário
+    participant UI as SearchPage
+    participant BFF as /api/search
+    participant SR as lib/smartrecruiters
+    participant IDX as lib/searchIndex
+
+    U->>UI: /search?q=engineer
+    UI->>BFF: GET /api/search?q=engineer&locale=en
+    BFF->>BFF: sanitizeQuery, validateLocale
+
+    par Vagas
+        BFF->>SR: getPublicJobs("engineer")
+        SR->>SR: OAuth + fetch SmartRecruiters
+        SR-->>BFF: jobs[]
+    and Páginas
+        BFF->>IDX: searchPages("engineer", "en")
+        IDX-->>BFF: matchedPages[]
+    end
+
+    BFF->>BFF: isValidJobId, toSafeInternalPath
+    BFF-->>UI: { jobs, pages }
+    UI-->>U: Resultados
+```
+
+### 3.1.5 Componentes Internos e Dependências
+
+```mermaid
+flowchart TB
+    subgraph Pages["Páginas [locale]"]
+        Home[page.tsx]
+        OpenPos[open-positions]
+        Culture[our-culture]
+        WhatWeDo[what-we-do]
+        Search[search]
+        Positions[positions/[id]]
+        Imprint[imprint / aviso-legal]
+        Privacy[privacy-policy]
+    end
+
+    subgraph API["API Routes"]
+        JobsAPI[/api/jobs]
+        JobsId[/api/jobs/:id]
+        JobsPub[/api/jobs/:id/publication]
+        Candidates[/api/candidates]
+        SearchAPI[/api/search]
+    end
+
+    subgraph Lib["lib/"]
+        SR[smartrecruiters.ts]
+        Schema[schema.ts]
+        SearchIdx[searchIndex.ts]
+        SearchVal[searchValidation.ts]
+        Analytics[analytics.ts]
+    end
+
+    subgraph Ext["Externos"]
+        SmartRecruiters[SmartRecruiters API]
+    end
+
+    OpenPos --> JobsAPI
+    Positions --> JobsId
+    Positions --> JobsPub
+    Search --> SearchAPI
+    JobsAPI --> SR
+    JobsId --> SR
+    SearchAPI --> SR
+    SearchAPI --> SearchIdx
+    SearchAPI --> SearchVal
+    SR --> SmartRecruiters
+
+    Sitemap[sitemap.ts] --> SR
+```
+
+### 3.1.6 Infraestrutura e Pipeline de Deploy
+
+```mermaid
+flowchart LR
+    subgraph Dev["Desenvolvimento"]
+        GH[GitHub Repo]
+        GA[GitHub Actions]
+    end
+
+    subgraph Azure["Azure (Brazil South)"]
+        ACR[ACR crtechcolabbrsprd]
+        ACR --> |Managed Identity| App[App Service techco-lab]
+    end
+
+    subgraph Net["Rede"]
+        CF[Cloudflare DNS]
+        CF --> |HTTPS| App
+    end
+
+    GH --> |push main| GA
+    GA --> |build + push| ACR
+    GA --> |deploy| App
+
+    subgraph Observability["Observabilidade"]
+        Logs[Log Analytics log-techcolab-brs-prd]
+        App -.-> |Application logs| Logs
+    end
+```
+
+### 3.1.7 Camadas de Segurança
+
+```mermaid
+flowchart TB
+    subgraph Client["Cliente"]
+        Browser[Navegador]
+    end
+
+    subgraph Edge["Edge"]
+        CF[Cloudflare - DNS, SSL]
+    end
+
+    subgraph App["App Service"]
+        MW[Middleware - redirect www]
+        Next[Next.js]
+    end
+
+    subgraph Validation["Validação de Entrada"]
+        SearchVal[searchValidation - locale, query, jobId]
+        CandidatesVal[/api/candidates - email, file type, size]
+        SafePath[toSafeInternalPath - links]
+    end
+
+    subgraph Secrets["Secrets (nunca no cliente)"]
+        SR_Creds[SMARTRECRUITERS_*]
+    end
+
+    Browser --> CF
+    CF --> MW
+    MW --> Next
+    Next --> SearchVal
+    Next --> CandidatesVal
+    Next --> SafePath
+    Next --> SR_Creds
+```
+
+---
+
 ## 4. Integração com SmartRecruiters
 
 ### 4.1 Visão Geral
