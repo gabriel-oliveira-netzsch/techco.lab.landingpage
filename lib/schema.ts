@@ -40,7 +40,7 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "careers",
-    email: "info@netzsch.com",
+    email: "techcolab@netzsch.com",
     url: `${BASE_URL}/open-positions`,
     areaServed: "BR",
     availableLanguage: ["English", "Portuguese"],

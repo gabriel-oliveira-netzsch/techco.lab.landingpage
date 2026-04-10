@@ -3,7 +3,8 @@
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense, useState } from 'react';
-import { GA_MEASUREMENT_ID, pageview, persistUTMParams, trackUTMParams } from '@/lib/analytics';
+import { pageview, persistUTMParams, trackUTMParams } from '@/lib/analytics';
+import { GA_MEASUREMENT_ID } from '@/lib/ga-measurement-id';
 
 /**
  * Componente interno que faz o tracking de pageviews
@@ -80,16 +81,6 @@ function AnalyticsTracker() {
  * - Ativar no GA4 Admin > Property Settings > Data Collection
  */
 export function GoogleAnalytics() {
-  const isDev = process.env.NODE_ENV === 'development';
-  
-  // Verificar se o ID está configurado
-  if (!GA_MEASUREMENT_ID) {
-    if (isDev) {
-      console.warn('[GA4] Measurement ID não configurado. Defina NEXT_PUBLIC_GA_MEASUREMENT_ID no .env');
-    }
-    return null;
-  }
-
   return (
     <>
       {/* 
@@ -125,7 +116,7 @@ export function GoogleAnalytics() {
               'wait_for_update': 500
             });
             
-            gtag('config', '${GA_MEASUREMENT_ID}', {
+            gtag('config', ${JSON.stringify(GA_MEASUREMENT_ID)}, {
               page_path: window.location.pathname,
               send_page_view: true,
               cookie_flags: 'SameSite=None;Secure',

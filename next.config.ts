@@ -1,9 +1,15 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+import { GA_MEASUREMENT_ID } from './lib/ga-measurement-id';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  // Expõe o ID GA4 no build (inline em `process.env.NEXT_PUBLIC_*` no bundle cliente/servidor)
+  env: {
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: GA_MEASUREMENT_ID,
+  },
+
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 
