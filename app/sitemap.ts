@@ -1,60 +1,61 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+import { getPublicJobs } from "@/lib/smartrecruiters";
 
-const baseUrl = 'https://ntechcolab.com';
+const baseUrl = "https://ntechcolab.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Routes that are the same in both languages
-  const sharedRoutes = [
-    { path: '', priority: 1, changeFrequency: 'weekly' as const },
-    { path: '/what-we-do', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/our-culture', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/open-positions', priority: 0.9, changeFrequency: 'daily' as const },
-    { path: '/positions', priority: 0.7, changeFrequency: 'weekly' as const },
+  // Static routes (localePrefix: as-needed — en has no prefix)
+  const staticRoutes = [
+    { path: "", priority: 1, changeFrequency: "weekly" as const },
+    { path: "/what-we-do", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/our-culture", priority: 0.8, changeFrequency: "monthly" as const },
+    {
+      path: "/open-positions",
+      priority: 0.9,
+      changeFrequency: "daily" as const,
+    },
   ];
 
-  // Add shared routes for both locales
-  for (const route of sharedRoutes) {
-    // English version
+  for (const route of staticRoutes) {
     sitemapEntries.push({
-      url: `${baseUrl}/en${route.path || ''}`,
+      url: `${baseUrl}${route.path || "/"}`,
       lastModified: new Date(),
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: {
         languages: {
-          en: `${baseUrl}/en${route.path || ''}`,
-          'pt-BR': `${baseUrl}/pt-BR${route.path || ''}`,
+          en: `${baseUrl}${route.path || "/"}`,
+          "pt-BR": `${baseUrl}/pt-BR${route.path || ""}`,
         },
       },
     });
 
-    // Portuguese version
     sitemapEntries.push({
-      url: `${baseUrl}/pt-BR${route.path || ''}`,
+      url: `${baseUrl}/pt-BR${route.path || ""}`,
       lastModified: new Date(),
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: {
         languages: {
-          en: `${baseUrl}/en${route.path || ''}`,
-          'pt-BR': `${baseUrl}/pt-BR${route.path || ''}`,
+          en: `${baseUrl}${route.path || "/"}`,
+          "pt-BR": `${baseUrl}/pt-BR${route.path || ""}`,
         },
       },
     });
   }
 
-  // Imprint - localized route names
+  // Imprint / Aviso Legal
   sitemapEntries.push({
-    url: `${baseUrl}/en/imprint`,
+    url: `${baseUrl}/imprint`,
     lastModified: new Date(),
-    changeFrequency: 'yearly',
-    priority: 0.5,
+    changeFrequency: "yearly",
+    priority: 0.3,
     alternates: {
       languages: {
-        en: `${baseUrl}/en/imprint`,
-        'pt-BR': `${baseUrl}/pt-BR/aviso-legal`,
+        en: `${baseUrl}/imprint`,
+        "pt-BR": `${baseUrl}/pt-BR/aviso-legal`,
       },
     },
   });
@@ -62,26 +63,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   sitemapEntries.push({
     url: `${baseUrl}/pt-BR/aviso-legal`,
     lastModified: new Date(),
-    changeFrequency: 'yearly',
-    priority: 0.5,
+    changeFrequency: "yearly",
+    priority: 0.3,
     alternates: {
       languages: {
-        en: `${baseUrl}/en/imprint`,
-        'pt-BR': `${baseUrl}/pt-BR/aviso-legal`,
+        en: `${baseUrl}/imprint`,
+        "pt-BR": `${baseUrl}/pt-BR/aviso-legal`,
       },
     },
   });
 
-  // Privacy Policy - same route name for both languages
+  // Privacy Policy
   sitemapEntries.push({
-    url: `${baseUrl}/en/privacy-policy`,
+    url: `${baseUrl}/privacy-policy`,
     lastModified: new Date(),
-    changeFrequency: 'yearly',
+    changeFrequency: "yearly",
     priority: 0.5,
     alternates: {
       languages: {
-        en: `${baseUrl}/en/privacy-policy`,
-        'pt-BR': `${baseUrl}/pt-BR/privacy-policy`,
+        en: `${baseUrl}/privacy-policy`,
+        "pt-BR": `${baseUrl}/pt-BR/privacy-policy`,
       },
     },
   });
@@ -89,16 +90,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
   sitemapEntries.push({
     url: `${baseUrl}/pt-BR/privacy-policy`,
     lastModified: new Date(),
-    changeFrequency: 'yearly',
+    changeFrequency: "yearly",
     priority: 0.5,
     alternates: {
       languages: {
-        en: `${baseUrl}/en/privacy-policy`,
-        'pt-BR': `${baseUrl}/pt-BR/privacy-policy`,
+        en: `${baseUrl}/privacy-policy`,
+        "pt-BR": `${baseUrl}/pt-BR/privacy-policy`,
       },
     },
   });
 
+  // Dynamic job positions
+  const jobs = await getPublicJobs();
+  for (const job of jobs) {
+    sitemapEntries.push({
+      url: `${baseUrl}/positions/${job.id}`,
+      lastModified: new Date(job.updatedOn || job.createdOn),
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/positions/${job.id}`,
+          "pt-BR": `${baseUrl}/pt-BR/positions/${job.id}`,
+        },
+      },
+    });
+
+    sitemapEntries.push({
+      url: `${baseUrl}/pt-BR/positions/${job.id}`,
+      lastModified: new Date(job.updatedOn || job.createdOn),
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/positions/${job.id}`,
+          "pt-BR": `${baseUrl}/pt-BR/positions/${job.id}`,
+        },
+      },
+    });
+  }
+
   return sitemapEntries;
 }
-

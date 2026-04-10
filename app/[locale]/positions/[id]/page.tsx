@@ -79,16 +79,30 @@ async function fetchJob(jobId: string): Promise<JobData | null> {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, id } = await params;
-  const t = await getTranslations({ locale, namespace: 'PositionDetails' });
+  const t = await getTranslations({ locale, namespace: "PositionDetails" });
+
+  const baseUrl = "https://ntechcolab.com";
+  const canonical =
+    locale === "en"
+      ? `${baseUrl}/positions/${id}`
+      : `${baseUrl}/pt-BR/positions/${id}`;
+
+  const job = await fetchJob(id);
+  const title = job
+    ? `${job.title} | ${job.location.city} | Techco.lab`
+    : t("pageTitle");
+  const description = job
+    ? `${job.title} — ${t("interestedDescription")} ${job.location.city}, Brazil.`
+    : t("pageDescription");
 
   return {
-    title: t('pageTitle'),
-    description: t('pageDescription'),
+    title,
+    description,
     alternates: {
-      canonical: `https://ntechcolab.com/${locale}/positions/${id}`,
+      canonical,
       languages: {
-        en: `https://ntechcolab.com/en/positions/${id}`,
-        'pt-BR': `https://ntechcolab.com/pt-BR/positions/${id}`,
+        en: `${baseUrl}/positions/${id}`,
+        "pt-BR": `${baseUrl}/pt-BR/positions/${id}`,
       },
     },
   };

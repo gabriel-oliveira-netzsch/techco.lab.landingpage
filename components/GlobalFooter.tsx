@@ -80,11 +80,11 @@ export function GlobalFooter() {
                   {t("contact.title")}
                 </span>
                 <ExternalLink
-                  href="mailto:info@netzsch.com"
+                  href="mailto:techcolab@netzsch.com"
                   linkText="Email"
                   className="hover:opacity-80 transition-opacity"
                 >
-                  info@netzsch.com
+                  techcolab@netzsch.com
                 </ExternalLink>
               </div>
               <div className="flex flex-col gap-1">

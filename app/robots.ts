@@ -1,7 +1,7 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://ntechcolab.com';
+  const baseUrl = "https://ntechcolab.com";
 
   return {
     rules: [
@@ -28,6 +28,9 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: "ntechcolab.com",
   };
 }
+
+// AI discovery: https://ntechcolab.com/llms.txt
 

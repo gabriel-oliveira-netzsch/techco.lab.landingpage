@@ -1,6 +1,6 @@
 # Techco.lab Landing Page
 
-Landing page institucional do **Techco.lab**, o hub de inovação digital do grupo NETZSCH. O site apresenta a cultura, projetos, vagas abertas e informações sobre a equipe.
+Landing page institucional do **Techco.lab**, o hub de inovação digital do grupo NETZSCH. O site apresenta a cultura, projetos, vagas abertas e talent pool integrado ao SmartRecruiters.
 
 🌐 **Produção:** [https://ntechcolab.com](https://ntechcolab.com)
 
@@ -20,30 +20,37 @@ Landing page institucional do **Techco.lab**, o hub de inovação digital do gru
 
 ```
 ├── app/
-│   ├── [locale]/           # Rotas internacionalizadas (en, pt)
-│   │   ├── open-positions/ # Página de vagas
+│   ├── [locale]/           # Rotas internacionalizadas (en, pt-BR)
+│   │   ├── page.tsx        # Home
+│   │   ├── open-positions/# Página de vagas
 │   │   ├── our-culture/    # Página de cultura
 │   │   ├── what-we-do/     # Página de projetos
-│   │   └── positions/[id]/ # Detalhes de vaga
-│   ├── api/                # API Routes
-│   │   └── jobs/           # Endpoints de vagas
+│   │   ├── positions/[id]/ # Detalhes de vaga (metadados dinâmicos)
+│   │   ├── imprint/        # Aviso legal (EN)
+│   │   ├── aviso-legal/    # Aviso legal (PT)
+│   │   └── privacy-policy/ # Política de privacidade
+│   ├── api/                # API Routes (BFF)
+│   │   ├── jobs/           # Endpoints de vagas
+│   │   └── candidates/    # Talent pool
 │   ├── layout.tsx          # Layout raiz
 │   ├── robots.ts           # Configuração robots.txt
-│   └── sitemap.ts          # Sitemap dinâmico
+│   └── sitemap.ts          # Sitemap dinâmico (inclui vagas)
 ├── components/
 │   ├── sections/           # Seções das páginas
 │   ├── jobs/               # Componentes de vagas
 │   ├── ui/                 # Componentes UI base (shadcn)
 │   ├── icons/              # Ícones SVG
+│   ├── analytics/         # Tracking e analytics
 │   ├── Cookiebot.tsx       # Gerenciamento de cookies
 │   └── GoogleAnalytics.tsx # Analytics
 ├── lib/
 │   ├── analytics.ts        # Utilitários GA4
-│   └── utils.ts            # Funções auxiliares
+│   ├── smartrecruiters.ts # Fetch de vagas (sitemap)
+│   └── utils.ts           # Funções auxiliares
 ├── messages/
-│   ├── en.json             # Traduções inglês
-│   └── pt.json             # Traduções português
-└── i18n/                   # Configuração i18n
+│   ├── en.json            # Traduções inglês
+│   └── pt.json            # Traduções português
+└── i18n/                  # Configuração i18n
 ```
 
 ## ⚙️ Variáveis de Ambiente
@@ -51,6 +58,12 @@ Landing page institucional do **Techco.lab**, o hub de inovação digital do gru
 Crie um arquivo `.env.local` na raiz do projeto:
 
 ```bash
+# ========================================
+# SmartRecruiters - API de Vagas
+# ========================================
+SMARTRECRUITERS_CLIENT_ID=
+SMARTRECRUITERS_CLIENT_SECRET=
+
 # ========================================
 # Cookiebot - Gerenciamento de Consentimento
 # ========================================
@@ -62,6 +75,11 @@ NEXT_PUBLIC_COOKIEBOT_CBID=
 # ========================================
 # Formato: G-XXXXXXXXXX
 NEXT_PUBLIC_GA_MEASUREMENT_ID=
+
+# ========================================
+# URL Base (SSR, sitemap)
+# ========================================
+NEXT_PUBLIC_BASE_URL=https://ntechcolab.com
 ```
 
 ## 🛠️ Desenvolvimento
@@ -94,10 +112,10 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 ## 🌍 Internacionalização
 
-O site suporta dois idiomas:
+O site suporta dois idiomas com `localePrefix: "as-needed"` (inglês sem prefixo, alinhado ao canonical do Google):
 
-- 🇺🇸 **Inglês** (`/en`) - padrão
-- 🇧🇷 **Português** (`/pt-br`)
+- 🇺🇸 **Inglês** — URLs sem prefixo: `/`, `/open-positions`, `/what-we-do`, `/our-culture`, `/imprint`, `/privacy-policy`
+- 🇧🇷 **Português** — URLs com prefixo: `/pt-BR`, `/pt-BR/open-positions`, `/pt-BR/aviso-legal`, etc.
 
 As traduções ficam em `messages/en.json` e `messages/pt.json`.
 
@@ -131,7 +149,11 @@ docker build \
 ### Executar Container
 
 ```bash
-docker run -p 3000:3000 techcolab-landing
+docker run -p 3000:3000 \
+  -e SMARTRECRUITERS_CLIENT_ID=xxx \
+  -e SMARTRECRUITERS_CLIENT_SECRET=xxx \
+  -e NEXT_PUBLIC_BASE_URL=https://ntechcolab.com \
+  techcolab-landing
 ```
 
 ### Build com Docker Compose (recomendado)
@@ -146,6 +168,10 @@ services:
       args:
         NEXT_PUBLIC_COOKIEBOT_CBID: ${NEXT_PUBLIC_COOKIEBOT_CBID}
         NEXT_PUBLIC_GA_MEASUREMENT_ID: ${NEXT_PUBLIC_GA_MEASUREMENT_ID}
+    environment:
+      - SMARTRECRUITERS_CLIENT_ID=${SMARTRECRUITERS_CLIENT_ID}
+      - SMARTRECRUITERS_CLIENT_SECRET=${SMARTRECRUITERS_CLIENT_SECRET}
+      - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL}
     ports:
       - "3000:3000"
 ```
@@ -156,6 +182,14 @@ Execute com:
 # Com .env na raiz
 docker compose up --build
 ```
+
+## 🔍 SEO
+
+- **Sitemap dinâmico:** Rotas estáticas e vagas ativas (SmartRecruiters)
+- **Metadados dinâmicos:** Vagas com título e descrição por vaga
+- **Canonicals:** Alinhados com `localePrefix: "as-needed"`
+- **Imprint/Aviso Legal:** `noindex` para conteúdo legal
+- **llms.txt:** [https://ntechcolab.com/llms.txt](https://ntechcolab.com/llms.txt) — descoberta por IAs (identidade, serviços, contato)
 
 ## 📄 Licença
 

@@ -38,8 +38,10 @@ export function BreadcrumbSchema({ customItems }: BreadcrumbSchemaProps) {
       { name: t('home'), url: baseUrl + (prefix || '/') },
     ];
 
-    // Remove locale prefix and split path
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '').replace(/^\//, '');
+    // Remove locale prefix and split path (localePrefix: as-needed — pt-BR only)
+    const pathWithoutLocale = pathname
+      .replace(/^\/pt-BR/, "")
+      .replace(/^\//, "") || "";
     const segments = pathWithoutLocale.split('/').filter(Boolean);
 
     let currentPath = prefix;

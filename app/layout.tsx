@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans, Poppins } from 'next/font/google';
 import { Cookiebot } from "@/components/Cookiebot";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { PageTracking } from "@/components/analytics/PageTracking";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
 const inter = Inter({
@@ -103,58 +104,17 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data - Organization + WebSite para Google Knowledge Panel */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Techco.lab",
-              alternateName: "Techco.lab",
-              url: "https://ntechcolab.com",
-              logo: "https://ntechcolab.com/logo.png",
-              sameAs: [
-                "https://www.linkedin.com/company/techco-lab",
-                "https://www.netzsch.com/en/",
-              ],
-              description:
-                "Techco.lab is the digital innovation hub of NETZSCH, hiring professionals in Data, Cloud, Software, UX and Product for hybrid roles in Brazil.",
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "careers",
-                email: "info@netzsch.com",
-                url: "https://ntechcolab.com/open-positions",
-              },
-              address: [
-                {
-                  "@type": "PostalAddress",
-                  addressLocality: "Curitiba",
-                  addressRegion: "PR",
-                  addressCountry: "BR",
-                  name: "Nex Coworking",
-                },
-                {
-                  "@type": "PostalAddress",
-                  addressLocality: "Pomerode",
-                  addressRegion: "SC",
-                  addressCountry: "BR",
-                  name: "NEM Headquarters",
-                },
-              ],
-            }),
+            __html: JSON.stringify(organizationSchema),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Techco.lab",
-              url: "https://ntechcolab.com",
-              inLanguage: ["en", "pt-BR"],
-            }),
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>

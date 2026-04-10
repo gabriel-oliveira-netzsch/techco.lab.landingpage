@@ -23,15 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "SEO.home" });
 
+  const baseUrl = "https://ntechcolab.com";
+  const canonical = locale === "en" ? `${baseUrl}/` : `${baseUrl}/${locale}`;
   return {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
     alternates: {
-      canonical: `https://ntechcolab.com/${locale}`,
+      canonical,
       languages: {
-        en: "https://ntechcolab.com/en",
-        "pt-BR": "https://ntechcolab.com/pt-BR",
+        en: `${baseUrl}/`,
+        "pt-BR": `${baseUrl}/pt-BR`,
       },
     },
   };

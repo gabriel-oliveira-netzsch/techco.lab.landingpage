@@ -17,14 +17,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "OpenPositions" });
 
+  const baseUrl = "https://ntechcolab.com";
+  const canonical =
+    locale === "en"
+      ? `${baseUrl}/open-positions`
+      : `${baseUrl}/${locale}/open-positions`;
   return {
     title: t("pageTitle"),
     description: t("pageDescription"),
     alternates: {
-      canonical: `https://ntechcolab.com/${locale}/open-positions`,
+      canonical,
       languages: {
-        en: "https://ntechcolab.com/en/open-positions",
-        "pt-BR": "https://ntechcolab.com/pt-BR/open-positions",
+        en: `${baseUrl}/open-positions`,
+        "pt-BR": `${baseUrl}/pt-BR/open-positions`,
       },
     },
   };
@@ -91,7 +96,7 @@ export default async function OpenPositionsPage({ params }: Props) {
                 {t("cultureQuestion")}
               </p>
               <Link
-                href={`/${locale === "en" ? "en" : locale}/our-culture`}
+                href={locale === "en" ? "/our-culture" : `/${locale}/our-culture`}
                 className="flex items-center gap-2 text-[#00B894] font-semibold text-[15px] hover:gap-3 transition-all whitespace-nowrap group"
               >
                 {t("cultureLink")}
